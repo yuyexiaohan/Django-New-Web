@@ -1,0 +1,122 @@
+{% extends 'cms/base.html' %}
+
+{% block title %}
+    {% if news %}
+        编辑新闻-{{ news.title }}
+    {% else %}
+        发布新闻
+    {% endif %}
+{% endblock %}
+
+{% block head %}
+{#    引入的qiniu文件必须放在'js/writ_news.js'文件前面，之后'js/writ_news.js'文件中会引用到qiniu的文件 #}
+    <script src="https://unpkg.com/qiniu-js@2.4.0/dist/qiniu.min.js"></script>
+    <script src="{% static 'ueditor/ueditor.config.js' %}"></script>
+    <script src="{% static 'ueditor/ueditor.all.min.js' %}"></script>
+    <script src="{% static 'js/writ_news.js' %}"></script>
+{% endblock %}
+
+{% block content-header %}
+    {% if news %}
+        <h1>编辑新闻</h1>
+    {% else %}
+        <h1>发布新闻</h1>
+    {% endif %}
+
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+                <form action="" method="POST">
+                    <div class="box-body">
+                    <div class="box-body">
+                    <div class="from-group">
+                        <label for="title-form">标题</label>
+                        {% if news %}
+                            <input type="text" name="title" id="title-form" class="form-control" value="{{ news.title }}">
+                        {% else %}
+                            <input type="text" name="title" id="title-form" class="form-control">
+                        {% endif %}
+
+                    </div>
+                    <div class="form-group">
+                        <label for="desc-form">描述</label>
+                        {% if news %}
+                            <input type="text" class="form-control" name="desc" id="desc-form" value="{{ news.desc }}">
+                        {% else %}
+                            <input type="text" class="form-control" name="desc" id="desc-form">
+                        {% endif %}
+
+                    </div>
+                    <div class="form-group">
+                        <label for="category-form">分类</label>
+                        <select class="form-control" name="category" id="category-form">
+                            {% for category in categories %}
+                                {% if news and news.category.pk == category.pk %}
+                                    {# 选中对应的分类 #}
+                                    <option value="{{ category.pk }}" selected>{{ category.name }}</option>
+                                {% else %}
+                                    <option value="{{ category.pk }}">{{ category.name }}</option>
+                                {% endif %}
+                            {% endfor %}
+{# 以下部分是写死的，我们需要使用for循环将实际添加的数据实时显示在发布新闻页面的选择分类列表中 #}
+{#                            <option value="1">热点新闻</option>#}
+{#                            <option value="2">创业资讯</option>#}
+{#                            <option value="3">创业故事</option>#}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="thumbnail-form">缩略图</label>
+                        <div class="input-group">
+                            {% if news %}
+                                <input type="text" name="thumbnail" class="form-control" id="thumbnail-form" value="{{ news.thumbnail }}">
+                            {% else %}
+                                <input type="text" name="thumbnail" class="form-control" id="thumbnail-form">
+                            {% endif %}
+
+                            <span class="input-group-btn">
+{#                                <button class="btn btn-default">上传图片</button>#}
+{# 这里选择另一种方式上传文件，不能使用from表单的形式，否则，直接使用按钮button上传就是将整张表的内容都上传了，不符合我们实际只是上传图片的功能要求 #}
+{# 这里改用一种上传文件的标签来上传，操作如下:使用input标签，input标签实际是没有闭合的，这里可以把后半部分删除，将“上传图片”以value的形式进行说明  #}
+                                <label class="btn btn-default btn-file">
+{# 使用label标签包裹input标签，然后使用hidden将input标签隐藏，将“上传图片”单独拿出来，放在label标签中，这样既可以使用input标签的上传文件的特性，又能界面的美观 #}
+                                   上传图片 <input hidden type="file" class="btn btn-default" id="upload-btn">
+                                </label>
+
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group" id="progress-group" style="display: none;">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+                                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                    0%
+                                </div>
+                            </div>
+                        </div>
+                    <div class="form-group">
+                        <label for="content-form">内容</label>
+                        {% if news %}
+                            <script id="editor" type="text/plain">{{ news.content|safe }}</script> {# 新闻内容加入safe当作HTML标签处理 #}
+{# type="text/plain"表示是一个纯文本类型 #}
+                        {% else %}
+                            <script id="editor" type="text/plain"></script>
+{# type="text/plain"表示是一个纯文本类型 #}
+                        {% endif %}
+                        {#编辑器内容标签#}
+
+{#                        <textarea name="content" id="content-form" cols="30" rows="10" class="form-control"></textarea>#}
+                    </div>
+                    </div>
+                    </div>
+                    <div class="box-footer">
+                        <button id="submit-btn" class="btn btn-primary pull-right" data-news-id="{{ news.pk }}">发布</button>
+                        {# 发布时，根据news.pk进行判断，如果有值就是编辑，没有值就是新闻的新增 #}
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

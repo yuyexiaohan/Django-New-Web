@@ -1,0 +1,32 @@
+{% extends 'base/front_base.html' %}
+{% load static %}
+
+{% block title %}小饭桌创业课堂{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/course/course_index.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+		<div class="course-list-container">
+			<ul class="course-list-group">
+                {% for course in courses %}
+                    <li>
+                        <a href="{% url 'course:course_detail' course_id=course.pk  %}">
+                            <img class="thumbnail-group" src="{{ course.cover_url }}" alt="">
+                            <div class="course-info-group">
+                                <p class="course-title">{{ course.title }}</p>
+                                <p class="teacher-info-group">{{ course.teacher.username }}</p>
+                            </div>
+                            <div class="course-bottom-group">
+                                <span class="price-text nofree-price-text">{{ course.price }}</span>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+
+			</ul>
+		</div>
+        </div>
+{% endblock %}

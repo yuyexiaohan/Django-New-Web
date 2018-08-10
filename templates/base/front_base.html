@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/news/news.css' %}">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_710680_dzxmyw7pz3.css">
+    <link rel="stylesheet" href="{% static 'css/base/front_base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/side.css' %}">
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    {# front_base.js文件是基于jquery写的所以需要将其放在jQuery后面 #}
+    <script src="{% static 'js/template-web.js' %}"></script>
+    <script src="{% static 'js/front_base.js' %}"></script>
+    {# xfzajax文件是基于jquery写的所以需要将其放在jQuery后面 #}
+    <script src="{% static 'js/xfzajax.js' %}"></script>
+    <script src="{% static 'js/message.js' %}"></script>
+    {% block head %}{% endblock %}
+{# 只要会修改，就添加block 便于模板继承后的修改 #}
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="{% url 'news:index' %}"><h1 class="login-box"></h1></a>
+
+            <ul class="menu">
+                <li><a href="/">创投资讯</a></li>
+                <li><a href="{% url 'course:index' %}">创业课堂</a></li>
+                <li><a href="{% url 'payinfo:index' %}">付费咨询</a></li>
+                <li><a href="{% url 'news:search' %}">搜索</a></li>
+            </ul>
+            <div class="auth-group">
+                <span class="user-icon icon-user iconfont"></span>
+                {% if user.is_authenticated %}
+                    <a href="javascript:void (0);">{{ user.username }}</a>
+{#                使用"javascript:void (0);"的方式这样就是直接点击a标签不做任何操作#}
+                    <div class="user-box">
+                        <span>{{ front_user.username }}</span>
+                    </div>
+                    <div class="user-more-box">
+                        <i class="triangle"></i>
+                        {% if user.is_staff %}
+                            <a href="{% url 'cms:index' %}">管理系统</a>
+                        {% endif %}
+
+                        <a href="{% url 'xfzauth:logout' %}">退出登录</a>
+                    </div>
+                {% else %}
+                    <a href="{% url 'xfzauth:login' %}">登录 /</a>
+                    <a href="{% url 'xfzauth:register' %}">注册</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    {% block main %}{% endblock %}
+
+    <div class="footer">
+        <div class="footer-1">
+            <div class="footer-inner">
+                <div class="login-box"></div>
+                <div class="detail-info-group">
+                    <div class="top-group">
+                        <ul class="links">
+                            <li><a href="#">关于小饭桌</a></li>
+                            <li><a href="#">创业课堂</a></li>
+                            <li><a href="#">寻求报道</a></li>
+                            <li><a href="#">创业礼包</a></li>
+                        </ul>
+                        <div class="about-us">
+                            <span>关于我们:</span>
+                            <span class="weixin">jiang08</span>
+                            <span class="weibo">创业课堂</span>
+                        </div>
+                    </div>
+                    <div class="bottom-group">
+                        <p class="adress">地址：武汉市东湖高新技术开发区关山大道软件园A5-01栋</p>
+                        <p class="contact">客服电话： 400-810-1090 (工作日10点－18点)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-2">
+            @2018 武汉道和投资股份有限公司
+        </div>
+    </div>
+</body>
+</html>

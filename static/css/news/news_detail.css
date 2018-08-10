@@ -1,0 +1,169 @@
+.main-container {
+  background-color: #fff;
+}
+
+.main-container .article-group {
+  padding: 26px 20px;
+}
+
+.main-container .article-group .article-title-group {
+  font-size: 24px;
+  color: #212121;
+  font-weight: 400;
+}
+
+.main-container .article-group .article-info-group {
+  color: #878787;
+  font-size: 14px;
+  margin-top: 33px;
+  overflow: hidden;
+}
+
+.main-container .article-group .article-info-group .left-info-group {
+  float: left;
+}
+
+.main-container .article-group .article-info-group .left-info-group .author-time-group {
+  margin-right: 10px;
+}
+
+.main-container .article-group .article-info-group .left-info-group .category-group {
+  background-color: #5b86db;
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.main-container .article-group .article-info-group .right-share-group {
+  float: right;
+}
+
+.main-container .article-group .article-info-group .right-share-group .tag-style {
+  float: right;
+  margin-left: 10px;
+  line-height: 30px;
+}
+
+.main-container .article-group .article-info-group .right-share-group .share-icon {
+  background-repeat: no-repeat;
+  background-image: url("http://www.xfz.cn/static/build/images/share.png");
+  width: 30px;
+  height: 30px;
+  background-size: auto 30px;
+}
+
+.main-container .article-group .article-info-group .right-share-group .weibo-share {
+  background-position: -41px 0;
+}
+
+.main-container .article-group .article-info-group .right-share-group .wx-share {
+  background-position: 0 0;
+}
+
+.main-container .article-group .article-content-group {
+  margin-top: 28px;
+}
+
+.main-container .article-group .comment-group {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 30px;
+}
+
+.main-container .article-group .comment-group .comment-title {
+  color: #212121;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.main-container .article-group .comment-group .comment-textarea {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  line-height: 26px;
+  resize: none;
+}
+
+.main-container .article-group .comment-group .nologin-textarea {
+  height: 40px;
+}
+
+.main-container .article-group .comment-group .logined-textarea {
+  height: 80px;
+}
+
+.main-container .article-group .comment-group .submit-comment-group {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.main-container .article-group .comment-group .submit-comment-group .submit-comment-btn {
+  display: inline-block;
+  float: right;
+  width: 68px;
+  height: 30px;
+  background: #5b86db;
+  font-size: 16px;
+  color: #fff;
+  outline: 0;
+  text-align: center;
+  line-height: 28px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.main-container .article-group .comment-list-group {
+  margin-top: 40px;
+}
+
+.main-container .article-group .comment-list-group li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.main-container .article-group .comment-list-group li .top-info-group {
+  overflow: hidden;
+  line-height: 40px;
+  color: #9b9b9b;
+  font-size: 16px;
+}
+
+.main-container .article-group .comment-list-group li .top-info-group .user-info-group {
+  float: left;
+}
+
+.main-container .article-group .comment-list-group li .top-info-group .user-info-group img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  float: left;
+}
+
+.main-container .article-group .comment-list-group li .top-info-group .user-info-group .username-group {
+  margin-left: 20px;
+}
+
+.main-container .article-group .comment-list-group li .top-info-group .time-group {
+  float: right;
+}
+
+.main-container .article-group .comment-list-group li .comment-content-group {
+  font-size: 16px;
+  color: #696969;
+  margin-left: 60px;
+  line-height: 30px;
+  padding: 20px 0;
+}
+
+.article-content-group img{
+  max-width: 100%;
+}

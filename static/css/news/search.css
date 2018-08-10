@@ -1,0 +1,120 @@
+.main-container {
+  background: #fff;
+}
+
+.main-container .search-group {
+  width: 732px;
+  height: 44px;
+  border: 1px solid #ededed;
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 40px auto;
+}
+
+.main-container .search-group .search-input {
+  padding: 10px;
+  font-size: 20px;
+  float: left;
+  width: 612px;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  color: #696969;
+}
+
+.main-container .search-group .search-btn {
+  float: right;
+  width: 120px;
+  height: 100%;
+  background: #5b86db;
+  text-align: center;
+  font-size: 18px;
+  line-height: 44px;
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+.main-container .list-group {
+  overflow: hidden;
+}
+
+.main-container .list-group .list-search-title {
+  margin-left: 20px;
+}
+
+.main-container .list-group .list-content-group {
+  overflow: hidden;
+  background: #fff;
+}
+
+.main-container .list-group .list-content-group li {
+  border-bottom: 1px solid #ededed;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.main-container .list-group .list-content-group li .thumbnail-group {
+  float: left;
+}
+
+.main-container .list-group .list-content-group li .thumbnail-group img {
+  display: block;
+  width: 224px;
+  height: 160px;
+}
+
+.main-container .list-group .list-content-group li .content-group {
+  position: relative;
+  float: left;
+  margin-left: 30px;
+  height: 160px;
+  width: 500px;
+}
+
+.main-container .list-group .list-content-group li .content-group .title-group {
+  font-size: 22px;
+  height: 52px;
+  font-weight: 500;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.main-container .list-group .list-content-group li .content-group .title-group a {
+  color: #212121;
+}
+
+.main-container .list-group .list-content-group li .content-group .title-group a:hover {
+  color: #5b86db;
+}
+
+.main-container .list-group .list-content-group li .content-group .desc-group {
+  color: #878787;
+  font-size: 14px;
+  height: 44px;
+  margin-top: 16px;
+}
+
+.main-container .list-group .list-content-group li .content-group .content-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  font-size: 14px;
+  color: #878787;
+}
+
+.main-container .list-group .list-content-group li .content-group .content-footer .category-group {
+  color: #5b86db;
+  float: left;
+}
+
+.main-container .list-group .list-content-group li .content-group .content-footer .author-group {
+  float: right;
+  margin-right: 20px;
+}
+
+.main-container .list-group .list-content-group li .content-group .content-footer .time-group {
+  float: right;
+}

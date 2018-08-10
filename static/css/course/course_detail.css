@@ -1,0 +1,550 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  list-style: none;
+  text-decoration: none;
+}
+
+body, html {
+  font-family: Montserrat,'Microsoft YaHei','Heiti SC',simhei,'Lucida Sans Unicode','Myriad Pro','Hiragino Sans GB',Verdana;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.main {
+  width: 1170px;
+  overflow: hidden;
+  margin: 87px auto 0;
+  min-height: 500px;
+}
+
+.main-container {
+  width: 795px;
+  float: left;
+  margin-right: 20px;
+}
+
+.sidebar-container {
+  width: 355px;
+  float: right;
+}
+
+.danger-text {
+  color: #D9534F;
+  text-align: center;
+  font-size: 16px;
+}
+
+.sidebar-container {
+  background: #fff;
+}
+
+.sidebar-container .course-group {
+  padding: 20px 20px;
+}
+
+.sidebar-container .course-group .top-group {
+  overflow: hidden;
+}
+
+.sidebar-container .course-group .top-group .title-group {
+  float: left;
+  color: #212121;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sidebar-container .course-group .top-group .more-group {
+  float: right;
+  color: #5b86db;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.sidebar-container .course-group .thumbnail-group {
+  margin-top: 22px;
+}
+
+.sidebar-container .course-group .thumbnail-group img {
+  width: 100%;
+  height: 178px;
+}
+
+.sidebar-container .pay-info-group {
+  margin-top: 20px;
+  height: 130px;
+}
+
+.sidebar-container .pay-info-group img {
+  display: block;
+  width: 100%;
+  height: inherit;
+}
+
+.sidebar-container .focus-group {
+  padding: 22px 20px 0;
+}
+
+.sidebar-container .focus-group .title-group {
+  color: #212121;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sidebar-container .focus-group .website-group {
+  margin-top: 25px;
+  overflow: hidden;
+}
+
+.sidebar-container .focus-group .website-group .left-group {
+  float: left;
+}
+
+.sidebar-container .focus-group .website-group .left-group .item-group {
+  margin-bottom: 27px;
+  overflow: hidden;
+}
+
+.sidebar-container .focus-group .website-group .left-group .item-group .logo-group {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  float: left;
+  background-image: url("http://www.xfz.cn/static/build/images/side-icon.png");
+  background-size: 100%;
+}
+
+.sidebar-container .focus-group .website-group .left-group .item-group .text-group {
+  font-size: 14px;
+  margin-left: 20px;
+  float: left;
+  line-height: 43px;
+}
+
+.sidebar-container .focus-group .website-group .left-group .item-group .text-group a {
+  color: #555;
+}
+
+.sidebar-container .focus-group .website-group .left-group .item-group .zhihu-logo {
+  background-position: 0 0;
+}
+
+.sidebar-container .focus-group .website-group .left-group .item-group .weibo-logo {
+  background-position: 0 -54px;
+}
+
+.sidebar-container .focus-group .website-group .left-group .item-group .toutiao-logo {
+  background-position: 0 -111px;
+}
+
+.sidebar-container .focus-group .website-group .right-group {
+  float: right;
+  margin-right: 10px;
+  width: 95px;
+}
+
+.sidebar-container .focus-group .website-group .right-group .qr-group {
+  width: 95px;
+  height: 95px;
+  background-image: url("http://www.xfz.cn/static/build/images/wxQr.jpg");
+  background-size: 100%;
+}
+
+.sidebar-container .focus-group .website-group .right-group .text-group {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sidebar-container .recommend-news-group {
+  padding: 0 20px;
+}
+
+.sidebar-container .recommend-news-group .recommend-title-group {
+  font-size: 18px;
+  color: #202020;
+}
+
+.sidebar-container .recommend-news-group ul li {
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.sidebar-container .recommend-news-group ul li .news-info-group {
+  width: 206px;
+  float: left;
+}
+
+.sidebar-container .recommend-news-group ul li .news-info-group .news-title-group {
+  height: 50px;
+}
+
+.sidebar-container .recommend-news-group ul li .news-info-group .news-title-group a {
+  color: #202020;
+}
+
+.sidebar-container .recommend-news-group ul li .news-info-group .news-title-group a:hover {
+  color: #5b86db;
+}
+
+.sidebar-container .recommend-news-group ul li .news-info-group .news-more-group {
+  font-size: 14px;
+}
+
+.sidebar-container .recommend-news-group ul li .news-info-group .news-more-group .category-group {
+  float: left;
+  color: #5b86db;
+}
+
+.sidebar-container .recommend-news-group ul li .news-info-group .news-more-group .time-group {
+  float: right;
+}
+
+.sidebar-container .recommend-news-group ul li .news-thumbnail-group {
+  float: right;
+  width: 98px;
+  height: 70px;
+}
+
+.sidebar-container .recommend-news-group ul li .news-thumbnail-group img {
+  display: block;
+  width: 100%;
+}
+
+.course-nav {
+  height: 54px;
+  line-height: 54px;
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 65px;
+}
+
+.course-nav .nav-container {
+  width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.course-nav .nav-container .nav-title {
+  font-size: 24px;
+  color: #696969;
+  float: left;
+}
+
+.course-nav .nav-container .nav-ul {
+  font-size: 16px;
+  margin-left: 80px;
+  overflow: hidden;
+  float: left;
+}
+
+.course-nav .nav-container .nav-ul li {
+  cursor: pointer;
+  float: left;
+  padding: 0 40px;
+}
+
+.course-nav .nav-container .nav-ul li a {
+  color: #888;
+}
+
+.course-nav .nav-container .nav-ul li a:hover {
+  color: #212121;
+}
+
+.course-nav .nav-container .nav-ul li.active a {
+  color: #212121;
+}
+
+.main {
+  margin-top: 20px;
+}
+
+.course-container {
+  width: 1070px;
+  margin: 20px auto;
+}
+
+.course-container .course-video-container {
+  background-color: #fff;
+}
+
+.course-container .course-video-container .banner {
+  padding: 20px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.course-container .course-video-container .banner .banner-left {
+  width: 600px;
+  float: left;
+}
+
+.course-container .course-video-container .banner .banner-left .video-title {
+  font-size: 20px;
+  color: #212121;
+}
+
+.course-container .course-video-container .banner .banner-left .share-video-group {
+  color: #696969;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.course-container .course-video-container .banner .banner-left .share-video-group span {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.course-container .course-video-container .banner .banner-left .share-video-group .share-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("http://www.xfz.cn/static/build/images/share.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  vertical-align: bottom;
+}
+
+.course-container .course-video-container .banner .banner-left .share-video-group .wx-share-icon {
+  background-position: 0 0;
+}
+
+.course-container .course-video-container .banner .banner-left .share-video-group .weibo-share-icon {
+  background-position: -27px 0px;
+}
+
+.course-container .course-video-container .banner .buy-course-group {
+  float: right;
+  margin-top: 27px;
+  overflow: hidden;
+}
+
+.course-container .course-video-container .banner .buy-course-group .buy-course-btn {
+  background-color: #ff8d3f;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  float: right;
+}
+
+.course-container .course-video-container .banner .buy-course-group .price-text {
+  color: #f76363;
+  float: right;
+  margin-right: 20px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.course-container .course-video-container .video-container {
+  width: 100%;
+  height: 630px;
+}
+
+.course-container .course-detail-container {
+  margin-top: 30px;
+  width: 1070px;
+  overflow: hidden;
+}
+
+.course-container .course-detail-container .main-detail-container {
+  float: left;
+  width: 700px;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group {
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .item-title {
+  border-left: 6px solid #5b86db;
+  padding: 0 10px;
+  color: #202020;
+  font-size: 18px;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .item-content {
+  font-size: 14px;
+  color: #888;
+  line-height: 2em;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .inner-course-title {
+  font-size: 18px;
+  color: #202020;
+  float: left;
+  line-height: 40px;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .buy-course-group {
+  float: right;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .buy-course-group .buy-course-btn {
+  background-color: #ff8d3f;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  float: right;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .buy-course-group .price-text {
+  color: #f76363;
+  float: right;
+  margin-right: 20px;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .teacher-group {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .teacher-group .avatar-group {
+  display: block;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  float: left;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .teacher-group .teacher-info-group {
+  float: left;
+  margin-left: 10px;
+  position: relative;
+  font-size: 16px;
+  color: #696969;
+  height: 62px;
+  width: 70%;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .teacher-group .teacher-info-group .author-name {
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.course-container .course-detail-container .main-detail-container .detail-item-group .teacher-group .teacher-info-group .author-identify {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+}
+
+.side-detail-container {
+  float: right;
+  width: 355px;
+  background-color: #fff;
+  padding: 20px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+
+.side-detail-container .side-title {
+  color: #202020;
+  font-size: 18px;
+}
+
+.side-detail-container .large-recommend-group {
+  margin-top: 20px;
+}
+
+.side-detail-container .large-recommend-group .important-recommend {
+  width: 317px;
+  height: 180px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.side-detail-container .large-recommend-group .important-recommend img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.side-detail-container .large-recommend-group .important-recommend .course-info-group {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42px;
+  padding: 0 15px;
+  line-height: 42px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.side-detail-container .large-recommend-group .important-recommend .course-info-group .left-info {
+  float: left;
+}
+
+.side-detail-container .large-recommend-group .important-recommend .course-info-group .right-info {
+  float: right;
+}
+
+.side-detail-container .large-recommend-group .important-recommend .course-info-group .right-info .price-text {
+  color: #f76363;
+  font-size: 18px;
+}
+
+.side-detail-container .small-recommend-group li {
+  overflow: hidden;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.side-detail-container .small-recommend-group li .left-info-group {
+  float: left;
+  width: 150px;
+  position: relative;
+  height: 94px;
+}
+
+.side-detail-container .small-recommend-group li .left-info-group .course-title {
+  font-size: 14px;
+  color: #202020;
+}
+
+.side-detail-container .small-recommend-group li .left-info-group .teacher-info {
+  font-size: 12px;
+  color: #696969;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.side-detail-container .small-recommend-group li .course-thumbnail {
+  float: right;
+  width: 160px;
+  height: 90px;
+}

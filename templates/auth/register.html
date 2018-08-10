@@ -1,0 +1,57 @@
+{% extends 'base/front_base.html' %}
+
+{% block title %}
+    注册界面
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/auth/auth.css' %}">
+    <script src="{% static 'js/auth.js' %}"></script>
+{% endblock %}
+
+{% block main %}
+<form action="" method="POST">
+{# 加入"{% csrf_token %}"这个是为了解决跨域问题  #}
+    {% csrf_token %}
+    <div class="main-auth-group">
+        <div class="top-group">
+            <span class="title">请注册</span>
+            <a href="#" class="more-link">立即登录</a>
+        </div>
+        <div class="from-group">
+            <div class="input-group">
+                <input id="test" type="text" class="from-control" name="telephone" placeholder="请输入手机号码或邮箱">
+            </div>
+            <div class="input-group">
+                <input type="text" class="from-control" name="username" placeholder="请输入用户名">
+            </div>
+            <div class="input-group">
+                <input type="text" class="from-control split-form-control" name="img_captcha" placeholder="图形验证码">
+                <img src="{% url 'xfzauth:img_captcha' %}" alt="" class="img-captcha input-group-addon">
+            </div>
+            <div class="input-group">
+                <input type="password" class="from-control" name="password1" placeholder="请输入密码">
+            </div>
+            <div class="input-group">
+                <input type="password" class="from-control" name="password2" placeholder="请重新输入密码">
+            </div>
+            <div class="input-group">
+                <input type="text" class="from-control split-form-control" name="sms_captcha" placeholder="请输入短信验证码">
+                <span class="sms-captcha-btn input-group-addon">发送验证码</span>
+            </div>
+            {% if messages %}
+                <div class="input-group">
+                    {# message消息是一个需要遍历才能提取的消息 #}
+                    {% for message in messages %}
+                        <p style="color: red;text-align: center">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="input-group">
+            <button class="submit-btn">注册</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
+

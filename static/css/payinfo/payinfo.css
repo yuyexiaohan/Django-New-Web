@@ -1,0 +1,75 @@
+.main .main-container .banner {
+  width: 100%;
+  height: 200px;
+}
+
+.main .main-container .banner img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.main .main-container .payinfo-list-container {
+  padding: 17px 0 0px 17px;
+  background-color: #fff;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul {
+  overflow: hidden;
+  width: 795px;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul li {
+  float: left;
+  width: 370px;
+  height: 150px;
+  border: 1px solid #ccc;
+  margin-right: 17px;
+  margin-bottom: 17px;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul li .category-group {
+  float: left;
+  width: 100px;
+  height: 150px;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul li .document-group {
+  background-image: url("http://www.xfz.cn/static/build/images/web-bp-pc.png");
+  background-size: 100%;
+  background-position: 0 0;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul li .research-report-group {
+  background-image: url("http://www.xfz.cn/static/build/images/web-bg-pc.png");
+  background-size: 100%;
+  background-position: 0 0;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul li .payinfo-info-group {
+  float: left;
+  width: 270px;
+  height: 150px;
+  box-sizing: border-box;
+  padding: 12px;
+  position: relative;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul li .payinfo-info-group .payinfo-title {
+  color: #202020;
+  font-size: 16px;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul li .payinfo-info-group .payinfo-desc {
+  margin-top: 14px;
+  color: #696969;
+  font-size: 14px;
+}
+
+.main .main-container .payinfo-list-container .payinfo-ul li .payinfo-info-group .price-text {
+  color: #f76363;
+  font-size: 18px;
+  position: absolute;
+  right: 17px;
+  bottom: 17px;
+}

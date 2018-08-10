@@ -1,0 +1,102 @@
+.sidebar-container {
+  background: #fff;
+float: right;
+width: 355px;
+height: 200px;
+}
+.sidebar-container .course-group {
+  padding: 20px 20px;
+}
+.sidebar-container .course-group .top-group {
+  overflow: hidden;
+}
+.sidebar-container .course-group .top-group .title-group {
+  float: left;
+  color: #212121;
+  font-size: 18px;
+  font-weight: 500;
+}
+.sidebar-container .course-group .top-group .more-group {
+  float: right;
+  color: #5b86db;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 2px;
+}
+.sidebar-container .course-group .thumbnail-group {
+  margin-top: 22px;
+}
+.sidebar-container .course-group .thumbnail-group img {
+  width: 100%;
+  height: 178px;
+}
+.sidebar-container .pay-info-group {
+  margin-top: 20px;
+  height: 130px;
+}
+.sidebar-container .pay-info-group img {
+  display: block;
+  width: 100%;
+  height: inherit;
+}
+.sidebar-container .focus-group {
+  padding: 22px 20px 0;
+}
+.sidebar-container .focus-group .title-group {
+  color: #212121;
+  font-size: 18px;
+  font-weight: 500;
+}
+.sidebar-container .focus-group .website-group {
+  margin-top: 25px;
+  overflow: hidden;
+}
+.sidebar-container .focus-group .website-group .left-group {
+  float: left;
+}
+.sidebar-container .focus-group .website-group .left-group .item-group {
+  margin-bottom: 27px;
+  overflow: hidden;
+}
+.sidebar-container .focus-group .website-group .left-group .item-group .logo-group {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+  float: left;
+  background-image: url('http://www.xfz.cn/static/build/images/side-icon.png');
+  background-size: 100%;
+}
+.sidebar-container .focus-group .website-group .left-group .item-group .text-group {
+  font-size: 14px;
+  margin-left: 20px;
+  float: left;
+  line-height: 43px;
+}
+.sidebar-container .focus-group .website-group .left-group .item-group .text-group a {
+  color: #555;
+}
+.sidebar-container .focus-group .website-group .left-group .item-group .zhihu-logo {
+  background-position: 0 0;
+}
+.sidebar-container .focus-group .website-group .left-group .item-group .weibo-logo {
+  background-position: 0 -54px;
+}
+.sidebar-container .focus-group .website-group .left-group .item-group .toutiao-logo {
+  background-position: 0 -111px;
+}
+.sidebar-container .focus-group .website-group .right-group {
+  float: right;
+  margin-right: 10px;
+  width: 95px;
+}
+.sidebar-container .focus-group .website-group .right-group .qr-group {
+  width: 95px;
+  height: 95px;
+  background-image: url('http://www.xfz.cn/static/build/images/wxQr.jpg');
+  background-size: 100%;
+}
+.sidebar-container .focus-group .website-group .right-group .text-group {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}

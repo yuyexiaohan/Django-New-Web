@@ -1,0 +1,169 @@
+{% extends 'base/front_base.html' %}
+
+{% block title %}
+确认订单
+{% endblock %}
+
+{% block head %}
+    <style>
+        .table{
+            width: 100%;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            background: #eaeaea;
+            text-align: center;
+        }
+        .table{
+            border-spacing: 20px;
+        }
+        .table img{
+            width: 120px;
+            height: 68px;
+            float: left;
+        }
+        .table .title{
+            margin-left: 10px;
+        }
+        .pay-way label{
+            float: right;
+        }
+        .pay-way span{
+            border: 1px solid #ccc;
+            position: relative;
+            top: 20px;
+        }
+        .pay-way .zfb-btn{
+            display: inline-block;
+            width: 139px;
+            height: 48px;
+            cursor: pointer;
+            background: url("http://study.163.com/res/images/pay/payList.png");
+            background-position: -140px 0;
+            background-size: 300% 200%;
+            margin-right:20px;
+        }
+        .pay-way .wx-btn{
+            display: inline-block;
+            width: 139px;
+            height: 48px;
+            position: relative;
+            cursor: pointer;
+        }
+        .pay-way .wx-btn img{
+            top: 12px;
+            left: 16px;
+            position: absolute;
+        }
+        .submit-group{
+            overflow: hidden;
+            padding: 60px 0;
+        }
+        .submit-btn{
+            display: block;
+            text-align: center;
+            width: 136px;
+            height:49px;
+            line-height: 49px;
+            background: url("http://s.stu.126.net/res/images/pay/payBtns.png?c9b6b849b38cca45b160a96802575ac8") no-repeat 4449px 4449px;
+            background-position: 0 -302px;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            float: right;
+        }
+        .submit-btn:hover{
+            background-position: -139px -302px;
+        }
+    </style>
+    <script>
+    $(function () {
+        $("#submit-btn").click(function (event) {
+            // 需要手动执行post请求函数，所以这里阻止默认行为
+            event.preventDefault();
+                var goodsname = $("input[name='goodsname']").val();
+                // 加入checked条件判断提取的时支付宝还是微信
+                var istype = $("input[name='istype']:checked").val();
+                var notify_url = $("input[name='notify_url']").val();
+                var orderid = $("input[name='orderid']").val();
+                var price = $("input[name='price']").val();
+                var return_url = $("input[name='return_url']").val();
+                xfzajax.post({
+                    'url': '/course/order_key/',
+                    'data': {
+                        'goodsname': goodsname,
+                        'istype': istype,
+                        'notify_url': notify_url,
+                        'orderid': orderid,
+                        'price': price,
+                        'return_url': return_url
+                    },
+                    'success': function (result) {
+                        if(result['code'] === 200){
+                            var key = result['data']['key'];
+                            var keyInput = $("input[name='key']");
+                            keyInput.val(key); // 赋值给key
+                            $("#order-form").submit(); //针对表单的提交事件
+                        }
+                    }
+                });
+        });
+    });
+    </script>
+{% endblock %}
+
+
+
+{% block main %}
+    <div class="main">
+        <div class="wrapper">
+            <table class="table">
+            <thead>
+                <tr>
+                    <th>商品名称</th>
+                    <th>单价(元)</th>
+                    <th>小计（元）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td align="left">
+                        <a href="#">
+                            <img class="thumbnail" src="{{ course.cover_url }}" alt="">
+                            <span class="title">{{ course.title }}</span>
+                        </a>
+                    </td>
+                    <td>{{ course.price }}</td>
+                    <td>{{ course.price }}</td>
+                </tr>
+            </tbody>
+        </table>
+            <form action="https://pay.bbbapi.com/" method="post" id="order-form">
+                <input type="hidden" name="uid" value="49dc532695baa99e16e01bc0">
+                <input type="hidden" name="price" value="{{ course.price }}">
+                <input type="hidden" name="notify_url" value="{{ notify_url }}">
+                <input type="hidden" name="return_url" value="{{ return_url }}">
+                <input type="hidden" name="orderid" value="{{ order.pk }}">
+                <input type="hidden" name="orderuid" value="{{ order.buyer_id }}">
+                <input type="hidden" name="goodsname" value="{{ course.title }}">
+                <input type="hidden" name="key" value="">
+            <div class="pay-way">
+                <label for="istype-wx">
+                    <input id="istype-wx" type="radio" name="istype" value="2">
+                    <span class="wx-btn">
+                        <img src="http://nos.netease.com/test-edu-image/1BD9F69D6760CE1508D2269864AA54F8.png" alt="">
+                    </span>
+                </label>
+                <label for="istype-zfb">
+                    <input id="istype-zfb" type="radio" name="istype" value="1" checked>
+                    <span class="zfb-btn"></span>
+                </label>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="submit-group">
+                <input type="submit" value="去支付" id="submit-btn" class="submit-btn">
+            </div>
+        </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'cms/base.html' %}
+
+{% block head %}
+    <script src="{% static 'ueditor/ueditor.config.js' %}"></script>
+    <script src="{% static 'ueditor/ueditor.all.min.js' %}"></script>
+    <script src="{% static 'js/pub_course.js' %}"></script>
+{% endblock %}
+
+{% block title %}
+    发布课程
+{% endblock %}
+
+{% block content-header %}
+    <h1>发布课程</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-md-12">
+    <div class="box">
+        {# 设计主体页面 #}
+        <div class="box-body">
+            {# 加入form表单，方法：设置为post请求 #}
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="title-input">标题：</label>
+                    <input type="text" class="form-control" name="title" placeholder="标题" id="title-input">
+                </div>
+                <div class="form-group">
+                    <label for="category-select">课程分类：</label>
+                    <select name="category" id="category-select" class="form-control">
+                        {% for category in categories %}
+                            <option value="{{ category.pk }}">{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="teacher-select">讲师：</label>
+                    <select name="teacher" id="teacher-select" class="form-control">
+                        {% for teacher in teachers %}
+                            <option value="{{ teacher.pk }}">{{ teacher.username }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="video-input">视频地址：</label>
+                    <input type="text" class="form-control" name="video_url" id="video-input" placeholder="请输入视频地址">
+                </div>
+                <div class="form-group">
+                    <label for="cover-input">封面图：</label>
+                    <input type="text" class="form-control" name="cover_url" id="cover-input" placeholder="请输入封面图地址">
+                </div>
+                <div class="form-group">
+                    <label for="price-input">价格：</label>
+                    <input type="text" class="form-control" name="price" id="price-input" placeholder="请输入课程价格">
+                </div>
+                <div class="form-group">
+                    <label for="duration-input">课程时长：</label>
+                    <input type="text" class="form-control" name="duration" id="duration-input" placeholder="请输入课程时长">
+                </div>
+                <div class="form-group">
+                    <label>课程简介</label>
+                    <script id="editor" type="text/plain"></script>
+                </div>
+            </form>
+        </div>
+
+        <div class="box-footer">
+            <button class="btn btn-primary pull-right"id="submit-btn">发布</button>
+        </div>
+
+    </div>
+</div>
+</div>
+{% endblock %}

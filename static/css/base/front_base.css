@@ -1,0 +1,242 @@
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, dd, del, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul,var,video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    list-style: none;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none !important; /* 所有的a标签选中时都不加下划线 */
+}
+
+body{
+    background: #f2f2f2;
+}
+
+.main{
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.main .main-container{
+    float: left;
+    width: 795px;
+    /*background: pink;*/
+}
+
+.main .sidebar-container{
+    float: right;
+    width: 355px;
+    height: 200px;
+}
+
+.header{
+    width: 100%;
+    height: 65px;
+    background: #3a3a3a;
+
+}
+
+.nav{
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    line-height: 64px;
+
+}
+
+.nav .login-box{
+    width: 145px;
+    height: 49px;
+    background: url("http://www.xfz.cn/static/build/images/logo.png");
+    margin-top: 8px;
+    float: left;
+
+
+}
+
+.nav .menu{
+    float: left;
+    margin-left: 40px;
+    overflow: hidden;
+}
+
+.menu li{
+    float: left;
+    margin-right: 40px;
+    box-sizing: border-box; /*box-sizing使加载在盒子周边的边距都变成盒子内部消化 ;*/
+    height: 64px;
+}
+
+.menu li.active{
+    border-bottom: 4px solid cornflowerblue;
+}
+
+.menu li a{
+    color: white;
+}
+
+.auth-group{
+    float: right;
+    /*margin-right: 40px;*/
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+.auth-group a{
+    color: white;
+}
+
+.auth-group .user-icon{
+    color: white;
+    font-size: 20px;
+}
+
+.auth-group:hover .user-more-box{
+    display: block;
+}
+
+.user-more-box{
+    display: none;
+    background: #fff;
+    width: 140px;
+    position: absolute; /* 绝对定位 */
+    box-shadow: 0 3px 4px #ccc;
+    border-radius: 5px;
+    top: 65px;
+    left: 50%;
+    margin-left: -70px;
+    font-size: 14px;
+}
+
+.user-more-box .triangle{
+    border: solid transparent;
+    border-width: 10px;
+    border-bottom-color: #fff;
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: -20px;
+    margin-left: 60px;
+}
+
+.user-more-box a{
+    text-align: center;
+    height: 44px;
+    color: #6d85ac;
+    display: block;
+    line-height: 44px;
+}
+
+
+
+
+/*********footer样式**********/
+
+.footer{
+    width: 100%;
+    margin-top: 40px;
+    color: #c9c9c9;
+    font-size: 14px;
+}
+
+.footer .footer-1{
+    width: 100%;
+    height: 100px;
+    background: #555e68;
+}
+
+.footer-1 .footer-inner{
+    width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;/*加浮动可以将该盒子高度自动，便于后面直接加数据*/
+}
+
+.footer-inner .login-box{
+    width: 168px;
+    height: 54px;
+    background: url("http://www.xfz.cn/static/build/images/foot-logo.png");
+    background-size: 100%;
+    margin-top: 20px;
+    float: left;
+}
+
+.footer-inner .detail-info-group{
+    float: left;
+    margin-left: 80px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.detail-info-group .top-group{
+    /*background: #ccc;*/
+}
+
+.top-group .links{
+    overflow: hidden;
+    float: left;
+}
+
+.links li{
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-right: 1px solid #c9c9c9;
+}
+
+.links li a{
+    color: #c9c9c9;
+}
+
+.links li:last-of-type{
+    border-right: none;/* 最右边的|去掉 */
+}
+
+.detail-info-group .about-us{
+    float: left;
+    margin-left: 40px;
+}
+
+.about-us .weixin{
+    padding-left: 22px;
+    background-image: url("https://www.bufanbiz.com/static/build/images/wx-icon.png");
+    background-repeat: no-repeat;
+    background-size: 30%;
+}
+
+.about-us .weibo{
+    padding-left: 20px;
+    background-image: url("https://www.bufanbiz.com/static/build/images/xl-icon.png");
+    background-repeat: no-repeat;
+    background-size: 25%;
+}
+
+.detail-info-group .bottom-group{
+    float: left;
+    overflow: hidden;
+}
+
+.bottom-group .adress{
+    float: left;
+}
+
+.bottom-group .contact{
+    float: left;
+    padding-left: 40px;
+}
+
+.footer .footer-2{
+    width: 100%;
+    height: 50px;
+    background: #383e44;
+    text-align: center;
+    line-height: 50px;
+}
+
+/*********footer样式**********/

@@ -1,0 +1,130 @@
+{# 继承cms后台管理的基本模板 #}
+{% extends 'cms/base.html' %}
+
+{# 标题部分 #}
+{% block title %}
+    轮播图管理
+{% endblock %}
+
+{# 头文件部分 #}
+{% block head %}
+{# 将样式写在这里，正常项目应该要建一个css文件导入 #}
+    <style>
+    .button-group{
+        float:left;
+    }
+    .banner-item{
+        width: 800px;
+    }
+    .more-group{
+        padding-left: 20px;
+    }
+    .more-group input{
+        width: 420px;
+    }
+    .image-group{
+        width: 328px;
+        height: 82px;
+    }
+    .image-group img{
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+    {# 引入模板文件 #}
+    <script src="{% static 'js/template-web.js' %}"></script>
+    <script src="{% static 'js/banners.js' %}"></script>
+{% endblock %}
+
+{# 内容标题 #}
+{% block content-header %}
+    <h1>轮播图管理</h1>
+{% endblock %}
+
+{% block content %}
+{# 顶部添加轮播图盒子 #}
+{#<div class="row">#}
+{# 内部盒子占满列 #}
+{#<div class="col-md-12">#}
+{#    <div class="button-group pull-left">#}
+{#        <button class="btn btn-primary" id="add-banner-btn">#}
+{#        <i class="fa fa-plus"></i>#}
+{#            添加轮播图#}
+{#        </button>#}
+{#    </div>#}
+{#</div>#}
+{#    <ul class="tips pull-left">#}
+{#        <li>支持JPG，GIF,PNG格式，最多可上传6张</li>#}
+{#        <li>比例4：1，宽度在800px以上，5M以内</li>#}
+{#    </ul>#}
+{#</div>#}
+
+<div class="row">
+<div class="col-md-12">
+    <div class="button-group pull-left">
+        <button class="btn btn-primary" id="add-banner-btn">
+            <i class="fa fa-plus"></i>
+            添加轮播图
+        </button>
+    </div>
+    <ul class="tips pull-left">
+        <li>支持JPG,GIF,PNG格式，最多可上传6张</li>
+        <li>比例4：1，宽度在800px以上，5M以内</li>
+    </ul>
+</div>
+</div>
+
+{# 下部轮播图的盒子 #}
+<div class="banner-list-group"></div>
+
+<script id="banner-item" type="text/html">
+{% verbatim %}
+{{ if banner }}
+    <div class="box banner-item" data-banner-id="{{ banner.id }}">
+{{ else }}
+    <div class="box banner-item" >
+{{ /if }}
+        <div class="box-header">
+            {{ if banner }}
+                <span class="priority-span">优先级：{{ banner.priority }}</span>
+            {{ else }}
+                <span class="priority-span">优先级：0</span>
+            {{ /if }}
+            <button class="btn btn-default btn-xs pull-right close-btn">
+                <i class="fa fa-close"></i>
+            </button>
+        </div>
+        <div class="box-body">
+            <div class="image-group pull-left">
+                <input type="file" style="display: none;" class="image-select">
+                {{ if banner }}
+                    <img src="{{ banner.image_url }}" alt="" class="banner-image ">
+                {{ else }}
+                    <img src="/static/images/banner.png" alt="" class="banner-image ">
+                {{ /if }}
+            </div>
+            <div class="more-group pull-left">
+                <div class="form-group">
+                    {{ if banner }}
+                        <input type="number" class="form-control" name="priority" placeholder="优先级" value="{{ banner.priority }}">
+                    {{ else }}
+                        <input type="number" class="form-control" name="priority" placeholder="优先级">
+                    {{ /if }}
+                </div>
+                <div class="form-group">
+                    {{ if banner }}
+                        <input type="text" class="form-control" name="link_to" placeholder="跳转链接" value="{{ banner.link_to }}">
+                    {{ else }}
+                        <input type="text" class="form-control" name="link_to" placeholder="跳转链接">
+                    {{ /if }}
+                </div>
+            </div>
+        </div>
+        <div class="box-footer ">
+                <button class="btn btn-primary pull-right save-btn">保存</button>
+            </div>
+    </div>
+{% endverbatim %}
+</script>
+
+{% endblock %}

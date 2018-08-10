@@ -1,0 +1,104 @@
+
+.main-auth-group{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background: #fff;
+    /*background: pink;*/
+}
+
+.main-auth-group .top-group{
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    /*background: pink;*/
+    margin-bottom: 10px;
+}
+
+.main-auth-group .top-group .title{
+    float: left;
+    border-bottom: 3px solid #5b86db;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.main-auth-group .top-group .more-link{
+    color: #5b86db;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+.main-auth-group .input-group{
+    width: 95%;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    /*float: left;*/
+}
+
+.main-auth-group .input-group .from-control{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.main-auth-group .input-group .forget-pwd{
+    float: right;
+    color: #696969;
+}
+
+.main-auth-group .input-group .split-form-control{
+    width: 275px;
+    float: left;
+
+}
+
+.main-auth-group .input-group .input-group-addon{
+    width: 100px;
+    height: 100%;
+    float: right;
+}
+
+.main-auth-group .input-group .img-captcha{
+    width: 100px;
+    height: 100%;
+    float: right;
+    cursor: pointer;
+}
+
+.main-auth-group .input-group .sms-captcha-btn{
+    border: 1px solid #5b86db;
+    color: #5b86db;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.main-auth-group .input-group .disabled{
+    color: #ccc;
+    border: 1px solid #ccc;
+}
+
+.main-auth-group .submit-btn{
+    width: 100%;
+    height: 40px;
+    background: #5b86db;
+    border: none; /* 消除默认的蓝色边框 */
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+

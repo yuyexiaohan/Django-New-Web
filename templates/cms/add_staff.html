@@ -1,0 +1,43 @@
+{% extends 'cms/base.html' %}
+
+{% block title %}
+新增员工
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content-header %}
+<h1>新增员工</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-md-6">
+    <div class="box">
+        <form action="" method="post">
+        {# 解决跨域问题 #}
+        {% csrf_token %}
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="telephone-input">手机号码</label>
+                    <input type="text" class="form-control" name="telephone" placeholder="手机号码">
+                </div>
+                <div class="checkbox">
+                    {% for group in groups %}
+                        <label for="">
+                            <input type="checkbox" name="groups" value="{{ group.pk }}">{{ group.name }}
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="box-footer">
+            <button class="btn btn-primary pull-right">提交</button>
+        </div>
+        </form>
+
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,61 @@
+
+{% extends 'cms/base.html' %}
+
+{% block title %}
+员工管理
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content-header %}
+<h1>员工管理</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-md-12">
+    <div class="box">
+        <div class="box-header">
+            <a href="{% url 'cms:add_staff' %}" class="btn btn-primary pull-right">新增员工</a>
+        </div>
+        <div class="box-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>手机号码</th>
+                        <th>所属分组</th>
+                        <th>员工管理</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for staff in staffs %}
+                    <tr>
+                        <td>{{ staff.username }}</td>
+                        <td>{{ staff.telephone }}</td>
+                        <td>
+                            {% if staff.is_superuser %}
+                                超级管理员
+                            {% else %}
+                                {% for group in staff.groups.all %}
+                                    {{ group.name }}
+                                {% endfor %}
+                            {% endif %}
+                        </td>
+                        <td>
+                            <button class="btn btn-info btn-xs">编辑</button>
+                            <button class="btn btn-danger btn-xs">删除</button>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+        <div class="box-footer"></div>
+    </div>
+</div>
+</div>
+{% endblock %}
