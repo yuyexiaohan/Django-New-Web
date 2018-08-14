@@ -149,10 +149,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 # 七牛云相关的配置,根据七牛云的信息可以修改，这里暂时使用老师的空间，审核过后换回自己的空间信息
-QINIU_ACCESS_KEY = 'AnE70UQaiqokVXUT7v3BGYNAVWo5oey8UA3fEdsD'
-QINIU_SECRET_KEY = 'BIGPCz55HcnTtq3RqDgMfeLUtvwTaBGnVKNs4gyN'
-QINIU_BUCKET_NAME = 'achjiangspace'
-QINIU_DOMAIN = 'http://pbomppzdt.bkt.clouddn.com/'
+QINIU_ACCESS_KEY = ''
+QINIU_SECRET_KEY = ''
+QINIU_BUCKET_NAME = ''
+QINIU_DOMAIN = ''
 
 
 # Ueditor编辑器配置
@@ -173,6 +173,6 @@ ONE_PAGE_NEWS_COUNT = 1
 
 # 百度云的配置
 # 控制台->用户中心->用户ID
-BAIDU_CLOUD_USER_ID = '30d221a3bfbf4a8f9661747affc78446'
+BAIDU_CLOUD_USER_ID = ''
 # 点播VOD->全局设置->发布设置->安全设置->UserKey
-BAIDU_CLOUD_USER_KEY = 'e6ea440183094cdd'
+BAIDU_CLOUD_USER_KEY = ''
