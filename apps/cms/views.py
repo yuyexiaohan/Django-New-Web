@@ -251,9 +251,9 @@ class NewsCategoryViem(View):
 			'''获取各分类数量'''
 			# 方法1：使用len()方法获取长度：
 			# 通过分类名对newses数据进行过滤，用len()获取该分类新闻的数量
-			# nums = len(newses.filter(category__name=category.name))
+			nums = len(newses.filter(category__name=category.name))
 			# 方法2：使用count()方法统计数量：
-			nums = newses.filter(category__name=category.name).count()
+			# nums = newses.filter(category__name=category.name).count()
 			# 将筛选得到的每一个分类及分类数量以键值对的形式存在字典中
 			# 其中将category作为字典键传入html文件是为了后面js文件编辑分类名时取category.id
 			category_nums[category] = nums
