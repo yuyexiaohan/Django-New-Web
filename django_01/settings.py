@@ -57,11 +57,17 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# 根目录的url路径设置
 ROOT_URLCONF = 'django_01.urls'
 
+from django.templatetags import static
+
+# 模板设置
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+
+        # 会在当前项目下的‘templates’文件夹下寻找所有的文件
         'DIRS': [os.path.join (BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
@@ -73,7 +79,8 @@ TEMPLATES = [
                 # auth中的user中有属性.is_authenticated可以判断该用户是否存在
                 'django.contrib.messages.context_processors.messages',
             ],
-            'builtins': ['django.templatetags.static']
+            # 在setting文件中按照如下配置后，在后续的模板中就不用再加载静待模板。省去了所有文件中的这句代码‘{% load static%}’
+            'builtins': ['django.templatetags.static'] # 模板内置标签
         },
     },
 ]
@@ -83,7 +90,7 @@ WSGI_APPLICATION = 'django_01.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
+# 数据库信息配置
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -126,9 +133,9 @@ AUTH_USER_MODEL = 'xfzauth.User'
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-us' # 语言配置
 
-TIME_ZONE = 'Asia/Shanghai'
+TIME_ZONE = 'Asia/Shanghai' # 时区配置
 
 USE_I18N = True
 
@@ -140,11 +147,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+# 静态文件路径配置
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+# 存储文件路径配置
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
