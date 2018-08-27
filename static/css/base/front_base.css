@@ -144,6 +144,8 @@ body{
     margin-top: 40px;
     color: #c9c9c9;
     font-size: 14px;
+    /*padding-bottom: 0px;*/
+    /*position:fixed; bottom:0;*/
 }
 
 .footer .footer-1{
