@@ -104,8 +104,9 @@ $(function () {
 $(function () {
     // window.ue 是将ue这个变量作为全局变量来定义
     window.ue = UE.getEditor('editor',{
-        "initialFrameHeight":400 , // 官方文档中给出前端的高度配置说明
-        'serverUrl':'/ueditor/upload/'
+        // 官方文档中给出前端的高度配置说明
+        "initialFrameHeight":400 , //初始化编辑器宽度
+        'serverUrl':'/ueditor/upload/' // 服务器统一请求接口路径
     });
 });
 

@@ -10,6 +10,8 @@ urlpatterns = [
     path("upload/",views.UploadView.as_view(),name='upload')
 ]
 
+
+#  ?
 if hasattr(settings,"UEDITOR_UPLOAD_PATH"):
     urlpatterns += [
         path("f/<filename>",views.send_file,name='send_file')
