@@ -157,7 +157,7 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
-# 七牛云相关的配置,根据七牛云的信息可以修改，这里暂时使用老师的空间，审核过后换回自己的空间信息
+# 七牛云相关的配置
 QINIU_ACCESS_KEY = ''
 QINIU_SECRET_KEY = ''
 QINIU_BUCKET_NAME = ''
