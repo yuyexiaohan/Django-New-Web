@@ -65,6 +65,7 @@ class NewsList(View):
 		page_obj = paginator.page (page)  # 获取对应分页的数据
 		categories = NewCategory.objects.all ()
 
+		# 通过分页函数返回分页数据，获取每一页的数据
 		pagination_data = self.get_pagination_data(paginator,page_obj)
 
 		'''查询内容组成的查询url是否应该带'''
@@ -104,6 +105,7 @@ class NewsList(View):
 		print(context['url_query']) # 打印测试输出的是否是我们查询内容
 		context.update(pagination_data)
 		return render (request, 'cms/news_list.html', context=context)
+
 	###定义一个分页函数
 	# < 1...5,6,7,8,9...13 >基本模式，即选中页前后留出2页，多出的用...代替。当选择最前或最后前后两页包含或者临近第一页或最后一页，那么取消显示...
 	def get_pagination_data(self,paginator,page_obj,around_count=1):

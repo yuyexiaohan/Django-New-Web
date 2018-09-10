@@ -15,7 +15,7 @@ from django.utils.decorators import method_decorator # 验证登录才能访问�
 
 
 '''课程的视图函数'''
-# @method_decorator(xfz_permission_required(Course),name='dispatch')
+@method_decorator(xfz_permission_required(Course),name='dispatch')
 # @xfz_permission_required
 def course_index(request):
 	context = {
