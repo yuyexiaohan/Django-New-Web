@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/root/.virtualenvs/django_01/bin/python3
 import os
 import sys
 
