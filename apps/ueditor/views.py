@@ -21,7 +21,7 @@ from django.views.decorators.http import require_http_methods
 # 更改工作目录。这么做的目的是七牛qiniu的sdk
 # 在设置缓存路径的时候默认会设置到C:/Windows/System32下面
 # 会造成没有权限创建。
-os.chdir(os.path.dirname(__file__))
+# os.chdir(os.path.dirname(__file__)) # 改变路径，将在服务器中会导致无法导入news/templatetags/news_filters文件无法导入，这里注释掉，影响不大
 try:
     import qiniu
 except:

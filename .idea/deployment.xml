@@ -5,7 +5,7 @@
       <paths name="aly_server">
         <serverdata>
           <mappings>
-            <mapping deploy="/study/django/django_news" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/study/django/django_01" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
