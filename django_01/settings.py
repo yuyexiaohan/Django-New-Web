@@ -23,10 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(!az*nhv-51*ki2f*d1(#m+e(@03-cqy77gtmy=a++2=4@7&fl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True # 调试开关，True是调试模式，Flase是关闭调试模式
+DEBUG = False # 调试开关，True是调试模式，Flase是关闭调试模式
 
 # 两种方式在括号种加*，或者加入该服务器的地址
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1','47.93.8.105']
 # ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
@@ -152,6 +152,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+# 同步到服务器部署时，关闭Debug模式，需要新建一个文件夹
+# 用于收集所有的文件
+
+# STATIC_ROOT = '/static_dist/' # 没有设置路径，会默认存放在根目录下
+STATIC_ROOT = os.path.join(BASE_DIR,'static_dist')
 
 # 存储文件路径配置
 MEDIA_URL = '/media/'
