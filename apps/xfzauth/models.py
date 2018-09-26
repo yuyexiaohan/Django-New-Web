@@ -50,36 +50,40 @@
 
 
 
-# 老师代码
+# t代码
 
 from django.contrib.auth.models import AbstractBaseUser,PermissionsMixin,BaseUserManager
 from django.db import models
 
 class UserManager(BaseUserManager):
-    ''''''
+    '''继承django模型的原有user'''
     def _create_user(self,telephone,username,password,**kwargs):
+        '''#1 创建通用类user'''
         user = self.model(telephone=telephone, username=username, **kwargs)
         user.set_password(password)
         user.save()
         return user
 
     def create_user(self,telephone,username,password,**kwargs):
+        '''user明确身份‘非superuser’'''
         kwargs['is_superuser'] = False
         return self._create_user(telephone,username,password,**kwargs)
 
     def create_superuser(self,telephone,username,password,**kwargs):
+        '''创建超级用户'''
         kwargs['is_superuser'] = True
         return self._create_user(telephone,username,password,**kwargs)
 
 
 class User(AbstractBaseUser,PermissionsMixin):
+    '''user模型'''
     telephone = models.CharField(max_length=11,unique=True)
     username = models.CharField(max_length=100)
     email = models.EmailField(unique=True,null=True)
     is_active = models.BooleanField(default=True)
     gender = models.IntegerField(default=0) # 0:代表未知，1：男，2：女
     date_joined = models.DateTimeField(auto_now_add=True)
-    is_staff = models.BooleanField(default=False)
+    is_staff = models.BooleanField(default=False) # 这里的命名是规定好的，
 
     # USERNAME_FIELD：这个属性是以后在使用authenticate
     # 进行验证的时候的字段
