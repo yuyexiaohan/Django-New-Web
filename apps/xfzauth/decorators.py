@@ -9,6 +9,7 @@ from django.http import Http404
 
 
 def xfz_login_required(func):
+	'''判断用户是否登陆'''
 	def wapper(request,*args,**kwargs):
 		# 判断用户是否登录
 		if request.user.is_authenticated:
@@ -53,7 +54,7 @@ def xfz_superuser_required(viewfunc):
 	return _wrapper
 '''
 
-'''老师代码'''
+'''t代码'''
 def xfz_permission_required(model):
     def decorator(viewfunc):
         @wraps(viewfunc)

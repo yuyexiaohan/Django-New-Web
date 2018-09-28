@@ -35,7 +35,7 @@ class RegisterForm(forms.Form,FormMixin):
 			# ajax前端方式的错误信息提取方式,因为函数validate_data没有返回，所以这种错误返回方式没有用
 			# return restful.params_error(message='两次密码输入不一致！')
 
-			return self.add_error('password1','两次输入密码不一致！')
+			return self.add_error('password1','两次输入密码不一致！') # self.add_error方法是forms中的方法，
 		img_captcha = cleaned_data.get('img_captcha')
 		server_img_captcha = request.session.get('img_captcha')
 		if img_captcha.lower() != server_img_captcha.lower():
@@ -60,7 +60,7 @@ class RegisterForm(forms.Form,FormMixin):
 			return self.add_error('sms_captcha','短信验证码错误！')
 		# 验证用户是否存在
 		telephone = cleaned_data.get('telephone')
-		exists = User.objects.filter(telephone=telephone).exists()
+		exists = User.objects.filter(telephone=telephone).exists() # 判断手机号是否存在，返回一个bool值
 		if exists:
 			# 传统表单方式的错误信息提示
 			# messages.info(request,'该手机号码已经存在！')

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.admin.views.decorators import staff_member_required # 导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
 from django.views.generic import View # 使用类定义函数时，变量需要引入该模块
 from django.views.decorators.http import require_POST,require_GET # 限制函数，只能使用post的请求，才能访问某个函数
 from apps.news.models import NewCategory,News,Banner # 导入对应的数据库表单
@@ -19,7 +19,7 @@ from apps.xfzauth.decorators import xfz_permission_required
 # 定义一个cms管理的视图函数，返回一个cms管理界面
 '''
 # 调用staff_member_required函数来验证staff处的值是否为Ture，不为真就跳转到login_url='...'对应的链接。如果为真则执行后面的函数
-@staff_member_required(login_url='/')
+@staff_member_required(login_url='/') # 这里跳转到首页
 def index(request):
 	category = NewCategory.objects.first ()
 	# 快速增加测试新闻数据
@@ -33,6 +33,7 @@ def index(request):
 
 
 '''定义一个新闻列表管理页面，使用类的方式构建函数便于继承相关的方法'''
+# method_decorator是一个将装饰器函数转换为装饰器方法的，参数1：装饰器，参数2：
 @method_decorator([xfz_permission_required(News)],name='dispatch')
 class NewsList(View):
 	def get(self,request):

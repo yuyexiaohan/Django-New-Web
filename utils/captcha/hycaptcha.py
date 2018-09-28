@@ -66,7 +66,7 @@ class Captcha(object):
                 if tmp > 100 - chance:
                     draw.point((w, h), fill=(0, 0, 0))
 
-    #生成验证码
+    #生成验证码，classmethod是一个将方法转换为类的装饰器
     @classmethod
     def gene_code(cls):
         width,height = cls.size #宽和高

@@ -28,9 +28,9 @@ class LoginView(View):
 			telephone = form.cleaned_data.get("telephone")
 			password = form.cleaned_data.get("password")
 			remember = form.cleaned_data.get("remember")
-			user = authenticate(request,username=telephone,password=password)
+			user = authenticate(request,username=telephone,password=password) # authenticate函数是判断凭证是否有效，有效返回一个user对象
 			if user:
-				login(request,user)
+				login(request,user) # 登陆成功
 				if remember:
 					# 如果设置过期时间位None,那么就会使用默认的过期时间
 			# 默认的过期时间位2个星期，14天
@@ -100,6 +100,7 @@ def logout_view(request):
 
 
 def img_captcha(request):
+	'''图形验证码'''
 	text,image = Captcha.gene_code()
 	# image不是一个HttpResponse可识别对象
 	# 因此先要将image变成一个数据流才能放到HttpResponse上
@@ -116,6 +117,7 @@ def img_captcha(request):
 	return response
 
 def sms_capacha(request):
+	'''短信验证码'''
 	code = Captcha.gene_text()
 	# 获取方式是/account/sms_captcha/?telephone=12345678900
 	telephone = request.GET.get('telephone')
