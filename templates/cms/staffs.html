@@ -2,7 +2,7 @@
 {% extends 'cms/base.html' %}
 
 {% block title %}
-员工管理
+人员管理
 {% endblock %}
 
 {% block head %}
@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content-header %}
-<h1>员工管理</h1>
+<h1>人员管理</h1>
 {% endblock %}
 
 {% block content %}
@@ -18,7 +18,7 @@
 <div class="col-md-12">
     <div class="box">
         <div class="box-header">
-            <a href="{% url 'cms:add_staff' %}" class="btn btn-primary pull-right">新增员工</a>
+            <a href="{% url 'cms:add_staff' %}" class="btn btn-primary pull-right">新增人员</a>
         </div>
         <div class="box-body">
             <table class="table table-bordered">
@@ -27,7 +27,7 @@
                         <th>用户名</th>
                         <th>手机号码</th>
                         <th>所属分组</th>
-                        <th>员工管理</th>
+                        <th>人员管理</th>
                     </tr>
                 </thead>
                 <tbody>

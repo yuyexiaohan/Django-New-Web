@@ -7,11 +7,11 @@
 {% endblock %}
 
 {% block title %}
-    发布课程
+    发布想法
 {% endblock %}
 
 {% block content-header %}
-    <h1>发布课程</h1>
+    <h1>发布想法</h1>
 {% endblock %}
 
 {% block content %}
@@ -27,7 +27,7 @@
                     <input type="text" class="form-control" name="title" placeholder="标题" id="title-input">
                 </div>
                 <div class="form-group">
-                    <label for="category-select">课程分类：</label>
+                    <label for="category-select">想法分类：</label>
                     <select name="category" id="category-select" class="form-control">
                         {% for category in categories %}
                             <option value="{{ category.pk }}">{{ category.name }}</option>

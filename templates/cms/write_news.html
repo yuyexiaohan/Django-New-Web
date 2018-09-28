@@ -2,9 +2,9 @@
 
 {% block title %}
     {% if news %}
-        编辑新闻-{{ news.title }}
+        编辑文章-{{ news.title }}
     {% else %}
-        发布新闻
+        发布文章
     {% endif %}
 {% endblock %}
 
@@ -18,9 +18,9 @@
 
 {% block content-header %}
     {% if news %}
-        <h1>编辑新闻</h1>
+        <h1>编辑文章</h1>
     {% else %}
-        <h1>发布新闻</h1>
+        <h1>发布文章</h1>
     {% endif %}
 
 {% endblock %}

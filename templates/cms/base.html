@@ -31,7 +31,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>CMS</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg">后台管理系统</span>
+            <span class="logo-lg">后台管理</span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -93,24 +93,24 @@
                 </li>
                 {# 根据用户权限显示对应的页面 #}
                 {% if perms.news.change_news %}
-                    <li class="header">新闻管理</li>
+                    <li class="header">文章管理</li>
                     <li>
                         <a href="{% url 'cms:news_list' %}">
                             <i class="fa fa-list">
-                                <span>新闻管理</span>
+                                <span>文章管理</span>
                             </i>
                         </a>
                     </li>
                     <li>
                         <a href="{% url 'cms:write_news' %}">
                             <i class="fa fa-edit"></i>
-                            <span>发布新闻</span>
+                            <span>发布文章</span>
                         </a>
                     </li>
                     <li>
                         <a href="{% url 'cms:news_category' %}">
                             <i class="fa fa-tag"></i>
-                            <span>新闻分类</span>
+                            <span>文章分类</span>
                         </a>
                     </li>
                     <li>
@@ -122,19 +122,19 @@
                     </li>
                 {% endif %}
                 {% if perms.course.change_course %}
-                    <li class="header">课程管理</li>
+                    <li class="header">奇思妙想管理</li>
                     <li><a href="{% url 'cms:pub_course' %}">
                     <i class="fa fa-tv">
-                        <span>发布课程</span>
+                        <span>发布妙想</span>
                     </i>
                 </a></li>
                 {% endif %}
                 {% if user.is_superuser %}
-                    <li class="header">员工管理</li>
+                    <li class="header">人员管理</li>
                     <li>
                     <a href="{% url 'cms:staffs' %}">
                         <i class="fa fa-group"></i>
-                        <span>员工管理</span>
+                        <span>人员管理</span>
                     </a>
                 </li>
                 {% endif %}
@@ -153,7 +153,7 @@
     </div>
 
     <footer class="main-footer">
-        CMS后台管理系统
+        CMS后台管理
     </footer>
 </div>
 </body>
