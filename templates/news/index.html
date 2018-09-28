@@ -3,7 +3,7 @@
 {% load news_filters %}
 {# 加载时间过滤器，用于页面时间的显示样式 #}
 {% block title %}
-    首页
+    achjiang博客首页
 {% endblock %}
 
 {% block head %}
@@ -113,7 +113,7 @@
             <div class="list-outer-group">
                 <ul class="list-tab-group">
 {#  class="active" 是默认选中状态   #}
-                    <li class="active" data-category-id="0"><a href="javascript:void (0);">最新资讯</a></li>
+                    <li class="active" data-category-id="0"><a href="javascript:void (0);">最新文章</a></li>
                     {% for category in categories  %}
                         <li data-category-id="{{ category.pk }}"><a href="javascript:void (0);">{{ category.name }}</a></li>
                     {% endfor %}
