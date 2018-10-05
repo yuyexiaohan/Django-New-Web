@@ -93,6 +93,7 @@ if UEDITOR_UPLOAD_TO_QINIU:
 
 @method_decorator([csrf_exempt,require_http_methods(['GET','POST'])],name='dispatch')
 class UploadView(View):
+    '''编辑器文件上传视图函数'''
     def __init__(self):
         super(UploadView, self).__init__()
 
@@ -194,6 +195,7 @@ class UploadView(View):
 
     def dispatch(self, request, *args, **kwargs):
         super(UploadView, self).dispatch(request,*args,**kwargs)
+        # 判断form表单上传的action情况
         action = request.GET.get('action')
         if action == 'config':
             return self._action_config()

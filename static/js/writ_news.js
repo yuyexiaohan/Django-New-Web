@@ -141,7 +141,9 @@ $(function () {
 
             'success':function (result) {
                 if (result['code'] === 200){
+
                     xfzalert.alertSuccess('新闻发布成功！',function () {
+                        url = '/cms/news_list/';
                         window.location.reload(); // 重新加载当前界面
 
                     });

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,reverse
 from django.contrib.admin.views.decorators import staff_member_required # 导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
 from django.views.generic import View # 使用类定义函数时，变量需要引入该模块
 from django.views.decorators.http import require_POST,require_GET # 限制函数，只能使用post的请求，才能访问某个函数
@@ -180,6 +180,7 @@ class WriteNewsView(View):
 			return restful.ok()
 		else:
 			return restful.params_error(message=form.get_error())
+		return redirect(reverse('news_list'))
 '''
 	# dispatch函数解释,当把装饰器命名未dispatch方法时，它就会对请求进行判断，如果时get请求，就调用get函数；如果请求时post请求时，
 	就调用post请求。这样装饰器就可以把两种请求都涉及到
