@@ -1,18 +1,22 @@
-from django.shortcuts import render,redirect,reverse
-from django.contrib.admin.views.decorators import staff_member_required # 导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
-from django.views.generic import View # 使用类定义函数时，变量需要引入该模块
-from django.views.decorators.http import require_POST,require_GET # 限制函数，只能使用post的请求，才能访问某个函数
-from apps.news.models import NewCategory,News,Banner # 导入对应的数据库表单
+#  coding=utf-8
+from django.shortcuts import render, redirect, reverse
+from django.contrib.admin.views.decorators import staff_member_required
+#  导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
+from django.views.generic import View  # 使用类定义函数时，变量需要引入该模块
+from django.views.decorators.http import require_POST, require_GET  # 限制函数，只能使用post的请求，才能访问某个函数
+from apps.news.models import NewCategory, News, Banner   # 导入对应的数据库表单
 from utils import restful  # 引入自定义的浏览器返回的错误信息文件
-from .forms import EditNewsCategoryForm,WriteNewsForm,AddBanner,EditBannerForm,EditNewsForm # 导入对应的forms表单，用于与数据库表单数据关联
+from .forms import EditNewsCategoryForm, WriteNewsForm, AddBanner, EditBannerForm, EditNewsForm
+# 导入对应的forms表单，用于与数据库表单数据关联
 from django.conf import settings
-import os,qiniu
-from django.contrib.auth.decorators import login_required # 导入登录验证函数
-from django.utils.decorators import method_decorator # 验证登录才能访问函数的装饰器
+import os
+import qiniu
+from django.contrib.auth.decorators import login_required  # 导入登录验证函数
+from django.utils.decorators import method_decorator  # 验证登录才能访问函数的装饰器
 from django.core.paginator import Paginator
-from datetime import datetime # 获取时间参数模块
-from urllib import parse # 导入url函数
-from django.contrib.auth.decorators import permission_required # 可以在该模块后给出一个条件，这样就可以要求对应的权限
+from datetime import datetime  # 获取时间参数模块
+from urllib import parse  # 导入url函数
+from django.contrib.auth.decorators import permission_required  # 可以在该模块后给出一个条件，这样就可以要求对应的权限
 from apps.xfzauth.decorators import xfz_permission_required
 
 '''
@@ -21,7 +25,7 @@ from apps.xfzauth.decorators import xfz_permission_required
 # 调用staff_member_required函数来验证staff处的值是否为Ture，不为真就跳转到login_url='...'对应的链接。如果为真则执行后面的函数
 @staff_member_required(login_url='/') # 这里跳转到首页
 def index(request):
-	category = NewCategory.objects.first ()
+	# category = NewCategory.objects.first ()
 	# 快速增加测试新闻数据
 	# for i in range(20):
 	# 	title = '标题%s'%i
@@ -29,27 +33,27 @@ def index(request):
 	# 	desc = '描述信息%s'%i
 	# 	thumbnail = '描述信息%s'%i
 	# 	News.objects.create(title=title,content=content,desc=desc,thumbnail=thumbnail,category=category,author=request.user)
-	return render(request,'cms/index.html')
+	return render(request, 'cms/index.html')
 
 
 '''定义一个新闻列表管理页面，使用类的方式构建函数便于继承相关的方法'''
 # method_decorator是一个将装饰器函数转换为装饰器方法的，参数1：装饰器，参数2：
-@method_decorator([xfz_permission_required(News)],name='dispatch')
+@method_decorator([xfz_permission_required(News)], name='dispatch')
 class NewsList(View):
 	def get(self,request):
 		page = int (request.GET.get ('p', 1))  # 获取当前所在页数
 		start = request.GET.get('start') # 通过前端的标签名获取值
 		end = request.GET.get('end')
 		title = request.GET.get('title')
-		category_id = int(request.GET.get('category',0))
+		category_id = int(request.GET.get('category', 0))
 
 		# newses = News.objects.select_related ('category', 'author').all () # 获取所有新闻分类及作者
 		newses = News.objects.select_related ('category', 'author')
 
 		# 过滤出指定时间内的新闻
 		if start and end:
-			start_date = datetime.strptime(start,'%Y/%m/%d')
-			end_date = datetime.strptime(end,'%Y/%m/%d')
+			start_date = datetime.strptime(start, '%Y/%m/%d')
+			end_date = datetime.strptime(end, '%Y/%m/%d')
 			newses = newses.filter(pub_time__range=(start_date,end_date))
 
 		# 过滤标题中包含指定关键字的新闻
@@ -177,10 +181,11 @@ class WriteNewsView(View):
 			category_id = form.cleaned_data.get('category') # 获取分类id,因为是通过外键获取的id,需要通过NewCategory来获取实际分类名称
 			category = NewCategory.objects.get(pk=category_id) # 获取分类名
 			News.objects.create(title=title,desc=desc,thumbnail=thumbnail,content=content,category=category,author=request.user)
-			return restful.ok()
+			return restful.ok() and redirect(reverse('cms:news_list'))
 		else:
 			return restful.params_error(message=form.get_error())
-		return redirect(reverse('news_list'))
+
+
 '''
 	# dispatch函数解释,当把装饰器命名未dispatch方法时，它就会对请求进行判断，如果时get请求，就调用get函数；如果请求时post请求时，
 	就调用post请求。这样装饰器就可以把两种请求都涉及到
@@ -234,8 +239,6 @@ def delete_news(request):
 	pk = request.POST.get('pk')
 	News.objects.filter(pk=pk).delete()
 	return restful.ok()
-
-
 
 '''
 # 定义一个分类函数，返回一个分类函数的模板，返回一个分类页界面
