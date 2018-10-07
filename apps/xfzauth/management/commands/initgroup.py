@@ -1,5 +1,4 @@
-#encoding:utf-8
-
+# encoding:utf-8
 from django.core.management.base import BaseCommand
 from django.contrib.auth.models import Group,Permission,ContentType
 # ContentType:用来将模型和app进行关联
@@ -9,6 +8,7 @@ from apps.payinfo.models import PayinfoOrder,Payinfo
 
 
 class Command(BaseCommand):
+	"""权限管理"""
 	def handle(self, *args, **options):
 		# 编辑组/财务组/管理组/超级管理员
 		# python manage.py initgroup
@@ -39,12 +39,9 @@ class Command(BaseCommand):
 		# 将查找后财务相关的内容创建进去
 		financeGroup.permissions.set(finance_permissions)
 
-
 		# 3. 创建管理员的分组：拥有财务和编辑人员的权限
-		admin_permissions = edit_permissions.union(finance_permissions) # union将两者权限合二为一
+		admin_permissions = edit_permissions.union(finance_permissions)  # union将两者权限合二为一
 		adminGroup = Group.objects.create(name='管理员')
 		adminGroup.permissions.set(admin_permissions)
 
-
 		self.stdout.write(self.style.SUCCESS("初始化分组已经添加成功！"))
-
