@@ -1,19 +1,20 @@
-from django.views.generic import View # 使用类方法定义视图函数引入的View模块
+from django.views.generic import View  # 使用类方法定义视图函数引入的View模块
 from django.shortcuts import render
-from apps.course.models import CourseCategory,Teacher,Course
-from .forms import AddCourseForm # 导入需要的form表单
-from utils import restful # 导入返回信息判断文件
+from apps.course.models import CourseCategory, Teacher, Course
+from .forms import AddCourseForm  # 导入需要的form表单
+from utils import restful  # 导入返回信息判断文件
 
-'''定义一个发布课程的视图函数'''
+
 class PubCourse(View):
-	def  get(self,request):
+	"""发布课程"""
+	def  get(self, request):
 		context = {
-			'categories':CourseCategory.objects.all(),
-			'teachers':Teacher.objects.all()
+			'categories': CourseCategory.objects.all(),
+			'teachers': Teacher.objects.all()
 		}
-		return render(request,'cms/pub_course.html',context=context)
+		return render(request, 'cms/pub_course.html', context=context)
 
-	def post(self,request):
+	def post(self, request):
 		form = AddCourseForm(request.POST)
 		if form.is_valid():
 			# 从form表单中获取数据赋值给model中定义的变量
@@ -32,15 +33,14 @@ class PubCourse(View):
 			# 将以上整理的数据写入数据库的Course模型
 			Course.objects.create(
 				title=title,
-				category = category,
-				teacher = teacher,
-				video_url = video_url,
-				cover_url = cover_url,
-				price = price,
-				duration = duration,
-				profile = profile
+				category=category,
+				teacher=teacher,
+				video_url=video_url,
+				cover_url=cover_url,
+				price=price,
+				duration=duration,
+				profile=profile
 			)
-
 			return restful.ok()
 		else:
 			return restful.params_error(form.get_error())
