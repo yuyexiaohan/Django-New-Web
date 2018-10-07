@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apps/cms/course_views.py" afterPath="$PROJECT_DIR$/apps/cms/course_views.py" />
+      <change beforePath="$PROJECT_DIR$/apps/cms/views.py" afterPath="$PROJECT_DIR$/apps/cms/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,13 +32,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="187" column="56" lean-forward="false" selection-start-line="187" selection-start-column="56" selection-end-line="187" selection-end-column="56" />
+            <state relative-caret-position="-1832">
+              <caret line="385" column="61" lean-forward="true" selection-start-line="385" selection-start-column="61" selection-end-line="385" selection-end-column="61" />
               <folding>
-                <element signature="e#16#70#0" expanded="true" />
+                <element signature="e#15#69#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course_views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="course_views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/cms/course_views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
@@ -198,9 +198,9 @@
         <option value="$PROJECT_DIR$/templates/base/front_base.html" />
         <option value="$PROJECT_DIR$/templates/cms/base.html" />
         <option value="$PROJECT_DIR$/static/js/writ_news.js" />
-        <option value="$PROJECT_DIR$/apps/cms/views.py" />
         <option value="$PROJECT_DIR$/apps/cms/staff_views.py" />
         <option value="$PROJECT_DIR$/apps/cms/course_views.py" />
+        <option value="$PROJECT_DIR$/apps/cms/views.py" />
       </list>
     </option>
   </component>
@@ -561,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1538875911312</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Change the code format according to PEP8">
+      <created>1538876182058</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1538876182058</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1027,16 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="187" column="56" lean-forward="false" selection-start-line="187" selection-start-column="56" selection-end-line="187" selection-end-column="56" />
-          <folding>
-            <element signature="e#16#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1069,6 +1066,16 @@
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1832">
+          <caret line="385" column="61" lean-forward="true" selection-start-line="385" selection-start-column="61" selection-end-line="385" selection-end-column="61" />
+          <folding>
+            <element signature="e#15#69#0" expanded="true" />
           </folding>
         </state>
       </provider>

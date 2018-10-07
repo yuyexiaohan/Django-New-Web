@@ -1,4 +1,4 @@
-#  coding=utf-8
+# coding=utf-8
 from django.shortcuts import render, redirect, reverse
 from django.contrib.admin.views.decorators import staff_member_required
 #  导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
