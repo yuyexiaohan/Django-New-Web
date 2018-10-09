@@ -13,7 +13,7 @@ import os
 import qiniu
 from django.contrib.auth.decorators import login_required  # 导入登录验证函数
 from django.utils.decorators import method_decorator  # 验证登录才能访问函数的装饰器
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator  # django自带分页处理
 from datetime import datetime  # 获取时间参数模块
 from urllib import parse  # 导入url函数
 from django.contrib.auth.decorators import permission_required  # 可以在该模块后给出一个条件，这样就可以要求对应的权限
@@ -116,6 +116,7 @@ class NewsList(View):
 	# < 1...5,6,7,8,9...13 >基本模式，即选中页前后留出2页，多出的用...代替。当选择最前或最后前后两页包含或者临近第一页或最后一页，那么取消显示...
 
 	def get_pagination_data(self, paginator, page_obj, around_count=1):
+		"""分页功能"""
 		current_page = page_obj.number  # 获取当前页码
 		num_pages = paginator.num_pages
 
