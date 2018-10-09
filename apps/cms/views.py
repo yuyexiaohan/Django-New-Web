@@ -19,6 +19,7 @@ from urllib import parse  # 导入url函数
 from django.contrib.auth.decorators import permission_required  # 可以在该模块后给出一个条件，这样就可以要求对应的权限
 from apps.xfzauth.decorators import xfz_permission_required
 
+
 '''
 # 定义一个cms管理的视图函数，返回一个cms管理界面
 '''
@@ -304,7 +305,8 @@ def edit_news_category(request):
 		try:
 			NewCategory.objects.filter(pk=pk).update(name=name)
 			return restful.ok()
-		except:
+		except NotImplemented as e:
+			print(e)
 			return restful.params_error(message='这个分类不存在！')
 	else:
 		return restful.params_error(message=form.get_error())
@@ -381,7 +383,7 @@ def edit_banner(request):
 		link_to = form.cleaned_data.get('link_to')
 		priority = form.cleaned_data.get('priority')
 		# 将表单中获取的参数写入数据库创建的对应的表单中
-		banner = Banner.objects.filter(pk=pk).update(image_url=image_url, link_to=link_to, priority=priority)  # 数据库查找并更新
+		Banner.objects.filter(pk=pk).update(image_url=image_url, link_to=link_to, priority=priority)  # 数据库查找并更新
 		return restful.ok()
 	else:
 		return restful.params_error(message=form.get_error())
