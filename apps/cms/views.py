@@ -411,7 +411,7 @@ def upload_file(request):
 		# / media / 代码框架.png
 		# http://127.0.0.1:9000/media/代码框架.png
 		# 不讲url写死，自动获取url 其中request.build_absolute_uri()可以获取前面的所有链接，我们只需要将"settings.MEDIA_URL+name"后面的路径加入即可组成一个完整的url
-		url = request.build_absolute_uri(settings.MEDIA_URL+name)
+		url = request.build_absolute_uri(settings.MEDIA_URL + name)
 		return restful.result(data={"url": url})
 
 
