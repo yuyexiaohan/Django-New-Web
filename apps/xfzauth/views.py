@@ -119,6 +119,7 @@ def img_captcha(request):
 def sms_capacha(request):
 	'''短信验证码'''
 	code = Captcha.gene_text()
+	print('code:',code)
 	# 获取方式是/account/sms_captcha/?telephone=12345678900
 	telephone = request.GET.get('telephone')
 	result = aliyun.send_sms(telephone,code=code)
