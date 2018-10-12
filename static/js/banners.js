@@ -31,6 +31,8 @@ function addCloseBannerEvent(bannerItem) {
                     });
                 }
             });
+        }else{
+            bannerItem.remove();
         }
 
     });
