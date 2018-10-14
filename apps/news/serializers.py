@@ -1,25 +1,29 @@
 #  定义序列化,将一个模型序列化为一个json字段
 from rest_framework import serializers
-from .models import News,NewCategory,Comment
+from .models import News, NewCategory, Comment
 from apps.xfzauth.serializers import UserSerizlizer
 
-class NewsCategorySerizlizer(serializers.ModelSerializer):
+
+class NewsCategorySerizlizer(serializers. ModelSerializer):
+	"""新闻分类序列化"""
+
 	class Meta:
 		model = NewCategory
-		fields = ('id','name')
+		fields = ('id', 'name')
 
 
-
-class NewsSerializer(serializers.ModelSerializer):
-	category = NewsCategorySerizlizer() # 当使用到到category时，会从NewsCategorySerizlizer类中获取
+class NewsSerializer(serializers. ModelSerializer):
+	category = NewsCategorySerizlizer()   # 当使用到到category时，会从NewsCategorySerizlizer类中获取
 	author = UserSerizlizer()
+
 	class Meta:
 		model = News
-		fields = ('id','title','desc','thumbnail','pub_time','category','author')
+		fields = ('id', 'title', 'desc', 'thumbnail', 'pub_time', 'category', 'author')
 
 
-class CommentSerializer(serializers.ModelSerializer):
+class CommentSerializer(serializers. ModelSerializer):
 	author = UserSerizlizer()
+
 	class Meta:
 		model = Comment
-		fields = ('id','content','author','pub_time')
+		fields = ('id', 'content', 'author', 'pub_time')
