@@ -57,7 +57,8 @@ $(function () {
     function complete(response) {
         // 内部含有两个值，一个是哈希值，一个是类名
         var key = response.key;
-        var domain = 'http://pbomppzdt.bkt.clouddn.com/'; // 七牛云给出存储空间的外链，可以根据使用七牛云空间的不同进行更改
+        var domain = 'http://pgqn7rl1m.bkt.clouddn.com/';
+        // 七牛云给出存储空间的外链，可以根据使用七牛云空间的不同进行更改
         var url = domain + key;
         var thumbnailInput = $("input[name='thumbnail']");
         thumbnailInput.val(url);
