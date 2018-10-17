@@ -24,13 +24,13 @@ SECRET_KEY = '(!az*nhv-51*ki2f*d1(#m+e(@03-cqy77gtmy=a++2=4@7&fl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False # 调试开关，True是调试模式，Flase是关闭调试模式
-DEBUG = True # 调试开关，True是调试模式，Flase是关闭调试模式
+
+DEBUG = True  # 调试开关，True是调试模式，Flase是关闭调试模式
 
 # 两种方式在括号种加*，或者加入该服务器的地址
 ALLOWED_HOSTS = ['*']
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -46,12 +46,12 @@ INSTALLED_APPS = [
     'rest_framework'
 ]
 
-
+# 中间键，针对所有的app有效,可以方便批量修改处理时使用
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',  # 跨域{% csrf_token %}
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -60,16 +60,14 @@ MIDDLEWARE = [
 # 根目录的url路径设置
 ROOT_URLCONF = 'django_01.urls'
 
-from django.templatetags import static
+# from django.templatetags import static
 
 # 模板设置
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-
         # 会在当前项目下的‘templates’文件夹下寻找所有的文件
-        'DIRS': [os.path.join (BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +78,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
             ],
             # 在setting文件中按照如下配置后，在后续的模板中就不用再加载静待模板。省去了所有文件中的这句代码‘{% load static%}’
-            'builtins': ['django.templatetags.static'] # 模板内置标签
+            'builtins': ['django.templatetags.static']  # 模板内置标签
         },
     },
 ]
@@ -94,11 +92,11 @@ WSGI_APPLICATION = 'django_01.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'mydb',
-        'USER':'root',
-        'PASSWORD':'QAZwsx1992,.',
-        'HOST':'127.0.0.1',
-        'POST':'3306',
+        'NAME': 'mydb',
+        'USER': 'root',
+        'PASSWORD': 'QAZwsx1992,.',
+        'HOST': '127.0.0.1',
+        'POST': '3306',
 
     }
 }
@@ -133,9 +131,9 @@ AUTH_USER_MODEL = 'xfzauth.User'
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us' # 语言配置
+LANGUAGE_CODE = 'zh-Hans'  # 语言配置'zh-Hans'/'en-us'
 
-TIME_ZONE = 'Asia/Shanghai' # 时区配置
+TIME_ZONE = 'Asia/Shanghai'  # 时区配置
 
 USE_I18N = True
 
@@ -149,9 +147,9 @@ USE_TZ = True
 
 # 静态文件路径配置
 STATIC_URL = '/static/'
-#STATICFILES_DIRS = [
+# STATICFILES_DIRS = [
 #    os.path.join(BASE_DIR, 'static')
-#]
+# ]
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -159,13 +157,12 @@ STATICFILES_DIRS = (
 
 # 同步到服务器部署时，关闭Debug模式，需要新建一个文件夹
 # 用于收集所有的文件
-
 # STATIC_ROOT = '/static_dist/' # 没有设置路径，会默认存放在根目录下
-STATIC_ROOT = os.path.join(BASE_DIR,'static_dist')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 
 # 存储文件路径配置
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # 七牛云相关的配置
 QINIU_ACCESS_KEY = ''
@@ -178,7 +175,7 @@ QINIU_DOMAIN = ''
 # 上传服务器配置
 UEDITOR_UPLOAD_TO_SERVER = True
 UEDITOR_UPLOAD_PATH = MEDIA_ROOT
-UEDITOR_CONFIG_PATH = os.path.join(BASE_DIR,'static','ueditor','config.json')
+UEDITOR_CONFIG_PATH = os.path.join(BASE_DIR, 'static', 'ueditor', 'config.json')
 
 # 上传七牛云配置
 UEDITOR_QINIU_ACCESS_KEY = QINIU_ACCESS_KEY
