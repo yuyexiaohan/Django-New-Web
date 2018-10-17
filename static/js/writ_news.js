@@ -155,7 +155,7 @@ $(function () {
 
 
 /*
-// 老师代码
+// t
 $(function () {
     // progressGroup：用来控制整个进度条是否需要显示的
     var progressGroup = $("#progress-group");
