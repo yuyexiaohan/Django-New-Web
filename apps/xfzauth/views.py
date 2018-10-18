@@ -43,7 +43,8 @@ class LoginView(View):
 					request.session.set_expiry(0)
 				# 如果登陆成功，就返回首页
 				print("验证登录成功！")
-				return redirect(reverse('news: index'))
+				# return redirect(reverse('news: index'))
+				return redirect('/')
 			else:
 				print("用户名或密码错误！", '电话 ：%s' % telephone, '密码 ：%s' % password)
 				messages.info(request, "用户名或密码错误！")
