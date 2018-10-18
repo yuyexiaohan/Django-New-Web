@@ -1,5 +1,4 @@
-''' cms中新闻发布的文本编辑器后端代码 '''
-#encoding: utf-8
+# encoding: utf-8
 import json
 import re
 import string
@@ -18,13 +17,15 @@ from django.http import FileResponse
 from django.views.generic import View
 from django.utils.decorators import method_decorator
 from django.views.decorators.http import require_http_methods
+''' cms中新闻发布的文本编辑器后端代码 '''
 # 更改工作目录。这么做的目的是七牛qiniu的sdk
 # 在设置缓存路径的时候默认会设置到C:/Windows/System32下面
 # 会造成没有权限创建。
-# os.chdir(os.path.dirname(__file__)) # 改变路径，将在服务器中会导致无法导入news/templatetags/news_filters文件无法导入，这里注释掉，影响不大
+# os.chdir(os.path.dirname(__file__)) #
+# 改变路径，将在服务器中会导致无法导入news/templatetags/news_filters文件无法导入，这里注释掉，影响不大
 try:
     import qiniu
-except:
+except BaseException:
     pass
 from io import BytesIO
 
@@ -56,25 +57,26 @@ try:
         UEDITOR_UPLOAD_PATH = settings.UEDITOR_UPLOAD_PATH
         if not os.path.exists(UEDITOR_UPLOAD_PATH):
             os.mkdir(UEDITOR_UPLOAD_PATH)
-except:
+except BaseException:
     pass
 
 
 # 用来判断是否要将文件上传到七牛
 try:
     UEDITOR_UPLOAD_TO_QINIU = settings.UEDITOR_UPLOAD_TO_QINIU
-except:
+except BaseException:
     pass
 
 # 如果既没有配置上传到本地，又没有配置上传到七牛，那么就抛出异常
 if not UEDITOR_UPLOAD_PATH and not UEDITOR_UPLOAD_TO_QINIU:
-    raise RuntimeError("UEditor的UEDITOR_UPLOAD_TO_SERVER或者UEDITOR_UPLOAD_TO_QINIU必须配置一项！")
+    raise RuntimeError(
+        "UEditor的UEDITOR_UPLOAD_TO_SERVER或者UEDITOR_UPLOAD_TO_QINIU必须配置一项！")
 
 
 # 判断是否配置了config.json文件的路径
 try:
     UEDITOR_CONFIG_PATH = settings.UEDITOR_CONFIG_PATH
-except:
+except BaseException:
     raise RuntimeError("请配置UEditor的配置文件的路径！")
 
 
@@ -87,17 +89,18 @@ if UEDITOR_UPLOAD_TO_QINIU:
         UEDITOR_QINIU_DOMAIN = settings.UEDITOR_QINIU_DOMAIN
     except Exception as e:
         option = e.args[0]
-        raise RuntimeError('请在app.config中配置%s！'%option)
+        raise RuntimeError('请在app.config中配置%s！' % option)
 
 
-
-@method_decorator([csrf_exempt,require_http_methods(['GET','POST'])],name='dispatch')
+@method_decorator([csrf_exempt, require_http_methods(
+    ['GET', 'POST'])], name='dispatch')
 class UploadView(View):
     '''编辑器文件上传视图函数'''
+
     def __init__(self):
         super(UploadView, self).__init__()
 
-    def _random_filename(self,rawfilename):
+    def _random_filename(self, rawfilename):
         """
         随机的文件名，保证文件名称不会冲突
         """
@@ -107,7 +110,7 @@ class UploadView(View):
         subffix = os.path.splitext(rawfilename)[-1]
         return filename + subffix
 
-    def _json_result(self,state='', url='', title='', original=''):
+    def _json_result(self, state='', url='', title='', original=''):
         """
         返回指定格式的json数据的
         """
@@ -119,7 +122,7 @@ class UploadView(View):
         }
         return JsonResponse(result)
 
-    def _upload_to_qiniu(self,upfile,filename):
+    def _upload_to_qiniu(self, upfile, filename):
         """
         #1.上传文件到七牛
         """
@@ -136,10 +139,9 @@ class UploadView(View):
             url = parse.urljoin(UEDITOR_QINIU_DOMAIN, ret['key'])
             return 'SUCCESS', url, ret['key'], ret['key']
         else:
-            return 'FAIL',None,None,None
+            return 'FAIL', None, None, None
 
-
-    def _upload_to_server(self,upfile,filename):
+    def _upload_to_server(self, upfile, filename):
         """
         #2.上传文件到自己的服务器
         """
@@ -148,7 +150,6 @@ class UploadView(View):
                 fp.write(chunk)
         url = reverse("ueditor:send_file", kwargs={"filename": filename})
         return 'SUCCESS', url, filename, filename
-
 
     def _action_config(self):
         """
@@ -159,7 +160,7 @@ class UploadView(View):
             result = json.loads(re.sub(r'\/\*.*\*\/', '', fp.read()))
             return JsonResponse(result)
 
-    def _action_upload(self,request):
+    def _action_upload(self, request):
         """
         处理文件（图片，视频，普通文件）上传
         """
@@ -170,10 +171,10 @@ class UploadView(View):
         server_result = None
 
         if UEDITOR_UPLOAD_TO_QINIU:
-            qiniu_result = self._upload_to_qiniu(upfile,filename)
+            qiniu_result = self._upload_to_qiniu(upfile, filename)
 
         if UEDITOR_UPLOAD_TO_SERVER:
-            server_result = self._upload_to_server(upfile,filename)
+            server_result = self._upload_to_server(upfile, filename)
 
         if qiniu_result and qiniu_result[0] == 'SUCCESS':
             return self._json_result(*qiniu_result)
@@ -182,8 +183,7 @@ class UploadView(View):
         else:
             return self._json_result()
 
-
-    def _action_scrawl(self,request):
+    def _action_scrawl(self, request):
         base64data = request.form.get("upfile")
         img = base64.b64decode(base64data)
         filename = self._random_filename('xx.png')
@@ -192,14 +192,13 @@ class UploadView(View):
         url = reverse('ueditor:send_file', kwargs={"filename": filename})
         return self._json_result('SUCCESS', url, filename, filename)
 
-
     def dispatch(self, request, *args, **kwargs):
-        super(UploadView, self).dispatch(request,*args,**kwargs)
+        super(UploadView, self).dispatch(request, *args, **kwargs)
         # 判断form表单上传的action情况
         action = request.GET.get('action')
         if action == 'config':
             return self._action_config()
-        elif action in ['uploadimage','uploadvideo','uploadfile']:
+        elif action in ['uploadimage', 'uploadvideo', 'uploadfile']:
             return self._action_upload(request)
         elif action == 'uploadscrawl':
             return self._action_scrawl(request)
@@ -207,9 +206,8 @@ class UploadView(View):
             return self._json_result()
 
 
-
-def send_file(request,filename):
-    fp = open(os.path.join(UEDITOR_UPLOAD_PATH,filename),'rb')
+def send_file(request, filename):
+    fp = open(os.path.join(UEDITOR_UPLOAD_PATH, filename), 'rb')
     response = FileResponse(fp)
     response['Content-Type'] = "application/octet-stream"
     return response

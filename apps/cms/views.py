@@ -429,7 +429,7 @@ def qntoken(request):
 
 	q = qiniu.Auth(access_key, secretkey)
 
-	bucket = 'achjiangspace'  # 可修改，七牛云中创建的存储空间
+	bucket = 'news1'  # 可修改，七牛云中创建的存储空间
 
 	token = q.upload_token(bucket)
 

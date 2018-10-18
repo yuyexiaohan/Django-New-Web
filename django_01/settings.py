@@ -77,7 +77,8 @@ TEMPLATES = [
                 # auth中的user中有属性.is_authenticated可以判断该用户是否存在
                 'django.contrib.messages.context_processors.messages',
             ],
-            # 在setting文件中按照如下配置后，在后续的模板中就不用再加载静待模板。省去了所有文件中的这句代码‘{% load static%}’
+            # 在setting文件中按照如下配置后，在后续的模板中就不用再加载静待模板。省去了所有文件中的这句代码‘{% load
+            # static%}’
             'builtins': ['django.templatetags.static']  # 模板内置标签
         },
     },
@@ -175,7 +176,8 @@ QINIU_DOMAIN = ''
 # 上传服务器配置
 UEDITOR_UPLOAD_TO_SERVER = True
 UEDITOR_UPLOAD_PATH = MEDIA_ROOT
-UEDITOR_CONFIG_PATH = os.path.join(BASE_DIR, 'static', 'ueditor', 'config.json')
+UEDITOR_CONFIG_PATH = os.path.join(
+    BASE_DIR, 'static', 'ueditor', 'config.json')
 
 # 上传七牛云配置
 UEDITOR_QINIU_ACCESS_KEY = QINIU_ACCESS_KEY

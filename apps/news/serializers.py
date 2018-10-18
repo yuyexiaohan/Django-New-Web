@@ -5,25 +5,33 @@ from apps.xfzauth.serializers import UserSerizlizer
 
 
 class NewsCategorySerizlizer(serializers. ModelSerializer):
-	"""新闻分类序列化"""
+    """新闻分类序列化"""
 
-	class Meta:
-		model = NewCategory
-		fields = ('id', 'name')
+    class Meta:
+        model = NewCategory
+        fields = ('id', 'name')
 
 
 class NewsSerializer(serializers. ModelSerializer):
-	category = NewsCategorySerizlizer()   # 当使用到到category时，会从NewsCategorySerizlizer类中获取
-	author = UserSerizlizer()
+    # 当使用到到category时，会从NewsCategorySerizlizer类中获取
+    category = NewsCategorySerizlizer()
+    author = UserSerizlizer()
 
-	class Meta:
-		model = News
-		fields = ('id', 'title', 'desc', 'thumbnail', 'pub_time', 'category', 'author')
+    class Meta:
+        model = News
+        fields = (
+            'id',
+            'title',
+            'desc',
+            'thumbnail',
+            'pub_time',
+            'category',
+            'author')
 
 
 class CommentSerializer(serializers. ModelSerializer):
-	author = UserSerizlizer()
+    author = UserSerizlizer()
 
-	class Meta:
-		model = Comment
-		fields = ('id', 'content', 'author', 'pub_time')
+    class Meta:
+        model = Comment
+        fields = ('id', 'content', 'author', 'pub_time')
