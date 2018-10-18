@@ -20,31 +20,22 @@ from django.contrib.auth.decorators import permission_required  # 可以在该�
 from apps.xfzauth.decorators import xfz_permission_required
 
 
-'''
-# 定义一个cms管理的视图函数，返回一个cms管理界面
-'''
+
 # 调用staff_member_required函数来验证staff处的值是否为Ture，不为真就跳转到login_url='...'对应的链接。如果为真则执行后面的函数
 
 
 @staff_member_required(login_url='/')  # 这里跳转到首页
 def index(request):
-	# category = NewCategory.objects.first ()
-	# 快速增加测试新闻数据
-	# for i in range(20):
-	# 	title = '标题%s'%i
-	# 	content = '内容%s'%i
-	# 	desc = '描述信息%s'%i
-	# 	thumbnail = '描述信息%s'%i
-	# 	News.objects.create(title=title,content=content,desc=desc,thumbnail=thumbnail,category=category,author=request.user)
+	"""# 1.定义一个cms管理的视图函数，返回一个cms管理界面"""
 	return render(request, 'cms/index.html')
 
 
-'''定义一个新闻列表管理页面，使用类的方式构建函数便于继承相关的方法'''
 # method_decorator是一个将装饰器函数转换为装饰器方法的，参数1：装饰器，参数2：
 
 
 @method_decorator([xfz_permission_required(News)], name='dispatch')
 class NewsList(View):
+	"""定义一个新闻列表管理页面，使用类的方式构建函数便于继承相关的方法"""
 	def get(self, request):
 		page = int(request.GET.get('p', 1))  # 获取当前所在页数
 		start = request.GET.get('start')   # 通过前端的标签名获取值
@@ -155,16 +146,17 @@ class NewsList(View):
 		}
 
 
-'''
-# 定义一个写入页面函数，并返回一个编辑界面
-# 在编辑界面中获取页面数据并出入数据库
-'''
+
 # 加入装饰器验证是否登录，登录执行该函数，未登录直接跳转到对应的url中
 
 
 @method_decorator([login_required(login_url='/account/login/'), xfz_permission_required(News)], name='dispatch')
 # dispatch 是什么方法？
 class WriteNewsView(View):
+	"""
+	# 定义一个写入页面函数，并返回一个编辑界面
+	# 在编辑界面中获取页面数据并出入数据库
+	"""
 	def get(self, request):
 		context = {
 			'categories': NewCategory.objects.all()
@@ -203,12 +195,13 @@ class WriteNewsView(View):
 			return self.post(request)
 
 '''
-'''定义一个编辑新闻的视图函数'''
+
 # 加入装饰器验证是否登录，登录执行该函数，未登录直接跳转到对应的url中
 
 
 @method_decorator([login_required(login_url='/account/login/'), xfz_permission_required(News)], name='dispatch')
 class EditNewsViem(View):
+	"""定义一个编辑新闻的视图函数"""
 	def get(self, request):
 		pk = request.GET.get('pk')
 		news = News.objects.get(pk=pk)
@@ -389,11 +382,6 @@ def edit_banner(request):
 		return restful.params_error(message=form.get_error())
 
 
-'''
-# 定义一个文件传输视图函数
-'''
-
-
 @require_POST
 @staff_member_required(login_url='/')  # ?
 def upload_file(request):
@@ -415,21 +403,16 @@ def upload_file(request):
 		return restful.result(data={"url": url})
 
 
-'''
-定义一个七牛云文件传输的函数
-'''
-
-
 @require_GET
 @staff_member_required(login_url='/')  # ?
 def qntoken(request):
 	# 七牛云中给出的访问和私有密钥
-	access_key = 'AnE70UQaiqokVXUT7v3BGYNAVWo5oey8UA3fEdsD'
-	secretkey = 'BIGPCz55HcnTtq3RqDgMfeLUtvwTaBGnVKNs4gyN'
+	access_key = 'xxx'	# 填写自己的七牛云key
+	secretkey = 'xxx'	# 填写自己的七牛云key
 
 	q = qiniu.Auth(access_key, secretkey)
 
-	bucket = 'news1'  # 可修改，七牛云中创建的存储空间
+	bucket = 'xxx'  # 可修改，填写七牛云中创建的存储空间
 
 	token = q.upload_token(bucket)
 
