@@ -46,7 +46,11 @@ class RegisterForm(forms.Form, FormMixin):
     img_captcha = forms.CharField(
         max_length=4,
         min_length=4,
-        error_messages={"required": "请输入图形验证码！"	})
+        error_messages={
+            "min_length": "请输入4位图形验证码！",
+            "max_length": "请输入4位图形验证码！",
+            "required": "请输入图形验证码！"
+        })
     password1 = forms.CharField(
         min_length=6,
         max_length=20,
@@ -113,12 +117,13 @@ class RegisterForm(forms.Form, FormMixin):
         exists = User.objects.filter(
             telephone=telephone).exists()  # 判断手机号是否存在，返回一个bool值
         if exists:
-            # 传统表单方式的错误信息提示
+            # 1 传统表单方式的错误信息提示
             # messages.info(request,'该手机号码已经存在！')
             # return redirect(reverse('xfzauth:register'))
 
-            # ajax前端方式的错误信息提取方式,因为函数validate_data没有返回，所以这种错误返回方式没有用
+            # 2 ajax前端方式的错误信息提取方式,因为函数validate_data没有返回，所以这种错误返回方式没有用
             # return restful.params_error('该手机号码已存在！')
 
+            # 3 使用FormMix中的错误信息返回
             return self.add_error('telephone', '手机号码已经存在！')
         return True
