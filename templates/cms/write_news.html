@@ -99,11 +99,12 @@
                     <div class="form-group">
                         <label for="content-form">内容</label>
                         {% if news %}
-                            <script id="editor" type="text/plain">{{ news.content|safe }}</script> {# 新闻内容加入safe当作HTML标签处理 #}
-{# type="text/plain"表示是一个纯文本类型 #}
+                            <script id="editor" type="text/plain">{{ news.content|safe }}</script>
+                            {# 新闻内容加入safe当作HTML标签处理 #}
+                            {# type="text/plain"表示是一个纯文本类型 #}
                         {% else %}
                             <script id="editor" type="text/plain"></script>
-{# type="text/plain"表示是一个纯文本类型 #}
+                            {# type="text/plain"表示是一个纯文本类型 #}
                         {% endif %}
                         {#编辑器内容标签#}
 
