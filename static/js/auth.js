@@ -18,7 +18,7 @@ $(function () {
     var smsCaptcha = $('.sms-captcha-btn');
     function send_sms() {
         // var telephone = $('input[name="telephone"]');
-        console.log('测试...');
+        // console.log('测试...');
         var telephone = $('input[name="telephone"]').val();
         // var telephone=document.getElementById("test");
         $.get({
@@ -46,32 +46,6 @@ $(function () {
         });
     }
     smsCaptcha.click(send_sms);
-    // smsCaptcha.click(function () {
-    //     var telephone = $('input[name="telephone"]');
-    //     // var telephone = $('input[name="telephone"]').val();
-    //     // var telephone=document.getElementById("test");
-    //     $.get({
-    //         'url': '/account/sms_captcha/',
-    //         'telephone': telephone,
-    //         'success': function (result) {
-    //             console.log('短信发送成功！');
-    //             var count = 10;
-    //             smsCaptcha.addClass('disabled');
-    //             var timer = setInterval(function () {
-    //                 smsCaptcha.text(count);
-    //                 count--;
-    //                 if (count <= 0){
-    //                     clearInterval(timer);
-    //                     smsCaptcha.text('发送验证码');
-    //                     smsCaptcha.removeClass('disabled');
-    //                 }
-    //             },1000)
-    //         },
-    //         'fail': function (error) {
-    //             console.log(error);
-    //         }
-    //     });
-    // });
 });
 
 // 注册功能
