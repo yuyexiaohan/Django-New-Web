@@ -40,6 +40,7 @@ UEDITOR_QINIU_BUCKET_NAME = ""
 # 七牛云中存储的空间名
 UEDITOR_QINIU_DOMAIN = ""
 # 七牛云空间域名
+
 # 如果文件要上传到七牛云中需要配置以上的
 UEDITOR_UPLOAD_PATH = ""
 # 如果文件上传到自己的服务器-本地，则需要配置这个路径
