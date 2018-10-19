@@ -713,7 +713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539946747950</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="add line for ueditor-views.py">
+      <created>1539959230529</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1539959230529</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TodoView">
@@ -825,7 +832,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add front_base css" />
     <MESSAGE value="Change writ_news" />
     <MESSAGE value="Delete picture" />
     <MESSAGE value="Delete annotation" />
@@ -850,7 +856,8 @@
     <MESSAGE value="forms.py-test" />
     <MESSAGE value="cms-base.html delete link tag to icon" />
     <MESSAGE value="news and auth: add admin parameter" />
-    <option name="LAST_COMMIT_MESSAGE" value="news and auth: add admin parameter" />
+    <MESSAGE value="add line for ueditor-views.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="add line for ueditor-views.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
