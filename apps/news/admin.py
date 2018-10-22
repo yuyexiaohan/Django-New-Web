@@ -33,6 +33,7 @@ class CommentAdmin(admin.ModelAdmin):
 	search_fields = ('content', 'news', 'author',)
 	list_per_page = 2
 
+
 admin.site.register(models.NewCategory, NewCategoryAdmin)
 admin.site.register(models.News, NewsAdmin)
 admin.site.register(models.Banner, BannerAdmin)
