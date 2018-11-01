@@ -28,7 +28,7 @@ SECRET_KEY = '(!az*nhv-51*ki2f*d1(#m+e(@03-cqy77gtmy=a++2=4@7&fl'
 DEBUG = True  # 调试开关，True是调试模式，Flase是关闭调试模式
 
 # 两种方式在括号种加*，或者加入该服务器的地址
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['www.achjiang.cn', '47.93.8.105', '127.0.0.1']
 
 # Application definition
 INSTALLED_APPS = [

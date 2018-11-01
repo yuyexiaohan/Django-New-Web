@@ -26,7 +26,6 @@ body{
 .main .main-container{
     float: left;
     width: 795px;
-    /*background: pink;*/
 }
 
 .main .sidebar-container{
@@ -57,8 +56,6 @@ body{
     background: url("#");
     margin-top: 8px;
     float: left;
-
-
 }
 
 .nav .menu{
@@ -212,19 +209,21 @@ body{
     background-size: 30%;
 }
 
-.about-us .weibo{
-    padding-left: 20px;
-    background-image: url("https://www.bufanbiz.com/static/build/images/xl-icon.png");
-    background-repeat: no-repeat;
-    background-size: 25%;
-}
+/*.about-us .weibo{*/
+    /*padding-left: 20px;*/
+    /*background-image: url("https://www.bufanbiz.com/static/build/images/xl-icon.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 25%;*/
+/*}*/
 
 .detail-info-group .bottom-group{
     float: left;
+    padding-left: 20px;
+
     overflow: hidden;
 }
 
-.bottom-group .adress{
+.bottom-group .address{
     float: left;
 }
 
