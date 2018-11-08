@@ -1,0 +1,3 @@
+2018-11-08 17:27:22,934 - views.py\edit_news_category[line:329] - WARNING: 文章分类修改'2'成功
+2018-11-08 17:27:22,958 - basehttp.py\log_message[line:124] - INFO: "POST /cms/edit_news_category/ HTTP/1.1" 200 42
+2018-11-08 17:27:23,305 - basehttp.py\log_message[line:124] - INFO: "GET /cms/news_category/ HTTP/1.1" 200 10332
