@@ -1,527 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="add makedown-editor">
-      <change beforePath="" afterPath="$PROJECT_DIR$/apps/editor_md/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/.jshintrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/BUGS.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/CHANGE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/Gulpfile.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/css/editormd.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/css/editormd.logo.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/css/editormd.logo.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/css/editormd.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/css/editormd.preview.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/css/editormd.preview.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/editormd.js.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Bold-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Bold-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Bold-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-BoldItalic-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-BoldItalic-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-BoldItalic-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Italic-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Italic-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Italic-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Light-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Light-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Light-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-LightItalic-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-LightItalic-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-LightItalic-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Regular-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Regular-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/fonts/OpenSans-Regular-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/scripts/linenumber.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/scripts/prettify/Apache-License-2.0.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/scripts/prettify/lang-css.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/scripts/prettify/prettify.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/styles/jsdoc-default.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/styles/prettify-jsdoc.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/docs/styles/prettify-tomorrow.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/editormd.amd.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/editormd.amd.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/editormd.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/editormd.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/@links.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/auto-height.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/change-mode.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/code-fold.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/css/style.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/custom-keyboard-shortcuts.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/custom-toolbar.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/define-plugin.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/delay-renderer-preview.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/dynamic-create-editormd.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/emoji.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/extends.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/external-use.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/flowchart.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/form-get-value.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/full.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/goto-line.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/html-preview-markdown-to-html-custom-toc-container.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/html-preview-markdown-to-html.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/html-tags-decode.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/image-cross-domain-upload.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/image-upload.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/images/4.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/images/7.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/images/8.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/images/editormd-screenshot.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/js/jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/js/require.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/js/sea.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/js/seajs-main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/js/zepto.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/katex.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/manually-load-modules.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/multi-editormd.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/multi-languages.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/on-off.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/onchange.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/onfullscreen.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/onload.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/onpreviewing-onpreviewed.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/onresize.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/onscroll-onpreviewscroll.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/onwatch-onunwatch.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/page-break.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/php/cross-domain-upload.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/php/editormd.uploader.class.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/php/post.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/php/upload.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/php/upload_callback.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/readonly.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/resettings.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/search-replace.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/sequence-diagram.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/set-get-replace-selection.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/simple.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/sync-scrolling.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/task-lists.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/test.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/themes.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/toc.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/toolbar-auto-fixed.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/use-requirejs.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/use-seajs.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/examples/use-zepto.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/editormd-logo.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/editormd-logo.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/editormd-logo.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/editormd-logo.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/loading@2x.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/loading@3x.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-favicon-16x16.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-favicon-24x24.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-favicon-32x32.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-favicon-48x48.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-favicon-64x64.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-114x114.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-120x120.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-144x144.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-16x16.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-180x180.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-240x240.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-24x24.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-320x320.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-32x32.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-48x48.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-57x57.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-64x64.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-72x72.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/editormd-logo-96x96.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/images/logos/vi.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/languages/en.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/languages/zh-tw.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/AUTHORS" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/LICENSE" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/comment/comment.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/comment/continuecomment.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/dialog/dialog.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/dialog/dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/display/fullscreen.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/display/fullscreen.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/display/panel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/display/placeholder.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/display/rulers.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/edit/closebrackets.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/edit/closetag.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/edit/continuelist.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/edit/matchbrackets.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/edit/matchtags.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/edit/trailingspace.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/fold/brace-fold.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/fold/comment-fold.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/fold/foldcode.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/fold/foldgutter.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/fold/foldgutter.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/fold/indent-fold.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/fold/markdown-fold.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/fold/xml-fold.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/hint/anyword-hint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/hint/css-hint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/hint/html-hint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/hint/javascript-hint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/hint/show-hint.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/hint/show-hint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/hint/sql-hint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/hint/xml-hint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/lint/coffeescript-lint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/lint/css-lint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/lint/javascript-lint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/lint/json-lint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/lint/lint.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/lint/lint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/lint/yaml-lint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/merge/merge.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/merge/merge.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/mode/loadmode.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/mode/multiplex.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/mode/multiplex_test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/mode/overlay.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/mode/simple.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/runmode/colorize.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/runmode/runmode-standalone.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/runmode/runmode.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/runmode/runmode.node.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/scroll/annotatescrollbar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/scroll/scrollpastend.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/scroll/simplescrollbars.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/scroll/simplescrollbars.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/search/match-highlighter.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/search/matchesonscrollbar.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/search/matchesonscrollbar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/search/search.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/search/searchcursor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/selection/active-line.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/selection/mark-selection.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/selection/selection-pointer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/tern/tern.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/tern/tern.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/tern/worker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addon/wrap/hardwrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/addons.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/codemirror.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/codemirror.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/lib/codemirror.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/lib/codemirror.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/apl/apl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/apl/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/asterisk/asterisk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/asterisk/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/clike/clike.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/clike/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/clike/scala.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/clojure/clojure.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/clojure/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/cobol/cobol.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/cobol/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/coffeescript/coffeescript.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/coffeescript/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/commonlisp/commonlisp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/commonlisp/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/css/css.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/css/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/css/less.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/css/less_test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/css/scss.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/css/scss_test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/css/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/cypher/cypher.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/cypher/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/d/d.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/d/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/dart/dart.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/dart/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/diff/diff.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/diff/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/django/django.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/django/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/dockerfile/dockerfile.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/dockerfile/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/dtd/dtd.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/dtd/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/dylan/dylan.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/dylan/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ebnf/ebnf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ebnf/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ecl/ecl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ecl/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/eiffel/eiffel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/eiffel/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/erlang/erlang.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/erlang/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/forth/forth.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/forth/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/fortran/fortran.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/fortran/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/gas/gas.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/gas/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/gfm/gfm.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/gfm/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/gfm/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/gherkin/gherkin.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/gherkin/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/go/go.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/go/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/groovy/groovy.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/groovy/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/haml/haml.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/haml/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/haml/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/haskell/haskell.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/haskell/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/haxe/haxe.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/haxe/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/htmlembedded/htmlembedded.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/htmlembedded/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/htmlmixed/htmlmixed.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/htmlmixed/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/http/http.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/http/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/idl/idl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/idl/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/jade/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/jade/jade.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/javascript/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/javascript/javascript.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/javascript/json-ld.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/javascript/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/javascript/typescript.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/jinja2/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/jinja2/jinja2.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/julia/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/julia/julia.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/kotlin/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/kotlin/kotlin.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/livescript/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/livescript/livescript.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/lua/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/lua/lua.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/markdown/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/markdown/markdown.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/markdown/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/meta.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/mirc/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/mirc/mirc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/mllike/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/mllike/mllike.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/modelica/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/modelica/modelica.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/nginx/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/nginx/nginx.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ntriples/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ntriples/ntriples.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/octave/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/octave/octave.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/pascal/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/pascal/pascal.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/pegjs/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/pegjs/pegjs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/perl/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/perl/perl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/php/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/php/php.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/php/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/pig/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/pig/pig.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/properties/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/properties/properties.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/puppet/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/puppet/puppet.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/python/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/python/python.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/q/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/q/q.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/r/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/r/r.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/rpm/changes/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/rpm/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/rpm/rpm.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/rst/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/rst/rst.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ruby/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ruby/ruby.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/ruby/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/rust/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/rust/rust.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/sass/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/sass/sass.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/scheme/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/scheme/scheme.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/shell/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/shell/shell.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/shell/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/sieve/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/sieve/sieve.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/slim/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/slim/slim.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/slim/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/smalltalk/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/smalltalk/smalltalk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/smarty/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/smarty/smarty.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/smartymixed/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/smartymixed/smartymixed.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/solr/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/solr/solr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/soy/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/soy/soy.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/sparql/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/sparql/sparql.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/spreadsheet/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/spreadsheet/spreadsheet.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/sql/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/sql/sql.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/stex/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/stex/stex.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/stex/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/stylus/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/stylus/stylus.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tcl/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tcl/tcl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/textile/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/textile/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/textile/textile.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tiddlywiki/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tiddlywiki/tiddlywiki.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tiddlywiki/tiddlywiki.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tiki/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tiki/tiki.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tiki/tiki.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/toml/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/toml/toml.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tornado/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/tornado/tornado.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/turtle/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/turtle/turtle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/vb/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/vb/vb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/vbscript/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/vbscript/vbscript.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/velocity/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/velocity/velocity.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/verilog/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/verilog/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/verilog/verilog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/xml/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/xml/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/xml/xml.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/xquery/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/xquery/test.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/xquery/xquery.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/yaml/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/yaml/yaml.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/z80/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/mode/z80/z80.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/modes.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/3024-day.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/3024-night.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/ambiance-mobile.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/ambiance.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/base16-dark.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/base16-light.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/blackboard.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/cobalt.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/colorforth.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/eclipse.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/elegant.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/erlang-dark.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/lesser-dark.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/mbo.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/mdn-like.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/midnight.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/monokai.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/neat.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/neo.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/night.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/paraiso-dark.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/paraiso-light.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/pastel-on-dark.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/rubyblue.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/solarized.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/the-matrix.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/tomorrow-night-bright.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/tomorrow-night-eighties.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/twilight.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/vibrant-ink.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/xq-dark.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/xq-light.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/codemirror/theme/zenburn.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/flowchart.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/jquery.flowchart.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/marked.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/prettify.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/raphael.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/sequence-diagram.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/lib/underscore.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/code-block-dialog/code-block-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/emoji-dialog/emoji-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/emoji-dialog/emoji.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/goto-line-dialog/goto-line-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/help-dialog/help-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/help-dialog/help.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/html-entities-dialog/html-entities-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/html-entities-dialog/html-entities.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/image-dialog/image-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/link-dialog/link-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/plugin-template.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/preformatted-text-dialog/preformatted-text-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/reference-link-dialog/reference-link-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/table-dialog/table-dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/plugins/test-plugin/test-plugin.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.codemirror.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.dialog.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.form.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.grid.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.logo.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.menu.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.preview.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.preview.themes.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.tab.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/editormd.themes.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/font-awesome.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/github-markdown.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/lib/prefixes.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/lib/variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/scss/prettify.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/src/editormd.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/bootstrap-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/codemirror-searchbox-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/codemirror-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/css/bootstrap-theme.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/js/searchbox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/katex-tests.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/marked-@at-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/marked-emoji-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/marked-heading-link-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/marked-todo-list-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/qunit/qunit-1.16.0.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/editor_md/tests/qunit/qunit-1.16.0.js" />
+    <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/apps/xfzauth/decorators.py" afterPath="$PROJECT_DIR$/apps/xfzauth/decorators.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -556,111 +38,82 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="350" column="49" lean-forward="false" selection-start-line="350" selection-start-column="49" selection-end-line="350" selection-end-column="49" />
+            <state relative-caret-position="-632">
+              <caret line="385" column="16" lean-forward="true" selection-start-line="385" selection-start-column="16" selection-end-line="385" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="banners.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/banners.js">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/news/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3894">
-              <caret line="59" column="25" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/news/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_01/settings.py">
+      <file leaf-file-name="decorators.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/contrib/admin/views/decorators.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="45" column="20" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+            <state relative-caret-position="560">
+              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editormd.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/editor_md/css/editormd.css">
+      <file leaf-file-name="news_filters.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/news/templatetags/news_filters.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="401">
+              <caret line="53" column="13" lean-forward="false" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="front_base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base/front_base.html">
+      <file leaf-file-name="decorators.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/xfzauth/decorators.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="58" column="52" lean-forward="false" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+            <state relative-caret-position="238">
+              <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
               <folding>
-                <element signature="n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="front_base.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/base/front_base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5802">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1541064429230" expanded="true" signature="3621:3815" ph="{...}" />
+                <element signature="e#20#59#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/news/models.py">
+        <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/contrib/contenttypes/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="273">
+              <caret line="133" column="6" lean-forward="false" selection-start-line="133" selection-start-column="6" selection-end-line="133" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/xfzauth/admin.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/news/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1925">
+              <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="options.py" pinned="false" current-in-tab="false">
-        <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/contrib/admin/options.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/cms/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16434">
-              <caret line="548" column="26" lean-forward="false" selection-start-line="548" selection-start-column="26" selection-end-line="548" selection-end-column="26" />
+            <state relative-caret-position="315">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -758,7 +211,6 @@
         <option value="$PROJECT_DIR$/static/js/xfzajax.js" />
         <option value="$PROJECT_DIR$/manage.py" />
         <option value="$PROJECT_DIR$/apps/xfzauth/models.py" />
-        <option value="$PROJECT_DIR$/apps/xfzauth/decorators.py" />
         <option value="$PROJECT_DIR$/apps/course/views.py" />
         <option value="$PROJECT_DIR$/templates/cms/add_staff.html" />
         <option value="$PROJECT_DIR$/templates/cms/index.html" />
@@ -781,7 +233,6 @@
         <option value="$PROJECT_DIR$/apps/payinfo/admin.py" />
         <option value="$PROJECT_DIR$/apps/forms.py" />
         <option value="$PROJECT_DIR$/apps/xfzauth/forms.py" />
-        <option value="$PROJECT_DIR$/templates/cms/write_news.html" />
         <option value="$PROJECT_DIR$/templates/cms/base.html" />
         <option value="$PROJECT_DIR$/apps/ueditor/views.py" />
         <option value="$PROJECT_DIR$/apps/cms/views.py" />
@@ -791,6 +242,8 @@
         <option value="$PROJECT_DIR$/django_01/settings.py" />
         <option value="$PROJECT_DIR$/static/css/base/front_base.css" />
         <option value="$PROJECT_DIR$/templates/base/front_base.html" />
+        <option value="$PROJECT_DIR$/templates/cms/write_news.html" />
+        <option value="$PROJECT_DIR$/apps/xfzauth/decorators.py" />
       </list>
     </option>
   </component>
@@ -801,8 +254,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1040" />
-    <option name="width" value="887" />
+    <option name="x" value="874" />
+    <option name="width" value="1022" />
     <option name="height" value="1021" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -859,8 +312,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../WebCrawler" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../web_mini" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -1279,10 +732,17 @@
       <option name="project" value="LOCAL" />
       <updated>1541076484395</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="add makedown-editor">
+      <created>1541172575758</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1541172575758</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -1293,28 +753,29 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33294117" sideWeight="0.5173184" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31698975" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.331813" sideWeight="0.48268157" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.331813" sideWeight="0.48268157" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33751425" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123390555" sideWeight="0.46551725" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12821889" sideWeight="0.46551725" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.49255583" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24873096" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24839056" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12818097" sideWeight="0.5344828" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="170" height="821" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31698975" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@django_01" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5153934" sideWeight="0.49585062" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1419,81 +880,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/apps/cms/course_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="20" column="50" lean-forward="false" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="845" column="6" lean-forward="false" selection-start-line="845" selection-start-column="6" selection-end-line="845" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/news/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/news/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/news/templatetags/news_filters.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1716">
-          <caret line="52" column="10" lean-forward="false" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/news/news_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1221">
-          <caret line="37" column="71" lean-forward="false" selection-start-line="37" selection-start-column="71" selection-end-line="37" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/news/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_01/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/xfzauth/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="12" column="30" lean-forward="false" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1529,20 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/staff_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1855">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/xfzauth/decorators.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-370">
-          <caret line="60" column="35" lean-forward="false" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/payinfo/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="521">
@@ -1554,7 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1609,25 +980,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cms/write_news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cms/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="759">
           <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/news/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="27" column="35" lean-forward="false" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1642,14 +998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="324" column="50" lean-forward="true" selection-start-line="324" selection-start-column="50" selection-end-line="324" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/news/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1657,7 +1005,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1672,7 +1019,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="858">
           <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1687,9 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2871">
           <caret line="91" column="30" lean-forward="false" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1697,7 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6402">
           <caret line="211" column="23" lean-forward="false" selection-start-line="211" selection-start-column="23" selection-end-line="211" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1705,9 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1716">
           <caret line="52" column="17" lean-forward="false" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1715,9 +1054,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
           <caret line="86" column="4" lean-forward="false" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1725,13 +1061,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16434">
           <caret line="548" column="26" lean-forward="false" selection-start-line="548" selection-start-column="26" selection-end-line="548" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/xfzauth/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="105">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -1739,20 +1074,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/news/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/news/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
+        <state relative-caret-position="1365">
           <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1761,16 +1088,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
           <caret line="9" column="55" lean-forward="false" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#h1#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/base/front_base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5802">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <marker date="1541064429230" expanded="true" signature="3621:3815" ph="{...}" />
@@ -1778,41 +1101,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base/front_base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="58" column="52" lean-forward="false" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
-          <folding>
-            <element signature="n#ul#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="350" column="49" lean-forward="false" selection-start-line="350" selection-start-column="49" selection-end-line="350" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/banners.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3894">
+        <state relative-caret-position="2065">
           <caret line="59" column="25" lean-forward="false" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/django_01/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="45" column="20" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1821,7 +1113,162 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/django_01/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="45" column="20" lean-forward="false" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cms/write_news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3465">
+          <caret line="99" column="60" lean-forward="false" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base/front_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2030">
+          <caret line="58" column="52" lean-forward="false" selection-start-line="58" selection-start-column="52" selection-end-line="58" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/db/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/news/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2146">
+          <caret line="58" column="46" lean-forward="false" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/staff_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/template/library.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="807">
+          <caret line="53" column="8" lean-forward="false" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/news/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-404">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/news/templatetags/news_filters.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="53" column="13" lean-forward="false" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/setuptools/command/easy_install.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="171" column="13" lean-forward="false" selection-start-line="171" selection-start-column="13" selection-end-line="171" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/rest_framework/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="397" column="17" lean-forward="false" selection-start-line="397" selection-start-column="17" selection-end-line="397" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/contrib/admin/views/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-632">
+          <caret line="385" column="16" lean-forward="true" selection-start-line="385" selection-start-column="16" selection-end-line="385" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/news/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="9" column="42" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/news/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1925">
+          <caret line="71" column="36" lean-forward="true" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/contrib/auth/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="61" column="4" lean-forward="false" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/contrib/contenttypes/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="133" column="6" lean-forward="false" selection-start-line="133" selection-start-column="6" selection-end-line="133" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/xfzauth/decorators.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="73" column="28" lean-forward="false" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+          <folding>
+            <element signature="e#20#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
