@@ -4,7 +4,6 @@
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="Configure the log">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/apps/cms/views.py" afterPath="$PROJECT_DIR$/apps/cms/views.py" />
-      <change beforePath="$PROJECT_DIR$/django_01.log" afterPath="$PROJECT_DIR$/django_01.log" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +35,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4550">
@@ -88,7 +87,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="django_01.log" pinned="false" current-in-tab="true">
+      <file leaf-file-name="django_01.log" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/django_01.log">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="35">
@@ -401,13 +400,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Add the project language description">
-      <created>1533953802485</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1533953802485</updated>
     </task>
     <task id="LOCAL-00003" summary="Add the project language description">
       <created>1533954286668</created>
@@ -745,7 +737,14 @@
       <option name="project" value="LOCAL" />
       <updated>1541670628118</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Clear the log">
+      <created>1541672194241</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1541672194241</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TodoView">
@@ -845,7 +844,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add STATIC_ROOT &amp; change DEBUG to False" />
     <MESSAGE value="Change the virtualenvs path" />
     <MESSAGE value="Add some note" />
     <MESSAGE value="Add notation" />
@@ -870,7 +868,8 @@
     <MESSAGE value="change auth:decorators.py" />
     <MESSAGE value="Add django_01.log" />
     <MESSAGE value="Configure the log" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configure the log" />
+    <MESSAGE value="Clear the log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clear the log" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1251,18 +1250,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4550">
-          <caret line="340" column="31" lean-forward="true" selection-start-line="340" selection-start-column="31" selection-end-line="340" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/django_01.log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
           <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4550">
+          <caret line="340" column="31" lean-forward="true" selection-start-line="340" selection-start-column="31" selection-end-line="340" selection-end-column="31" />
           <folding />
         </state>
       </provider>
