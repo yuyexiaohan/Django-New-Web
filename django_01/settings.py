@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import os
+import os, logging
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -194,3 +194,70 @@ ONE_PAGE_NEWS_COUNT = 2
 BAIDU_CLOUD_USER_ID = ''
 # 点播VOD->全局设置->发布设置->安全设置->UserKey
 BAIDU_CLOUD_USER_KEY = ''
+
+# log日志配置
+LOGGING = {
+    'version': 1,   # 版本
+    'disable_existing_loggers': False,
+    # 输出格式化：定义两种'verbose'/'simple'选择
+    'formatters': {
+        'verbose': {
+            # 'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s' # 官方示例
+            # WARNING 2018-11-08 16:19:23,113 views 24300 5424 文章分类修改'3'成功
+            'format': '%(asctime)s - %(filename)s\%(funcName)s[line:%(lineno)d] - %(levelname)s: %(message)s'
+	        #  2018-11-08 16:34:17,512 - views.py\edit_news_category[line:329] - WARNING: 文章分类修改'时政热点'成功
+	        # 'format': '[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d %(module)s] %(message)s'
+	        # [2018-11-08 16:22:29,817] WARNING [django.edit_news_category:329 views] 文章分类修改'4'成功
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    # 过滤器：定义两种
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    # 处理器：定义三种
+    'handlers': {
+        'log_file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': 'django_01.log',
+            'maxBytes': 16777216,  # 16 MB
+            'formatter': 'verbose'
+        },
+        'console': {
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'filters': ['require_debug_false']
+        }
+    },
+    # 记录器：
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'log_file'],
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'myproject.custom': {
+            'handlers': ['console', 'mail_admins'],
+            'level': 'INFO',
+            'filters': ['require_debug_false']
+        }
+    }
+}
