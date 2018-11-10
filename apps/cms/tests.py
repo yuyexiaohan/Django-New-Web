@@ -1,3 +1,11 @@
-from django.test import TestCase
+from django.test import TestCase, Client
 
-# Create your tests here.
+
+class NewsTest(TestCase):
+	"""新闻列表测试"""
+	def setUp(self):
+		self.client = Client()
+
+	def test_news(self):
+		pass
+
