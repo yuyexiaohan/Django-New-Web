@@ -8,7 +8,10 @@ class NewsTest(TestCase):
 	def setUp(self):
 		self.client = Client()
 		self.factory = RequestFactory()
+		print ("setUp: Run once for every test method to setup clean data.")
 
-	def test_news(self):
+	def test_news_edit(self):
 		pass
 
+	def test_news_update(self):
+		pass
