@@ -1,4 +1,6 @@
 from django.test import TestCase, Client, RequestFactory
+from apps.news.models import News, NewCategory
+from apps.xfzauth.models import User
 
 
 class NewsTest(TestCase):
