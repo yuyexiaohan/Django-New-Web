@@ -1,3 +1,10 @@
-from django.test import TestCase
+from apps.news.models import News, NewCategory
+from apps.xfzauth.models import User
 
-# Create your tests here.
+
+class NewsTest(TestCase):
+	"""新闻列表测试"""
+	def setUp(self):
+		self.client = Client()
+		self.factory = RequestFactory()
+		print ("setUp: Run once for every test method to setup clean data.")
