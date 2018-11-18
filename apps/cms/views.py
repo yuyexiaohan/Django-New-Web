@@ -24,7 +24,7 @@ from django.conf import settings
 import logging
 
 
-logger = logging.getLogger('django') # 'django'与配置文件中的logger名称一致
+logger = logging.getLogger('django')  # 'django'与配置文件中的logger名称一致
 # 调用staff_member_required函数来验证staff处的值是否为Ture，
 # 不为真就跳转到login_url='...'对应的链接。如果为真则执行后面的函数
 
@@ -108,7 +108,7 @@ class NewsList(View):
             # 查询内容url
             'url_query': url_query
         }
-        logger.info('用户查询了[%s]'%context['url_query'])
+        logger.info('用户查询了[%s]' % context['url_query'])
         # print(context['url_query'])  # 打印测试输出的是否是我们查询内容
         context.update(pagination_data)
         return render(request, 'cms/news_list.html', context=context)
@@ -244,7 +244,7 @@ class EditNewsViem(View):
                 thumbnail=thumbnail,
                 content=content,
                 category=category)
-            logger.info('编辑新闻%s成功！'%title)
+            logger.info('编辑新闻%s成功！' % title)
             return restful.ok()
         else:
             logger.error('编辑新闻失败！')
@@ -257,7 +257,7 @@ def delete_news(request):
     pk = request.POST.get('pk')
     newes = News.objects.filter(pk=pk)
     newes.delete()
-    logger.warning('删除新闻%s!'%newes.values('title'))
+    logger.warning('删除新闻%s!' % newes.values('title'))
     return restful.ok()
 
 
@@ -268,6 +268,7 @@ class NewsCategoryViem(View):
     """
     # 定义一个分类函数,返回一个分类页界面
     """
+
     def get(self, request):
         # categories是指所有的类别,使用id进行排序
         categories = NewCategory.objects.order_by(
@@ -308,10 +309,10 @@ def add_news_category(request):
     exists = NewCategory.objects.filter(name=name).exists()
     if not exists:
         NewCategory.objects.create(name=name)
-        logger.info('添加文章分类:%s！'%name)
+        logger.info('添加文章分类:%s！' % name)
         return restful.ok()
     else:
-        logger.warning("文章分类:'%s'已经存在！'"%name)
+        logger.warning("文章分类:'%s'已经存在！'" % name)
         return restful.params_error(message='该分类已经存在！')
 
 
@@ -325,10 +326,10 @@ def edit_news_category(request):
         name = form.cleaned_data.get('name')
         try:
             NewCategory.objects.filter(pk=pk).update(name=name)
-            logger.info("修改文章分类:'%s'成功"%name)
+            logger.info("修改文章分类:'%s'成功" % name)
             return restful.ok()
         except NotImplemented as e:
-            logger.error('修改文章分类报错：%s'%e)
+            logger.error('修改文章分类报错：%s' % e)
             return restful.params_error(message='这个分类不存在！')
     else:
         return restful.params_error(message=form.get_error())
@@ -341,7 +342,10 @@ def delete_news_category(request):
     pk = request.POST.get('pk')
     try:
         NewCategory.objects.filter(pk=pk).delete()
-        logger.warning('删除文章分类:%s！'%NewCategory.objects.filter(pk=pk).values('name'))
+        logger.warning(
+            '删除文章分类:%s！' %
+            NewCategory.objects.filter(
+                pk=pk).values('name'))
         return restful.ok()
     except BaseException as e:
         logger.error(e)
@@ -389,7 +393,7 @@ def add_banner(request):
             image_url=image_url,
             link_to=link_to,
             priority=priority)
-        logger.info('添加轮播图链接为：%s'%link_to)
+        logger.info('添加轮播图链接为：%s' % link_to)
         return restful.result(data={'banner_id': banner.pk})  # 返回轮播图的id
     else:
         return restful.params_error(
