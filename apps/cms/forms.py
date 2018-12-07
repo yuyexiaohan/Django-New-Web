@@ -58,6 +58,11 @@ class EditBannerForm(forms.ModelForm, FormMixin):
 '''定义一个发布课程表单，内容有课程标题/课程分类/讲师/视频地址/封面图/价格/课程时长/课程简介等'''
 
 
+class EditCoursesCategoryForm(forms.Form, FormMixin):
+    pk = forms.IntegerField(error_messages={"required": "必须传入一个分类id!"})
+    name = forms.CharField(max_length=100, min_length=1)
+
+
 class AddCourseForm(forms.ModelForm, FormMixin):
     # 定义两个表单变量，分类id和老师id
     category_id = forms.IntegerField()

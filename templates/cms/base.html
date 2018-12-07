@@ -128,6 +128,12 @@
                         <span>发布妙想</span>
                     </i>
                 </a></li>
+                    <li>
+                        <a href="{% url 'cms:course_category' %}">
+                            <i class="fa fa-tag"></i>
+                            <span>妙想分类</span>
+                        </a>
+                    </li>
                 {% endif %}
                 {% if user.is_superuser %}
                     <li class="header">人员管理</li>
