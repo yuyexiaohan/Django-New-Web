@@ -11,7 +11,7 @@
 {% block main %}
 <form action="" method="POST">
     {% csrf_token %}
-    <div class="main-auth-group">
+    <div class="main-auth-group" style="margin-top: 100px;margin-bottom: 250px">
         <div class="top-group">
             <span class="title">请登陆</span>
             <a href="{% url 'xfzauth:register' %}" class="more-link">请注册</a>

@@ -13,7 +13,7 @@
 <form action="" method="POST">
 {# 加入"{% csrf_token %}"这个是为了解决跨域问题  #}
     {% csrf_token %}
-    <div class="main-auth-group">
+    <div class="main-auth-group" style="margin-bottom: 140px">
         <div class="top-group">
             <span class="title">请注册</span>
             <a href="{% url 'xfzauth:login' %}" class="more-link">立即登录</a>
