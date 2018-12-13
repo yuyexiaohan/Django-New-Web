@@ -8,6 +8,39 @@
             color: red;
         }
     </style>
+
+    <link rel="stylesheet" href="{% static 'css/news/news.css' %}">
+    {# 轮播图功能代码需要引入的bootstrap.min.js和bootstrap.min.css #}
+    <link rel="stylesheet" href="{% static 'css/base/side.css' %}">
+{#  引入arttemplat  #}
+    <script src="{% static 'js/template-web.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script id="news-item" type="text/html">
+    {# 该标签是django标签，用于指示包裹的文件不处理，只作为字符串 #}
+    {% verbatim %}
+    {{ each newes news index }}
+        <li>
+            <div class="thumbnail-group">
+                <a href="/detail/{{ news.id }}">
+                    <img src="{{ news.thumbnail }}" alt="">
+                </a>
+            </div>
+            <div class="news-group">
+                <div class="title">
+                    <a href="/detail/{{ news.id }}">{{ news.title }}</a>
+                </div>
+                <p class="desc">{{ news.desc }}</p>
+                <div class="news-more-group">
+                    <span class="category">{{ news.category.name }}</span>
+                    <span class="pub-time">{{ news.pub_time|timeSince }}</span>
+                    <span class="author">{{ news.author.username }}</span>
+
+                </div>
+            </div>
+        </li>
+    {{ /each }}
+    {% endverbatim %}
+    </script>
 {% endblock %}
 
 {% block main %}
@@ -20,37 +53,44 @@
                 </form>
 			</div>
             <div class="list-group">
-                {% if newes %}
+                {% if flag == 2 %}
                     <p class="list-search-title">
-                    搜索结果
-                </p>
+                    搜索结果:
+                    </p>
+                {% elif flag == 1 %}
+                    <p class="list-search-title" style="color: red">
+                    暂未搜索到相关内容，到<a href="{% url 'news:index' %}">主页</a>在看看？
+                    </p>
                 {% endif %}
-                <ul class="list-content-group">
-                {% if newes %}
-                    {% for news in newes %}
-                        <li>
-                            <div class="thumbnail-group">
-                                <a href="{% url 'news:news_detail' news_id=news.pk %}">
-                                    <img src="{{ news.thumbnail }}" alt="">
-                                </a>
-                            </div>
-                            <div class="content-group">
-                                <p class="title-group">
-                                    <a href="{% url 'news:news_detail' news_id=news.pk %}">
-                                        {{ news.title }}
-                                    </a>
-                                </p>
-                                <p class="desc-group">{{ news.desc }}</p>
-                                <div class="content-footer">
-                                    <span class="category-group">{{ news.category.name }}</span>
-                                    <span class="time-group">{{ news.pub_time|time_since }}</span>
-                                    <span class="author-group">{{ news.author.username }}</span>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                {% endif %}
-                </ul>
+                 <ul class="news-list-group">
+                {% for news in newes %}
+                    <li>
+                     <div class="thumbnail-group">
+                         <a href="{% url 'news:news_detail' news_id=news.pk %}">
+                             <img src="{{ news.thumbnail }}" alt="">
+                         </a>
+                     </div>
+                    <div class="news-group">
+                        <div class="title">
+                            <a href="{% url 'news:news_detail' news_id=news.pk %}">{{ news.title }}</a>
+                        </div>
+                        <p class="desc">{{ news.desc }}</p>
+                        <div class="news-more-group">
+                            <span class="category">{{ news.category.name }}</span>
+                            <span class="pub-time">{{ news.pub_time | time_since}}</span>
+                            {# 加入time_since这样在调用时，将pub_time传给time_since #}
+                            <span class="author">{{ news.author.username }}</span>
+
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+                 <div class="load-more-group">
+                <button class="load-more-btn" data-page="2">
+                    加载更多
+                </button>
+            </div>
             </div>
 		</div>
 		<div class="sidebar-container">

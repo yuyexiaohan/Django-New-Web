@@ -6,7 +6,7 @@
 // 使用JS写一个函数利用account/img_captcha/随机数的方式进行更新路由，产生新的验证码
 $(function () {
     var imgCaptcha = $('.img-captcha');
-   console.log('点击刷新图形验证码...');
+   // console.log('点击刷新图形验证码...');
     imgCaptcha.click(function () {
         // alert('11111');
         imgCaptcha.attr("src",'/account/img_captcha/'+"?random="+Math.random());
@@ -21,18 +21,20 @@ $(function () {
         // console.log('测试...');
         var telephone = $('input[name="telephone"]').val();
         // var telephone=document.getElementById("test");
+        //ajax请求，发送短信验证码
         $.get({
             'url': '/account/sms_captcha/',
-            // 'telephone': telephone,
+            'telephone': telephone,
             'data':{'telephone':telephone},
             'success': function (result) {
-                var count = 20; // 短信验证码倒计时时间定义
+                var count = 60; // 短信验证码倒计时时间定义
                 smsCaptcha.addClass('disabled');
                 smsCaptcha.unbind('click');
                 var timer = setInterval(function () {
                     smsCaptcha.text(count);
                     count--;
                     if (count <= 0){
+                        //清除计时器
                         clearInterval(timer);
                         smsCaptcha.text('发送验证码');
                         smsCaptcha.removeClass('disabled');
@@ -45,7 +47,7 @@ $(function () {
             }
         });
     }
-    smsCaptcha.click(send_sms);
+    smsCaptcha.click(send_sms); // 当点击发送验证码时，调用send_sms函数
 });
 
 // 注册功能

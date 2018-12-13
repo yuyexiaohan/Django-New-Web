@@ -15,6 +15,7 @@ from apps.xfzauth.decorators import xfz_login_required   # y导入自定义的�
 # 当我们在查询的条件中需要组合条件时(例如两个条件“且”或者“或”)时。
 # 我们可以使用Q()查询对象
 from django.db.models import Q
+import random
 
 
 def index(request):
@@ -105,9 +106,20 @@ def search(request):
         # 搜索对象为：title或者content中包含的关键字，有就返回
         newes = News.objects.filter(
             Q(title__icontains=q) | Q(content__icontains=q))
-        context = {
-            'newes': newes
-        }
+        if newes:
+            flag = 2
+        else:
+            page = int (request.GET.get ('p', 1))
+            start = settings.ONE_PAGE_NEWS_COUNT * (page - 1)
+            end = start + settings.ONE_PAGE_NEWS_COUNT
+            newes = News.objects.all ()[start:end]
+            flag = 1
     else:
-        context = {}
+        page = int(request.GET.get ('p', 1))
+        start = settings.ONE_PAGE_NEWS_COUNT * (page - 1)
+        end = start + settings.ONE_PAGE_NEWS_COUNT
+        newes = News.objects.all ()[start:end]
+        flag = 0
+
+    context = {'newes': newes, 'flag': flag}
     return render(request, 'news/search.html', context=context)

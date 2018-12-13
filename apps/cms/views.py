@@ -447,7 +447,7 @@ def upload_file(request):
         # 最终返回一个文件路径+文件名
         # / media / 代码框架.png
         # http://127.0.0.1:9000/media/代码框架.png
-        # 不讲url写死，自动获取url
+        # 不将url写死，自动获取url
         # 其中request.build_absolute_uri()可以获取前面的所有链接，我们只需要将"settings.MEDIA_URL+name"后面的路径加入即可组成一个完整的url
         url = request.build_absolute_uri(settings.MEDIA_URL + name)
         logger.info('文件上传成功！')
@@ -468,3 +468,12 @@ def qntoken(request):
     token = q.upload_token(bucket)
 
     return restful.result(data={'token': token})
+
+
+
+def user_center(request):
+    """用户中心"""
+    current_user = request.user
+    context = {'current_user': current_user}
+    return render(request, "cms/user_center.html", context=context)
+

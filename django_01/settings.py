@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
-import os, logging
+import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'apps.news',
     'apps.payinfo',
     'apps.xfzauth',
-    'rest_framework'
+    'rest_framework',
 ]
 
 # 中间键，针对所有的app有效,可以方便批量修改处理时使用

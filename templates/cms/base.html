@@ -60,7 +60,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="{% url 'news:index' %}" class="btn btn-default btn-flat">个人中心</a>
+                                    <a href="{% url 'cms:user_center' %}" class="btn btn-default btn-flat">个人中心</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="{% url 'xfzauth:logout' %}" class="btn btn-default btn-flat">退出登录</a>
@@ -86,9 +86,13 @@
             </form>
             <ul class="sidebar-menu" data-widget="tree">
                 <li>
+                    <a href="{% url 'news:index' %}">
+                        <i class="fa fa-mail-reply-all"></i>
+                        <span>返回网站首页</span>
+                    </a>
                     <a href="{% url 'cms:index' %}">
                         <i class="fa fa-home"></i>
-                        <span>首页</span>
+                        <span>cms首页</span>
                     </a>
                 </li>
                 {# 根据用户权限显示对应的页面 #}
@@ -97,7 +101,7 @@
                     <li>
                         <a href="{% url 'cms:news_list' %}">
                             <i class="fa fa-list">
-                                <span>文章管理</span>
+                                <span>文章列表</span>
                             </i>
                         </a>
                     </li>

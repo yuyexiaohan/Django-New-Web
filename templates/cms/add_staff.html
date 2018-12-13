@@ -20,16 +20,38 @@
         {# 解决跨域问题 #}
         {% csrf_token %}
             <div class="box-body">
+                {% if messages %}
+                    <div class="input-group">
+                        {# message消息是一个需要遍历才能提取的消息 #}
+                        {% for message in messages %}
+                            <p style=" color: red;text-align: center">{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
                 <div class="form-group">
-                    <label for="telephone-input">手机号码</label>
+                    <label for="telephone-input">用户名称：</label>
+                    <input type="text" class="form-control" name="username" placeholder="用户名">
+                </div>
+                <div class="form-group">
+                    <label for="telephone-input">手机号码：</label>
                     <input type="text" class="form-control" name="telephone" placeholder="手机号码">
                 </div>
-                <div class="checkbox">
-                    {% for group in groups %}
-                        <label for="">
-                            <input type="checkbox" name="groups" value="{{ group.pk }}">{{ group.name }}
-                        </label>
-                    {% endfor %}
+                <div class="form-group">
+{#                <div class="checkbox">#}
+                    {# 勾选方式1： #}
+                    <label for="">工作岗位：</label>
+                    <select name="category" id="category-select" class="form-control">
+                        {% for group in groups %}
+                            <option value="{{ group.pk }}">{{ group.name }}</option>
+                        {% endfor %}
+                    </select>
+                    {# 勾选方式2： #}
+{#                    {% for group in groups %}#}
+{#                        <label for="">#}
+{#                            <input type="select_box" name="groups" value="{{ group.pk }}">{{ group.name }}#}
+{#                            <input type="checkbox" name="groups" value="{{ group.pk }}">{{ group.name }}#}
+{#                        </label>#}
+{#                    {% endfor %}#}
                 </div>
             </div>
             <div class="box-footer">

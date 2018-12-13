@@ -48,12 +48,12 @@ class LoginView(View):
                 print("验证登录成功！")
                 return redirect(reverse('news:index'))
             else:
-                print("用户名或密码错误！", '电话 ：%s' % telephone, '密码 ：%s' % password)
+                # print("用户名或密码错误！", '电话 ：%s' % telephone, '密码 ：%s' % password)
                 messages.info(request, "用户名或密码错误！")
                 # message中包含由3中消息，1.info：提示消息；2.error：错误消息；3.debug：调试消息
                 return redirect(reverse('xfzauth:login'))
         else:
-            print("表单验证失败！")
+            # print("表单验证失败！")
             messages.info(request, "表单验证失败！")
             return redirect(reverse('xfzauth:login'))
 

@@ -4,11 +4,13 @@ from apps.course.models import CourseCategory, Teacher, Course
 from .forms import AddCourseForm, EditCoursesCategoryForm  # 导入需要的form表单
 from utils import restful  # 导入返回信息判断文件
 import logging
+from django.contrib.auth.decorators import login_required
 
 
 logger = logging.getLogger("django")  # 初始化logger模块
 
 
+# @method_decorator(login_required, name='dispatch')
 class PubCourse(View):
     """发布课程"""
 
@@ -51,6 +53,7 @@ class PubCourse(View):
             return restful.params_error(form.get_error())
 
 
+# @login_required()
 class CourseCategoryViem(View):
     """课程分类"""
 
@@ -83,6 +86,7 @@ class CourseCategoryViem(View):
         return render(request, 'cms/course_category.html', context=context)
 
 
+@login_required()
 def add_course_category(request):
     """添加课程分类"""
 
@@ -96,6 +100,7 @@ def add_course_category(request):
     return restful.params_error(message='该分类已经存在！')
 
 
+@login_required()
 def edit_course_category(request):
     """编辑分类"""
     form = EditCoursesCategoryForm(request.POST)
@@ -110,6 +115,7 @@ def edit_course_category(request):
         return restful.params_error(message=form.get_error())
 
 
+@login_required()
 def delete_course_category(request):
     """删除分类"""
     pk = request.POST.get("pk")

@@ -85,6 +85,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     gender = models.IntegerField(default=0)  # 0:代表未知，1：男，2：女
     date_joined = models.DateTimeField(auto_now_add=True)
     is_staff = models.BooleanField(default=False)  # 这里的命名是规定好的，
+    # user_img_url = models.URLField (default=None)
 
     # USERNAME_FIELD：这个属性是以后在使用authenticate
     # 进行验证的时候的字段
@@ -104,3 +105,5 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def get_short_name(self):
         return self.username
+
+

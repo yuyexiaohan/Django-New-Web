@@ -35,5 +35,6 @@ urlpatterns += [
 # 用户管理相关url配置
 urlpatterns += [
     path('staffs/', staff_views.staffs, name='staffs'),
-    path('add_staff/', staff_views.AddStaffView.as_view(), name='add_staff')
+    path('add_staff/', staff_views.AddStaffView.as_view(), name='add_staff'),
+    path('user_center/', views.user_center, name='user_center')
 ]
