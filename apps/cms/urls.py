@@ -32,6 +32,11 @@ urlpatterns += [
     path('delete_course_category/', course_views.delete_course_category, name='delete_course_category'),
 ]
 
+# 分享资料url
+urlpatterns += [
+    path('payinfo_list/', views.PayInfoList.as_view(), name='payinfo_list'),
+]
+
 # 用户管理相关url配置
 urlpatterns += [
     path('staffs/', staff_views.staffs, name='staffs'),

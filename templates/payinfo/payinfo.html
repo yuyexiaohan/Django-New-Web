@@ -16,14 +16,14 @@
                     {% for payinfo in payinfos %}
                         <li>
                             <a href="{% url 'payinfo:payinfo_order' %}?payinfo_id={{ payinfo.pk }}">
-                            <div class="category-group document-group"></div>
-                            <div class="payinfo-info-group">
-                                <p class="payinfo-title">{{ payinfo.title }}</p>
-                                <p class="payinfo-desc">{{ payinfo.profile }}</p>
-                                <p class="price-text">￥{{ payinfo.price }}</p>
-                            </div>
-                        </a>
-                    </li>
+                                <div class="category-group document-group"></div>
+                                <div class="payinfo-info-group">
+                                    <p class="payinfo-title">{{ payinfo.title }}</p>
+                                    <p class="payinfo-desc">{{ payinfo.profile }}</p>
+                                    <p class="price-text">￥{{ payinfo.price }}</p>
+                                </div>
+                            </a>
+                        </li>
                     {% endfor %}
 
                 </ul>

@@ -2,7 +2,7 @@
 {% extends 'cms/base.html' %}
 
 {% block title %}
-用户中心
+个人中心
 {% endblock %}
 
 {% block head %}
@@ -10,42 +10,26 @@
 {% endblock %}
 
 {% block content-header %}
-<h1>用户中心</h1>
+<h1>个人中心</h1>
 {% endblock %}
 
 {% block content %}
 <div class="row">
 <div class="col-md-12">
     <div class="box">
-        <div class="box-header">
-{#            <a href="{% url 'cms:edit_user' %}" class="btn btn-primary pull-right">新增人员</a>#}
-        </div>
         <div class="box-body">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>用户名</th>
-                        <th>手机号码</th>
-                        <th>所属分组</th>
-                        <th>人员管理</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {% if current_user %}
-                    <tr>
-                        <td>{{ current_user.username }}</td>
-                        <td>{{ current_user.telephone }}</td>
-                        <td>{{ group.name }}</td>
-                        <td>
-                            <button class="btn btn-info btn-xs">编辑</button>
-                            <button class="btn btn-danger btn-xs">删除</button>
-                        </td>
-                    </tr>
-                {% endif %}
-
-                </tbody>
-            </table>
+        {% if current_user %}
+            <label style="font-size: 18px">用户信息：</label><br>
+            <label>用户名称：</label> <p>{{ current_user.username }}</p>
+            <label>手机号码：</label> <p>{{ current_user.telephone }}</p>
+            <label>头像：</label><br>
+            <img src="https://goss2.vcg.com/creative/vcg/800/version23/VCG41546770582.jpg" alt="" style=" width: 500px">
+        {% endif %}<br>
         </div>
+    <div style="width: 500px">
+        <button class="pull-right" style="margin-left: 50px"><a href="#" >编辑信息</a></button>
+    </div>
+
         <div class="box-footer"></div>
     </div>
 </div>

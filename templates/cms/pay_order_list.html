@@ -1,0 +1,148 @@
+{% extends 'cms/base.html' %}
+{% load news_filters %}
+{% block title %}
+    订单管理
+{% endblock %}
+
+{% block head %}
+    <style>
+    .left-group{
+        margin-left: 10px;
+    }
+    .box-body th{
+        text-align: center;
+    }
+    .form-inline{
+        white-space:nowrap;
+    }
+    </style>
+    {# 导入日期填写栏的bootstrap文件路径 #}
+    <link rel="stylesheet" href="{% static 'adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css' %}">
+    <script src="{% static 'adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js' %}"></script>
+    {# 导入中文文件 其中：zh-CN.min.js必须在bootstrip-datepicker.js文件后面 #}
+    <script src="{% static 'adminlte/bower_components/bootstrap-datepicker/dist/locales/bootstrap-datepicker.zh-CN.min.js' %}"></script>
+    <script src="{% static 'js/cms_news_list.js' %}"></script>
+{% endblock %}
+
+{% block content-header %}
+    <h1>订单列表</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="box">
+    {# 查看bootstrap3.0的中文文字中的组件的关联表单中可以作如下操作 #}
+    <div class="box-header">
+        {# 引入一个表单 #}
+        <form action="" class="form-inline">
+
+            <div class="form-group left-group">
+                <label for="title-input">标题：</label>
+                {% if title %}
+                    <input type="text" class="form-control" id="title-input" name="title" placeholder="关键字" value="{{ title }}">
+                {% else %}
+                    <input type="text" class="form-control" id="title-input" name="title" placeholder="关键字">
+                {% endif %}
+            </div>
+
+            <div class="form-group left-group">
+                <button class="btn btn-primary">查询</button>
+            </div>
+            <div class="form-group left-group">
+                <a href="{% url 'cms:payinfo_list' %}">清除查询</a>
+            </div>
+        </form>
+    </div>
+
+    <div class="box-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th class="pull-center">标题</th>
+                    <th>路径</th>
+                    <th>价格</th>
+                    <th>描述信息</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for payinfo in payinfoes %}
+                    <tr>
+                        <td><a href="{% url 'payinfo:index'%}">{{ payinfo.title }}</a></td>
+                        <td>{{ payinfo.path }}</td>
+                        <td>{{ payinfo.price }}</td>
+                        <td>{{ payinfo.profile }}</td>
+                        <td>
+                            {# 使用这种形式传递参数/edit_news/?pk=? #}
+{#                            <a href="{% url 'cms:edit_payinfo' %}?pk={{ payinfo.pk }}" class="btn btn-info btn-xs">编辑</a>#}
+                            <button class="btn btn-danger btn-xs delete-btn" data-news-id="{{ news.pk }}">删除</button>
+                            {# 绑定pk,可以直接在前后端获取 #}
+                        </td>
+                    </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+{#编辑底部#}
+    <div class="box-footer">
+        <span>第{{ current_page }}页/共{{ num_pages }}页</span>
+        <nav aria-label="Page navigation" class="pull-right">
+          <ul class="pagination">
+          {#1  has_previous是一个查看上页 #}
+              {% if page_obj.has_previous %}
+                  <li>
+                  {# 点击跳转上一页的页数（page_obj.previous_page_number为上一页页码） #}
+                      <a href="?p={{ page_obj.previous_page_number }}{{ url_query }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                  </li>
+              {% else %}
+                  <li class="disable">
+                      <span aria-hidden="true">&laquo;</span>
+                  </li>
+              {% endif %}
+          {# 左边是否要出现... #}
+          {% if left_has_more %}
+              <li><a href="?p=1{{ url_query }}">1</a></li>
+              <li><span>...</span></li>
+          {% endif %}
+
+          {#2 中间页:左边页码 #}
+              {% for page in left_pages %}
+                  <li ><a href="?p={{ page }}{{ url_query }}">{{ page }}</a></li>
+              {% endfor %}
+          {# 中间页：当前页 #}
+          <li class="active"><a href="?p={{ page_obj.number }}{{ url_query }}">{{ page_obj.number }}</a></li>
+
+
+          {# 中间页：右边的页码 #}
+            {% for page in right_pages %}
+                <li ><a href="?p={{ page }}{{ url_query }}">{{ page }}</a></li>
+            {% endfor %}
+
+          {# 右边页是否要出现... #}
+          {% if right_has_more %}
+              <li><span>...</span></li>
+              <li><a href="?p={{ paginator.num_pages }}{{ url_query }}">{{ paginator.num_pages }}</a></li>
+          {% endif %}
+
+            {#3 下一页 #}
+          {% if page_obj.has_next %}
+              <li>
+                  <a href="?p={{ page_obj.next_page_number }}{{ url_query }}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+            </li>
+          {% else %}
+              <li class="disabled">
+                <span aria-hidden="true">&raquo;</span>
+              </li>
+          {% endif %}
+
+          </ul>
+        </nav>
+    </div>
+
+</div>
+{% endblock %}

@@ -6,6 +6,7 @@ from django.views.generic import View  # 使用类定义函数时，变量需要
 # 限制函数，只能使用post的请求，才能访问某个函数
 from django.views.decorators.http import require_POST, require_GET
 from apps.news.models import NewCategory, News, Banner   # 导入对应的数据库表单
+from apps.payinfo.models import Payinfo
 from utils import restful  # 引入自定义的浏览器返回的错误信息文件
 from .forms import EditNewsCategoryForm, WriteNewsForm, AddBanner, EditBannerForm, EditNewsForm
 # 导入对应的forms表单，用于与数据库表单数据关联
@@ -29,7 +30,7 @@ logger = logging.getLogger('django')  # 'django'与配置文件中的logger名�
 # 不为真就跳转到login_url='...'对应的链接。如果为真则执行后面的函数
 
 
-@staff_member_required(login_url='/')  # 这里跳转到首页
+@staff_member_required(login_url='/account/login/')  # 这里跳转到登录页
 def index(request):
     """# 1.定义一个cms管理的视图函数，返回一个cms管理界面"""
     return render(request, 'cms/index.html')
@@ -474,6 +475,102 @@ def qntoken(request):
 def user_center(request):
     """用户中心"""
     current_user = request.user
-    context = {'current_user': current_user}
+    if current_user:
+        context = {'current_user': current_user}
+    else:
+        context ={}
     return render(request, "cms/user_center.html", context=context)
 
+
+class PayInfoList(View):
+    """定义一个新闻列表管理页面，使用类的方式构建函数便于继承相关的方法"""
+
+    def get(self, request):
+        page = int(request.GET.get('p', 1))  # 获取当前所在页数
+        title = request.GET.get('title')
+
+        # 获取所有付费信息
+        payinfoes = Payinfo.objects.all()
+
+        # 过滤标题中包含指定关键字的新闻
+        if title:
+            payinfoes = payinfoes.filter(
+                title__icontains=title)  # i指忽略大小写，contains指包含
+
+        paginator = Paginator(payinfoes, 2)  # 将获取的新闻内容按照每页2篇的形式进行分页
+        page_obj = paginator.page(page)  # 获取对应分页的数据
+
+        # 通过分页函数返回分页数据，获取每一页的数据
+        pagination_data = self.get_pagination_data(paginator, page_obj)
+        '''查询内容组成的查询url是否应该带'''
+        # 方法1：
+        # if (start and end) or title or category_id!=0 :
+        # 	url_query = '&' + parse.urlencode ({
+        # 		'start': start,
+        # 		'end': end,
+        # 		'title': title,
+        # 		'category': category_id
+        # 	})
+        # else:
+        # 	url_query = ''
+        # 方法2：
+        if title:
+            url_query = '&' + parse.urlencode({
+                'title': title,
+            })
+        else:
+            url_query = ''
+
+        context = {
+            'paginator': paginator,
+            'page_obj': page_obj,
+            'payinfoes': page_obj.object_list,  # 获取该页数据的内容
+            'title': title,
+            # 查询内容url
+            'url_query': url_query
+        }
+        logger.info('用户查询了[%s]' % context['url_query'])
+        # print(context['url_query'])  # 打印测试输出的是否是我们查询内容
+        context.update(pagination_data)
+        return render(request, 'cms/pay_order_list.html', context=context)
+
+    # 定义一个分页函数
+    # < 1...5,6,7,8,9...13 >基本模式，即选中页前后留出2页，多出的用...代替。当选择最前或最后前后两页包含或者临近第一页或最后一页，那么取消显示...
+
+    def get_pagination_data(self, paginator, page_obj, around_count=1):
+        """分页功能"""
+        current_page = page_obj.number  # 获取当前页码
+        num_pages = paginator.num_pages
+
+        # 左侧是否应该显示三个点
+        left_has_more = False
+
+        # 右侧是否应该显示三个点
+        right_has_more = False
+
+        # 左侧显示页
+        # 判断当前页数小于需要展示页数+2时，不显示三个点
+        l_start = current_page - around_count  # 左侧的开始页码数
+        l_end = current_page  # 右侧结束页码数
+        if current_page <= around_count + 2:
+            left_pages = range(1, l_end)
+        else:
+            left_has_more = True
+            left_pages = range(l_start, l_end)
+
+        # 右侧显示页
+        r_start = current_page + 1
+        r_end = current_page + around_count + 1   # ? 说绝对位置是是这个位置+1?
+        if current_page >= num_pages - around_count - 1:
+            right_pages = range(r_start, num_pages + 1)
+        else:
+            right_has_more = True
+            right_pages = range(r_start, r_end)
+        return {
+            'left_pages': left_pages,
+            'right_pages': right_pages,
+            'left_has_more': left_has_more,
+            'right_has_more': right_has_more,
+            'num_pages': num_pages,
+            'current_page': current_page
+        }

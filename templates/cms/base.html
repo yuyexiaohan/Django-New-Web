@@ -148,6 +148,22 @@
                     </a>
                 </li>
                 {% endif %}
+                {% if user.is_superuser %}
+                    <li class="header">资料管理</li>
+                    <li>
+                    <a href="{% url 'cms:payinfo_list' %}">
+                        <i class="fa fa-folder"></i>
+                        <span>资料列表</span>
+                    </a>
+                    </li>
+                    <li>
+{#                    <a href="{% url 'cms:pub_payinfo' %}">#}
+                    <a href="#">
+                        <i class="fa fa-leanpub"></i>
+                        <span>发布资料</span>
+                    </a>
+                    </li>
+                {% endif %}
             </ul>
         </section>
     </aside>
