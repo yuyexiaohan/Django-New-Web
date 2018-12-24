@@ -83,7 +83,6 @@ class RegisterView(View):
 
     def get(self, request):
         return render(request, "auth/register.html")
-    # render 是重定向，将链接跳转到指定的url;
 
     def post(self, request):
         form = RegisterForm(request.POST)
