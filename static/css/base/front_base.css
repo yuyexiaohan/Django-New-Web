@@ -51,10 +51,11 @@ body{
 }
 
 .nav .login-box{
-    width: 145px;
-    height: 49px;
-    background: url("#");
-    margin-top: 8px;
+    width: 180px;
+    height: 100px;
+    background: url(http://achjiang.cn/logo-1.png);
+    background-size: 100%;
+    margin-top: -36px;
     float: left;
 }
 
@@ -158,19 +159,20 @@ body{
 }
 
 .footer-inner .login-box{
-    width: 168px;
-    height: 54px;
-    background: url("#");
+    width: 200px;
+    height: 100px;
+    background: url("http://achjiang.cn/logo-1.png");
     background-size: 100%;
-    margin-top: 20px;
+    margin-top: -32px;
     float: left;
 }
 
 .footer-inner .detail-info-group{
     float: left;
-    margin-left: 80px;
+    margin-left: 160px;
     margin-top: 20px;
     overflow: hidden;
+    display: block;
 }
 
 .detail-info-group .top-group{
