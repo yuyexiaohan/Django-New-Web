@@ -1,8 +1,8 @@
-.sidebar-container {
+.main .sidebar-container {
   background: #fff;
-float: right;
-width: 355px;
-height: 200px;
+  float: right;
+  width: 355px;
+  height: auto;
 }
 .sidebar-container .course-group {
   padding: 20px 20px;
@@ -31,25 +31,24 @@ height: 200px;
   height: 178px;
 }
 .sidebar-container .pay-info-group {
-  margin-top: -11px;
+  margin-top: 0px;
   height: 130px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   margin-left: 50px;
   margin-right: auto;
 }
 .sidebar-container .pay-info-group img {
   display: block;
-  width: auto;
-  height: 155%;
-  margin-top: -46px;
-  margin-bottom: -17px;
+    width: auto;
+    height: 70%;
+    margin-top: 4px;
+    margin-bottom: 10px;
 
 }
 .sidebar-container .pay-info-group h4 {
   font-size: 16px;
   font-weight: bold;
   margin-left: 60px;
-  margin-top: -10px;
   overflow: hidden;
 }
 .sidebar-container .focus-group {
