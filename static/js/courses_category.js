@@ -8,13 +8,15 @@ $(function () {
             'title':'添加想法分类',
             'placeholder':'请输入想法分类',
             'confirmCallback':function (inputValue) {
+                console.log('添加想法分类ajax开始');
                 xfzajax.post({
-                    'url':'/cms/add_courses_category/',
+                    'url':'/cms/add_course_category/',
                     // 注意url前后的/线
                     'data':{
                         'name':inputValue
                     },
                     'success':function (result) {
+                        console.log(result);
                         if (result['code'] === 200){
                             window.location.reload();
                         }
@@ -52,7 +54,7 @@ $(function () {
                //使用Ajax的post请求
                xfzajax.post({
                    // url执行执行的路由接口，注意其中路经前后部分与urls文件中的路由一致，如果后面加有'/'，则该url也要加入
-                   'url':'/cms/edit_courses_category/',
+                   'url':'/cms/edit_course_category/',
                    //返回数据，pk/name是指通过指定前端的id获取对应分类category中的id和名称
                    'data':{
                        'pk': pk,
@@ -61,7 +63,9 @@ $(function () {
                    // 如果成功就执行函数
                     'success':function (result) {
                        // 进行判断，如果返回的代码是200即成功，则执行后面操作
+                        console.log(result);
                        if(result['code'] === 200){
+
                            // 重新加载本地页面
                             window.location.reload();
                         }
@@ -79,21 +83,23 @@ $(function () {
 $(function () {
     var deleteBtn = $('.delete-btn');
     deleteBtn.click(function () {
-        var currentBtn = $(this)
+        var currentBtn = $(this);
         var tr = currentBtn.parent().parent();
         var pk = tr.attr('data-pk');
         xfzalert.alertConfirm({
             'text':'你确认要删除该分类吗？',
             // 如果用户点击了确认，执行后面的操作
             'confirmCallback':function () {
+                console.log('删除ajax请求开始');
                 // 执行Ajax请求
                 xfzajax.post({
-                    'url':'/cms/delete_coures_category/',
+                    'url':'/cms/delete_course_category/',
                     'data':{
                       'pk':pk
                     },
                     // 如果成功则执行下面操作
                     'success':function (result) {
+                        console.log(result);
                         if (result['code'] === 200){
                             // 重新加载页面
                             window.location.reload();
@@ -103,4 +109,4 @@ $(function () {
             }
         });
     })
-})
+});

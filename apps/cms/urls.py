@@ -27,8 +27,8 @@ urlpatterns = [
 urlpatterns += [
     path('pub_course/', course_views.PubCourse.as_view(), name='pub_course'),
     path('course_category/', course_views.CourseCategoryViem.as_view(), name='course_category'),
-    path('add_courses_category/', course_views.add_course_category, name='add_course_category'),
-    path('edit_courses_category/', course_views.edit_course_category, name='edit_course_category'),
+    path('add_course_category/', course_views.add_course_category, name='add_course_category'),
+    path('edit_course_category/', course_views.edit_course_category, name='edit_course_category'),
     path('delete_course_category/', course_views.delete_course_category, name='delete_course_category'),
 ]
 

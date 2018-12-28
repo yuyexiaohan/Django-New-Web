@@ -89,8 +89,7 @@ class CourseCategoryViem(View):
 @login_required()
 def add_course_category(request):
     """添加课程分类"""
-
-    name = request.Post.get("name")
+    name = request.POST.get("name")
     exist = CourseCategory.objects.filter(name=name).exists()
     if not exist:
         CourseCategory.objects.create(name=name)
@@ -109,9 +108,11 @@ def edit_course_category(request):
         name = form.cleaned_data.get('name')
         try:
             CourseCategory.objects.filter(pk=pk).update(name=name)
+            return restful.ok()
         except Exception as e:
             logger.error("修改文章分类报错：%s" % e)
             return restful.params_error(message="这个分类不存在！")
+    else:
         return restful.params_error(message=form.get_error())
 
 
@@ -121,6 +122,8 @@ def delete_course_category(request):
     pk = request.POST.get("pk")
     try:
         CourseCategory.objects.filter(pk=pk).delete()
+        print('删除测试')
+        return restful.ok()
     except Exception as e:
         logger.error("删除分类出错：%s" % e)
         return restful.params_error(message="这个分类不存在或已被删除，请刷新界面重新查看！")
