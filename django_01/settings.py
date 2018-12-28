@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os
 from . import config
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -165,9 +166,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
-
-
 # Ueditor编辑器配置
 # 上传服务器配置
 UEDITOR_UPLOAD_TO_SERVER = True
@@ -211,7 +209,7 @@ LOGGING = {
         'verbose': {
             # 'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s' # 官方示例
             # WARNING 2018-11-08 16:19:23,113 views 24300 5424 文章分类修改'3'成功
-            'format': '%(asctime)s - %(filename)s\%(funcName)s[line:%(lineno)d] - %(levelname)s: %(message)s'
+            'format': '%(asctime)s - %(filename)s\%(funcName)s[line:%(lineno)d] - %(levelname)s: %(message)s',
 	        #  2018-11-08 16:34:17,512 - views.py\edit_news_category[line:329] - WARNING: 文章分类修改'时政热点'成功
 	        # 'format': '[%(asctime)s] %(levelname)s [%(name)s.%(funcName)s:%(lineno)d %(module)s] %(message)s'
 	        # [2018-11-08 16:22:29,817] WARNING [django.edit_news_category:329 views] 文章分类修改'4'成功
