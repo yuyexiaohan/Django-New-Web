@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+from . import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -92,11 +93,11 @@ WSGI_APPLICATION = 'django_01.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydb',
-        'USER': 'root',
-        'PASSWORD': 'QAZwsx1992,.',
-        'HOST': '127.0.0.1',
-        'POST': '3306',
+        'NAME': config.MYSQL_NAME,
+        'USER': config.MYSQL_USER,
+        'PASSWORD': config.MYSQL_PASSWORD,
+        'HOST': config.MYSQL_HOST,
+        'POST': config.MYSQL_POST,
 
     }
 }
@@ -164,11 +165,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# 七牛云相关的配置
-QINIU_ACCESS_KEY = ''
-QINIU_SECRET_KEY = ''
-QINIU_BUCKET_NAME = ''
-QINIU_DOMAIN = ''
+
 
 
 # Ueditor编辑器配置
@@ -179,10 +176,10 @@ UEDITOR_CONFIG_PATH = os.path.join(
     BASE_DIR, 'static', 'ueditor', 'config.json')
 
 # 上传七牛云配置
-UEDITOR_QINIU_ACCESS_KEY = QINIU_ACCESS_KEY
-UEDITOR_QINIU_SECRET_KEY = QINIU_SECRET_KEY
-UEDITOR_QINIU_BUCKET_NAME = QINIU_BUCKET_NAME
-UEDITOR_QINIU_DOMAIN = QINIU_DOMAIN
+UEDITOR_QINIU_ACCESS_KEY = config.QINIU_ACCESS_KEY
+UEDITOR_QINIU_SECRET_KEY = config.QINIU_SECRET_KEY
+UEDITOR_QINIU_BUCKET_NAME = config.QINIU_BUCKET_NAME
+UEDITOR_QINIU_DOMAIN = config.QINIU_DOMAIN
 UEDITOR_UPLOAD_TO_QINIU = True
 
 # 定义首页新闻一页展示多少条新闻
@@ -190,9 +187,20 @@ ONE_PAGE_NEWS_COUNT = 2
 
 # 百度云的配置
 # 控制台->用户中心->用户ID
-BAIDU_CLOUD_USER_ID = ''
+BAIDU_CLOUD_USER_ID = config.BAIDU_CLOUD_USER_ID
 # 点播VOD->全局设置->发布设置->安全设置->UserKey
-BAIDU_CLOUD_USER_KEY = ''
+BAIDU_CLOUD_USER_KEY = config.BAIDU_CLOUD_USER_KEY
+
+# 第三方支付
+PAY_TOKEN = config.PAY_TOKEN
+PAY_UID = config.PAY_UID
+
+# 阿里云短信配置
+ACCESS_KEY_ID = config.ALI_ACCESS_KEY_ID
+ACCESS_KEY_SECRET = config.ALI_ACCESS_KEY_SECRET
+SIGN_NAME = config.ALI_SIGN_NAME
+TEMPLATE_CODE = config.ALI_TEMPLATE_CODE
+
 
 # log日志配置
 LOGGING = {

@@ -112,18 +112,18 @@ def order_key(request):
     price = request.POST.get('price')
     return_url = request.POST.get('return_url')
 
-    token = 'e6110f92abcb11040ba153967847b7a6'
-    uid = '49dc532695baa99e16e01bc0'
+    token = settings.PAY_TOKEN
+    uid = settings.PAY_UID
     orderuid = str(request.user.pk)
 
-    print('goodsname:', goodsname)
-    print('istype:', istype)
-    print('notify_url:', notify_url)
-    print('orderid:', orderid)
-    print('price:', price)
-    print('return_url:', return_url)
-    print('token:', token)
-    print('orderuid:', orderuid)
+    # print('goodsname:', goodsname)
+    # print('istype:', istype)
+    # print('notify_url:', notify_url)
+    # print('orderid:', orderid)
+    # print('price:', price)
+    # print('return_url:', return_url)
+    # print('token:', token)
+    # print('orderuid:', orderuid)
 
     key = md5(
         (goodsname +

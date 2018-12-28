@@ -459,12 +459,9 @@ def upload_file(request):
 @staff_member_required(login_url='/')  # ?
 def qntoken(request):
     # 七牛云中给出的访问和私有密钥
-    access_key = 'AnE70UQaiqokVXUT7v3BGYNAVWo5oey8UA3fEdsD'  # 填写自己的七牛云key
-    secretkey = 'BIGPCz55HcnTtq3RqDgMfeLUtvwTaBGnVKNs4gyN'  # 填写自己的七牛云key
+    q = qiniu.Auth(settings.UEDITOR_QINIU_ACCESS_KEY, settings.UEDITOR_QINIU_SECRET_KEY)
 
-    q = qiniu.Auth(access_key, secretkey)
-
-    bucket = ' news1'  # 可修改，填写七牛云中创建的存储空间
+    bucket = settings.UEDITOR_QINIU_BUCKET_NAME  # 可修改，填写七牛云中创建的存储空间
 
     token = q.upload_token(bucket)
 

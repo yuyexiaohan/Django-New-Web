@@ -122,7 +122,6 @@ def delete_course_category(request):
     pk = request.POST.get("pk")
     try:
         CourseCategory.objects.filter(pk=pk).delete()
-        print('删除测试')
         return restful.ok()
     except Exception as e:
         logger.error("删除分类出错：%s" % e)

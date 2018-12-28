@@ -8,6 +8,7 @@ from aliyunsdkcore.profile import region_provider
 from aliyunsdkcore.http import method_type as MT
 from aliyunsdkcore.http import format_type as FT
 import json
+from django.conf import settings
 
 """
 短信业务调用接口示例，版本号：v20170525
@@ -16,8 +17,8 @@ Created on 2017-06-12
 
 """
 
-ACCESS_KEY_ID = "LTAIPa60hCkxzJsj"
-ACCESS_KEY_SECRET = "ThAmitCOWWGn0ze5h9IQdxImUoIogJ"
+ACCESS_KEY_ID = settings.ACCESS_KEY_ID
+ACCESS_KEY_SECRET = settings.ACCESS_KEY_SECRET
 
 
 # 注意：不要更改
@@ -32,8 +33,8 @@ region_provider.add_endpoint(PRODUCT_NAME, REGION, DOMAIN)
 def send_sms(phone_numbers,code):
 
     business_id = uuid.uuid1()
-    sign_name = "xfzjiang应用"
-    template_code = 'SMS_138060560'
+    sign_name = settings.SIGN_NAME
+    template_code = settings.TEMPLATE_CODE
     template_param = json.dumps({"code":code})
 
     smsRequest = SendSmsRequest.SendSmsRequest()
@@ -50,6 +51,7 @@ def send_sms(phone_numbers,code):
     smsRequest.set_PhoneNumbers(phone_numbers)
     # 调用短信发送接口，返回json
     smsResponse = acs_client.do_action_with_exception(smsRequest)
+    print('阿里信息回执：', smsResponse.decode())
     return smsResponse
 
 
