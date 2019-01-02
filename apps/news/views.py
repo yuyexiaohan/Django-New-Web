@@ -27,7 +27,7 @@ def index(request):
     categories = NewCategory.objects.all()
     banners = Banner.objects.all()  # 获取轮播图
     # context 中''中的数据是传入HTML模板中的变量，
-    print(type(banners), 'banners:%s' % banners)
+    # print(type(banners), 'banners:%s' % banners)
     context = {
         'newses': newses,
         'categories': categories,
