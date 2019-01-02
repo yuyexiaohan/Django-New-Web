@@ -165,7 +165,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 # 存储文件路径配置
 MEDIA_URL = '/static/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_dist/media')
 
 # Ueditor编辑器配置
 # 上传服务器配置

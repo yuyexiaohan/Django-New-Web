@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apps/news/views.py" afterPath="$PROJECT_DIR$/apps/news/views.py" />
       <change beforePath="$PROJECT_DIR$/django_01/settings.py" afterPath="$PROJECT_DIR$/django_01/settings.py" />
-      <change beforePath="$PROJECT_DIR$/media/382b7ca4680c44bfc41551d6945efbef.png" afterPath="$PROJECT_DIR$/static/media/382b7ca4680c44bfc41551d6945efbef.png" />
-      <change beforePath="$PROJECT_DIR$/media/55c759140f76199ec1d9a550d7a16281.jpg" afterPath="$PROJECT_DIR$/static/media/55c759140f76199ec1d9a550d7a16281.jpg" />
-      <change beforePath="$PROJECT_DIR$/media/timg (1).jpg" afterPath="$PROJECT_DIR$/static/media/timg (1).jpg" />
-      <change beforePath="$PROJECT_DIR$/media/timg (2).jpg" afterPath="$PROJECT_DIR$/static/media/timg (2).jpg" />
-      <change beforePath="$PROJECT_DIR$/media/timg (3).jpg" afterPath="$PROJECT_DIR$/static/media/timg (3).jpg" />
-      <change beforePath="$PROJECT_DIR$/media/timg (4).jpg" afterPath="$PROJECT_DIR$/static/media/timg (4).jpg" />
-      <change beforePath="$PROJECT_DIR$/media/timg.jpg" afterPath="$PROJECT_DIR$/static/media/timg.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +39,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="452" column="52" lean-forward="true" selection-start-line="452" selection-start-column="52" selection-end-line="452" selection-end-column="52" />
+            <state relative-caret-position="140">
+              <caret line="442" column="20" lean-forward="true" selection-start-line="442" selection-start-column="20" selection-end-line="442" selection-end-column="20" />
               <folding>
                 <element signature="e#15#69#0" expanded="true" />
                 <element signature="e#1408#1489#0" expanded="false" />
@@ -60,7 +52,6 @@
                 <element signature="e#9247#10483#0" expanded="false" />
                 <element signature="e#11790#12171#0" expanded="false" />
                 <element signature="e#13883#14521#0" expanded="false" />
-                <element signature="e#15480#15741#0" expanded="false" />
                 <element signature="e#15775#15985#0" expanded="false" />
               </folding>
             </state>
@@ -70,8 +61,30 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_01/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="157" column="1" lean-forward="true" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+            <state relative-caret-position="520">
+              <caret line="167" column="56" lean-forward="true" selection-start-line="167" selection-start-column="56" selection-end-line="167" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="writ_news.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/writ_news.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2004">
+              <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pub_course.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/pub_course.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-880">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -115,7 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>order_key</find>
       <find>orderid</find>
       <find>search</find>
       <find>\{\% extends \'cms\/base\.html\' \%\}\#\}\n\{\#\#\}\n\{\#\{\% block title \%\}\#\}\n\{\#员工管理\#\}\n\{\#\{\% endblock \%\}\#\}\n\{\#\#\}\n\{\#\{\% block head \%\}\#\}\n\{\#\#\}\n\{\#\{\% endblock \%\}\#\}\n\{\#\#\}\n\{\#\{\% block content\-header \%\}\#\}\n\{\#\&lt;h1\&gt;员工管理\&lt;\/h1\&gt;\#\}\n\{\#\{\% endblock \%\}\#\}\n\{\#\#\}\n\{\#\{\% block content \%\}\#\}\n\{\#\&lt;div class\=\&quot;row\&quot;\&gt;\#\}\n\{\#\&lt;div class\=\&quot;col\-md\-12\&quot;\&gt;\#\}\n\{\#    \&lt;div class\=\&quot;box\&quot;\&gt;\#\}\n\{\#        \&lt;div class\=\&quot;box\-header\&quot;\&gt;\#\}\n\{\#            \&lt;a href\=\&quot;\{\% url \'cms\:add_staff\' \%\}\&quot; class\=\&quot;btn btn\-primary pull\-right\&quot;\&gt;新增员工\&lt;\/a\&gt;\#\}\n\{\#        \&lt;\/div\&gt;\#\}\n\{\#        \&lt;div class\=\&quot;box\-body\&quot;\&gt;\#\}\n\{\#            \&lt;table class\=\&quot;table table\-bordered\&quot;\&gt;\#\}\n\{\#                \&lt;thead\&gt;\#\}\n\{\#                    \&lt;tr\&gt;\#\}\n\{\#                        \&lt;th\&gt;用户名\&lt;\/th\&gt;\#\}\n\{\#                        \&lt;th\&gt;手机号码\&lt;\/th\&gt;\#\}\n\{\#                        \&lt;th\&gt;所属分组\&lt;\/th\&gt;\#\}\n\{\#                        \&lt;th\&gt;员工管理\&lt;\/th\&gt;\#\}\n\{\#                    \&lt;\/tr\&gt;\#\}\n\{\#                \&lt;\/thead\&gt;\#\}\n\{\#                \&lt;tbody\&gt;\#\}\n\{\#                \{\% for staff in staffs \%\}\#\}\n\{\#                    \&lt;tr\&gt;\#\}\n\{\#                        \&lt;td\&gt;\{\{ staff\.username \}\}\&lt;\/td\&gt;\#\}\n\{\#                        \&lt;td\&gt;\{\{ staff\.telephone \}\}\&lt;\/td\&gt;\#\}\n\{\#                        \&lt;td\&gt;\#\}\n\{\#                            \{\% if staff\.is_superuser \%\}\#\}\n\{\#                                超级管理员\#\}\n\{\#                            \{\% else \%\}\#\}\n\{\#                                \{\% for group in staff\.groups\.all \%\}\#\}\n\{\#                                    \{\{ group\.name \}\}\#\}\n\{\#                                \{\% endfor \%\}\#\}\n\{\#                            \{\% endif \%\}\#\}\n\{\#                        \&lt;\/td\&gt;\#\}\n\{\#                        \&lt;td\&gt;\#\}\n\{\#                            \&lt;button class\=\&quot;btn btn\-info btn\-xs\&quot;\&gt;编辑\&lt;\/button\&gt;\#\}\n\{\#                            \&lt;button class\=\&quot;btn btn\-danger btn\-xs\&quot;\&gt;删除\&lt;\/button\&gt;\#\}\n\{\#                        \&lt;\/td\&gt;\#\}\n\{\#                    \&lt;\/tr\&gt;\#\}\n\{\#                \{\% endfor \%\}\#\}\n\{\#\#\}\n\{\#                \&lt;\/tbody\&gt;\#\}\n\{\#            \&lt;\/table\&gt;\#\}\n\{\#        \&lt;\/div\&gt;\#\}\n\{\#        \&lt;div class\=\&quot;box\-footer\&quot;\&gt;\&lt;\/div\&gt;\#\}\n\{\#    \&lt;\/div\&gt;\#\}\n\{\#\&lt;\/div\&gt;\#\}\n\{\#\&lt;\/div\&gt;\#\}\n\{\#\{\% endblock \%\}</find>
@@ -145,6 +157,7 @@
       <find>media</find>
       <find>MEDIA_ROOT</find>
       <find>MEDIA_URL</find>
+      <find>pg</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -178,7 +191,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/utils/captcha/hycaptcha.py" />
         <option value="$PROJECT_DIR$/static/js/banners.js" />
         <option value="$PROJECT_DIR$/apps/news/serializers.py" />
         <option value="$PROJECT_DIR$/apps/news/models.py" />
@@ -228,6 +240,7 @@
         <option value="$PROJECT_DIR$/django_01/config.py" />
         <option value="$PROJECT_DIR$/apps/course/views.py" />
         <option value="$PROJECT_DIR$/apps/news/views.py" />
+        <option value="$PROJECT_DIR$/static/js/writ_news.js" />
         <option value="$PROJECT_DIR$/django_01/settings.py" />
       </list>
     </option>
@@ -293,6 +306,12 @@
               <item name="django_01" type="b2602c69:ProjectViewProjectNode" />
               <item name="django_01" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="django_01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="django_01" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -428,20 +447,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Change the code format according to PEP8">
-      <created>1538876182058</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1538876182058</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Change the code format according to PEP8">
-      <created>1538876312499</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1538876312499</updated>
     </task>
     <task id="LOCAL-00028" summary="Change the code format according to PEP8">
       <created>1538881614161</created>
@@ -772,7 +777,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545991228514</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="存储文件路径修改">
+      <created>1546402015206</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1546402015206</updated>
+    </task>
+    <task id="LOCAL-00076" summary="修改云存储路径">
+      <created>1546436452909</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1546436452909</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -791,7 +810,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33295324" sideWeight="0.5193133" order="7" side_tool="true" content_ui="tabs" />
@@ -800,7 +818,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33751425" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12929185" sideWeight="0.46551725" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12929185" sideWeight="0.46551725" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.49255583" order="1" side_tool="false" content_ui="tabs" />
@@ -877,8 +895,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="forms.py-test" />
-    <MESSAGE value="cms-base.html delete link tag to icon" />
     <MESSAGE value="news and auth: add admin parameter" />
     <MESSAGE value="add line for ueditor-views.py" />
     <MESSAGE value="add accesskey and secretkey" />
@@ -902,7 +918,9 @@
     <MESSAGE value="修复cms想法分类的动态增删改" />
     <MESSAGE value="key_protect" />
     <MESSAGE value="pep8" />
-    <option name="LAST_COMMIT_MESSAGE" value="pep8" />
+    <MESSAGE value="存储文件路径修改" />
+    <MESSAGE value="修改云存储路径" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改云存储路径" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -911,21 +929,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/cms/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/payinfo/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/core/paginator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -1286,10 +1289,28 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/writ_news.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2004">
+          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/pub_course.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-880">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="452" column="52" lean-forward="true" selection-start-line="452" selection-start-column="52" selection-end-line="452" selection-end-column="52" />
+        <state relative-caret-position="140">
+          <caret line="442" column="20" lean-forward="true" selection-start-line="442" selection-start-column="20" selection-end-line="442" selection-end-column="20" />
           <folding>
             <element signature="e#15#69#0" expanded="true" />
             <element signature="e#1408#1489#0" expanded="false" />
@@ -1301,7 +1322,6 @@
             <element signature="e#9247#10483#0" expanded="false" />
             <element signature="e#11790#12171#0" expanded="false" />
             <element signature="e#13883#14521#0" expanded="false" />
-            <element signature="e#15480#15741#0" expanded="false" />
             <element signature="e#15775#15985#0" expanded="false" />
           </folding>
         </state>
@@ -1309,8 +1329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_01/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="157" column="1" lean-forward="true" selection-start-line="157" selection-start-column="1" selection-end-line="157" selection-end-column="1" />
+        <state relative-caret-position="520">
+          <caret line="167" column="56" lean-forward="true" selection-start-line="167" selection-start-column="56" selection-end-line="167" selection-end-column="56" />
           <folding />
         </state>
       </provider>
