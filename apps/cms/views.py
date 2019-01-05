@@ -441,8 +441,8 @@ def upload_file(request):
     if not file:
         return restful.params_error(message='没有上传任何文件！')
     name = file.name
-    filepath = os.path.join(settings.MEDIA_ROOT, name)
-    with open(filepath, 'wb')as fp:  # 以数据流的形式进行存储
+    file_path = os.path.join(settings.MEDIA_ROOT, name)
+    with open(file_path, 'wb')as fp:  # 以数据流的形式进行存储
         for chunk in file.chunks():
             fp.write(chunk)  # chunk使用一种遍历的形式，以定义的一定量，对文件进行传输，保证内存不被溢出
         # 最终返回一个文件路径+文件名
