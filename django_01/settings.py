@@ -77,6 +77,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 # auth中的user中有属性.is_authenticated可以判断该用户是否存在
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media', # media_url 文件
             ],
             # 在setting文件中按照如下配置后，在后续的模板中就不用再加载静待模板。省去了所有文件中的这句代码‘{% load
             # static%}’
@@ -164,8 +165,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 
 # 存储文件路径配置
 MEDIA_URL = '/static/media/'
+# MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static_dist/media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Ueditor编辑器配置
 # 上传服务器配置
@@ -199,6 +202,20 @@ ACCESS_KEY_ID = config.ALI_ACCESS_KEY_ID
 ACCESS_KEY_SECRET = config.ALI_ACCESS_KEY_SECRET
 SIGN_NAME = config.ALI_SIGN_NAME
 TEMPLATE_CODE = config.ALI_TEMPLATE_CODE
+
+# 全文检索框架的配置
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        # 使用whoosh引擎
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        # 'ENGINE': 'haystack.backends.whoosh_cn_backend.WhooshEngine',
+        # 索引文件路径
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    }
+}
+
+# 当添加、修改、删除数据时，自动生成索引
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 
 # log日志配置
@@ -267,3 +284,4 @@ LOGGING = {
         }
     }
 }
+
