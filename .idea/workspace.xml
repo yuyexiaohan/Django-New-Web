@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/django_01/settings.py" afterPath="$PROJECT_DIR$/django_01/settings.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,7 +69,7 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/django_01/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
+            <state relative-caret-position="431">
               <caret line="209" column="66" lean-forward="true" selection-start-line="209" selection-start-column="66" selection-end-line="209" selection-end-column="66" />
               <folding>
                 <element signature="e#5992#8167#0" expanded="false" />
@@ -263,8 +262,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="951" />
-    <option name="width" value="1002" />
+    <option name="x" value="5" />
+    <option name="width" value="1219" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -468,13 +467,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Change the code format according to PEP8">
-      <created>1539182274012</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1539182274038</updated>
     </task>
     <task id="LOCAL-00032" summary="add banner.close function">
       <created>1539350218031</created>
@@ -812,7 +804,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546693211452</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="全文检索框架配置">
+      <created>1546764642703</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1546764642703</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -917,7 +916,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add accesskey and secretkey" />
     <MESSAGE value="news-admin:coding by PEP8" />
     <MESSAGE value="index:css" />
     <MESSAGE value="add makedown-edit" />
@@ -942,7 +940,8 @@
     <MESSAGE value="修改云存储路径" />
     <MESSAGE value="修改图片存储和静态文件读取路径" />
     <MESSAGE value="修改变量名" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改变量名" />
+    <MESSAGE value="全文检索框架配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="全文检索框架配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1352,7 +1351,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/django_01/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
+        <state relative-caret-position="431">
           <caret line="209" column="66" lean-forward="true" selection-start-line="209" selection-start-column="66" selection-end-line="209" selection-end-column="66" />
           <folding>
             <element signature="e#5992#8167#0" expanded="false" />
