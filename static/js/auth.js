@@ -72,7 +72,7 @@ $(function () {
         var password2 = password2Input.val();
         var smscaptcha = smsCaptchaInput.val();
 
-        if(!telephone || telephone.length != 11){
+        if(!telephone || telephone.length !== 11){
             alert('手机号码输入不正确！');
             return;
         }
