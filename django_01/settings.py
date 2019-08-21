@@ -125,7 +125,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # AUTH_USER_MODEL 这个属性时Django内置的，它会主动的到文件中来
 # 查找这个属性，如果找到了，那么就会使用这个属性指定的模型来作为User对象
-# AUTH_USER_MODEL 这个属性是一个字符串，它的规则是'appname.Modelname'
+# AUTH_USER_MODEL 这个属性是一个字符串，它的规则是'appname.ModelName'
 # 如果设置了AUTH_USER_MODEL ,那么项目的makemigrations以及migrate命令
 # 必须要在设置（setting文件配置）完这些东西之后执行
 AUTH_USER_MODEL = 'xfzauth.User'
