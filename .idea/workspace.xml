@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/django_01/settings.py" afterPath="$PROJECT_DIR$/django_01/settings.py" />
+      <change beforePath="$PROJECT_DIR$/apps/forms.py" afterPath="$PROJECT_DIR$/apps/forms.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,26 +37,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_01/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4672">
-              <caret line="134" column="2" lean-forward="true" selection-start-line="134" selection-start-column="2" selection-end-line="134" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/django_01/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-384">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -84,11 +64,9 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/xfzauth/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="64">
+              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,24 +103,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="384">
+              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/xfzauth/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state relative-caret-position="623">
+              <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
+                <element signature="e#243#753#0" expanded="false" />
+                <element signature="e#2368#2729#0" expanded="false" />
+                <element signature="e#3933#4280#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/forms/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1137">
+              <caret line="306" column="8" lean-forward="false" selection-start-line="306" selection-start-column="8" selection-end-line="306" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,7 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>f</find>
       <find>font-size</find>
       <find>16</find>
       <find>nav</find>
@@ -191,6 +181,7 @@
       <find>title</find>
       <find>POST</find>
       <find>查询</find>
+      <find>cleaned_data</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -227,7 +218,6 @@
         <option value="$PROJECT_DIR$/apps/news/models.py" />
         <option value="$PROJECT_DIR$/apps/course/admin.py" />
         <option value="$PROJECT_DIR$/apps/payinfo/admin.py" />
-        <option value="$PROJECT_DIR$/apps/forms.py" />
         <option value="$PROJECT_DIR$/apps/xfzauth/forms.py" />
         <option value="$PROJECT_DIR$/apps/ueditor/views.py" />
         <option value="$PROJECT_DIR$/apps/xfzauth/admin.py" />
@@ -275,6 +265,7 @@
         <option value="$PROJECT_DIR$/apps/cms/views.py" />
         <option value="$PROJECT_DIR$/static/js/auth.js" />
         <option value="$PROJECT_DIR$/django_01/settings.py" />
+        <option value="$PROJECT_DIR$/apps/forms.py" />
       </list>
     </option>
   </component>
@@ -491,13 +482,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
-    </task>
-    <task id="LOCAL-00036" summary="delete annotation">
-      <created>1539526812541</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1539526812541</updated>
     </task>
     <task id="LOCAL-00037" summary="change code by PEP8">
       <created>1539535014363</created>
@@ -835,7 +819,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565257153408</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="modify grammar">
+      <created>1566394600716</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1566394600718</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -975,27 +966,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/css/news/news.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2187">
-          <caret line="104" column="27" lean-forward="false" selection-start-line="104" selection-start-column="27" selection-end-line="104" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/cms_news_list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1306,16 +1276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/xfzauth/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="17" column="19" lean-forward="true" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/xfzauth/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1342,21 +1302,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/forms.py">
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/forms/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#109#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/builtins.pyi">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-48">
+          <caret line="622" column="0" lean-forward="false" selection-start-line="622" selection-start-column="0" selection-end-line="622" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/xfzauth/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/workSpace_env/envs/django_01/Lib/site-packages/django/forms/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1137">
+          <caret line="306" column="8" lean-forward="false" selection-start-line="306" selection-start-column="8" selection-end-line="306" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/xfzauth/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="129" column="0" lean-forward="true" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state relative-caret-position="623">
+          <caret line="105" column="0" lean-forward="false" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
+            <element signature="e#243#753#0" expanded="false" />
+            <element signature="e#2368#2729#0" expanded="false" />
+            <element signature="e#3933#4280#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
