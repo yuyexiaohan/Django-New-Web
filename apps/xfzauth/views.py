@@ -124,7 +124,7 @@ def img_captcha(request):
     return response
 
 
-def sms_capacha(request):
+def sms_captcha(request):
     """短信验证码"""
     code = Captcha.gene_text()
     print('code:', code)
