@@ -121,6 +121,7 @@ def img_captcha(request):
     response.write(out.read())
     response['Content-length'] = out.tell()
     request.session['img_captcha'] = text
+    # print("response:", response, '\n', "text:", text, '\n', 'image:', image, '\n', 'imageType:', type(image))
     return response
 
 
