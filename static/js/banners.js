@@ -68,6 +68,8 @@ function addImageSelectEvent(bannerItem) {
                     var url = result['data']['url'];
                     console.log(url); // 打印url
                     image.attr('src',url);// 修改图片的属性，加入图片的url,这样图片添加后，就可以在网页上显示了
+                } else {
+                    console.log("code", result["code"]);
                 }
             }
         });

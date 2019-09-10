@@ -21,7 +21,6 @@ from urllib import parse  # 导入url函数
 # 可以在该模块后给出一个条件，这样就可以要求对应的权限
 from django.contrib.auth.decorators import permission_required
 from apps.xfzauth.decorators import xfz_permission_required
-from django.conf import settings
 import logging
 
 
