@@ -26,7 +26,8 @@ SECRET_KEY = '(!az*nhv-51*ki2f*d1(#m+e(@03-cqy77gtmy=a++2=4@7&fl'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False  # 调试开关，True是调试模式，False是关闭调试模式
+# DEBUG = False  # 调试开关，True是调试模式，False是关闭调试模式
+DEBUG = True  # 调试开关，True是调试模式，False是关闭调试模式
 
 # 两种方式在括号种加*，或者加入该服务器的地址
 ALLOWED_HOSTS = ['www.achjiang.cn', '47.93.8.105', '127.0.0.1']
@@ -164,11 +165,8 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_dist')
 
 # 存储文件路径配置
-MEDIA_URL = '/static/media/'
-# MEDIA_URL = '/media/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static_dist/media')
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Ueditor编辑器配置
 # 上传服务器配置
