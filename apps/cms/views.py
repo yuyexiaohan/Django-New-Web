@@ -8,7 +8,7 @@ from django.views.decorators.http import require_POST, require_GET
 from apps.news.models import NewCategory, News, Banner   # 导入对应的数据库表单
 from apps.payinfo.models import Payinfo
 from utils import restful  # 引入自定义的浏览器返回的错误信息文件
-from .forms import EditNewsCategoryForm, WriteNewsForm, AddBanner, EditBannerForm, EditNewsForm
+from .forms import EditNewsCategoryForm, WriteNewsForm, AddBannerForm, EditBannerForm, EditNewsForm, EditUserCenterForm
 # 导入对应的forms表单，用于与数据库表单数据关联
 from django.conf import settings
 import os
@@ -22,7 +22,7 @@ from urllib import parse  # 导入url函数
 from django.contrib.auth.decorators import permission_required
 from apps.xfzauth.decorators import xfz_permission_required
 import logging
-
+from apps.xfzauth.models import User
 
 logger = logging.getLogger('django')  # 'django'与配置文件中的logger名称一致
 # 调用staff_member_required函数来验证staff处的值是否为Ture，
@@ -201,7 +201,8 @@ class WriteNewsView(View):
 
 
 """
-# dispatch函数解释,当把装饰器命名未dispatch方法时，它就会对请求进行判断，如果时get请求，就调用get函数；如果请求时post请求时，
+# dispatch函数解释,当把装饰器命名未dispatch方法时，它就会对请求进行判断，
+# 如果时get请求，就调用get函数；如果请求时post请求时，
 就调用post请求。这样装饰器就可以把两种请求都涉及到
 def dispatch(self, request, *args, **kwargs):
 	if request.method == 'GET':
@@ -369,6 +370,7 @@ def banner_list(request):
     # 获取Banner模型中所有数据
     # values:返回的还是QuerySet,只不过在QuerySet中，存在的不是模型，而是字典
     banners = list(Banner.objects.all().values())  # 直接将获取数据转换为列表
+    print("banners:", banners)
     return restful.result(data={"banners": banners})
 
 
@@ -382,7 +384,7 @@ def banner_list(request):
 @xfz_permission_required(Banner)
 def add_banner(request):
     """#3 添加轮播图函数"""
-    form = AddBanner(request.POST)  # 表单赋值
+    form = AddBannerForm(request.POST)  # 表单赋值
     if form.is_valid():  # 如果表单验证成功
         # 获取表单那中的参数
         image_url = form.cleaned_data.get('image_url')
@@ -467,15 +469,49 @@ def qntoken(request):
     return restful.result(data={'token': token})
 
 
+class UserCenter(View):
+    """用户中心数据"""
 
-def user_center(request):
-    """用户中心"""
-    current_user = request.user
-    if current_user:
-        context = {'current_user': current_user}
-    else:
-        context ={}
-    return render(request, "cms/user_center.html", context=context)
+    def get(self, request):
+        """用户中心"""
+        current_user = request.user
+        print("id:", current_user.id)
+        if current_user:
+            context = {'current_user': current_user}
+        else:
+            context = {}
+        return render(request, "cms/user_center.html", context=context)
+
+
+class EditUserCenter(View):
+    """用户个人信息编辑"""
+    def get(self, request):
+        """编辑页面"""
+        current_user = request.user
+        if current_user:
+            context = {'current_user': current_user}
+        else:
+            context = {}
+        return render(request, "cms/edit_user_center.html", context=context)
+
+    def post(self, request):
+        """修改用户信息"""
+        print(".....")
+        current_user = request.user
+        telephone_old = current_user.telephone
+        print("telephone:", telephone_old)
+        form = EditUserCenterForm(request.POST)
+        print ("form.is_valid:", form.is_valid ())
+
+        if form.is_valid():
+            telephone = form.cleaned_data.get("telephone")
+            username = form.cleaned_data.get("username")
+            User.objects.filter(telephone=telephone_old).update(telephone=telephone ,username=username)
+            current_user = request.user
+            print("tel, name", current_user)
+            return render(request, "cms/user_center.html", context={"current_user": current_user})
+        else:
+            return render(request, "cms/edit_user_center.html")
 
 
 class PayInfoList(View):

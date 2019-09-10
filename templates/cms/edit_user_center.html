@@ -1,0 +1,42 @@
+
+{% extends 'cms/base.html' %}
+
+{% block title %}
+个人中心
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content-header %}
+<h1>个人中心</h1>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+<div class="col-md-12">
+    <div class="box">
+        <div class="box-body">
+            <form action="/cms/edit_user_center/" method="POST">
+                {% csrf_token %}
+                {% if current_user %}
+                    <label style="font-size: 18px" >用户信息：</label><br>
+                    <p>用户名称：<input type="text" value="{{ current_user.username }}" name="username"></p>
+                    <label>手机号码：<input name="telephone" value="{{ current_user.telephone }}"></label>
+                    <label>头像：</label><br>
+                    <img src="https://goss2.vcg.com/creative/vcg/800/version23/VCG41546770582.jpg" alt="" style=" width: 500px">
+                {% endif %}<br>
+                <div style="width: 500px">
+                    <button class="pull-right" style="margin-left: 50px">提交</button>
+                </div>
+            </form>
+
+        </div>
+
+
+        <div class="box-footer"></div>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -41,5 +41,6 @@ urlpatterns += [
 urlpatterns += [
     path('staffs/', staff_views.staffs, name='staffs'),
     path('add_staff/', staff_views.AddStaffView.as_view(), name='add_staff'),
-    path('user_center/', views.user_center, name='user_center')
+    path('user_center/', views.UserCenter.as_view(), name='user_center'),
+    path('edit_user_center/', views.EditUserCenter.as_view(), name='edit_user_center'),
 ]

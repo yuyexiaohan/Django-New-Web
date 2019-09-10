@@ -2,6 +2,7 @@ from apps.forms import FormMixin  # 导入错误信息反馈表单
 from django import forms
 from apps.news.models import News, Banner  # 导入创建的数据库模型
 from apps.course.models import Course  # 导入发布课程的模型
+from apps.xfzauth.models import User
 
 
 class EditNewsCategoryForm(forms.Form, FormMixin):
@@ -36,7 +37,7 @@ class EditNewsForm(WriteNewsForm):
 '''定义一个轮播图的数据表单，用来存放前端post获取的数据，然后便于存放在数据库对应的模型中'''
 
 
-class AddBanner(forms.ModelForm, FormMixin):
+class AddBannerForm(forms.ModelForm, FormMixin):
     # 导入模型表单和定义的输出错误信息的FormMixin表单
     # Meta 是干什么的？
     class Meta:
@@ -72,3 +73,28 @@ class AddCourseForm(forms.ModelForm, FormMixin):
         model = Course
         # 我们需要表单获取模型中的参数，这里使用exclude方法，排除一些参数，保留其它未排除的参数
         exclude = ('pub_time', 'category', 'teacher')
+
+
+class EditUserCenterForm(forms.ModelForm, FormMixin):
+    """个人信息表单"""
+    telephone = forms.CharField(
+        max_length=11,
+        min_length=11,
+        error_messages={"required": "必须输入手机号码！",
+                        "min_length": "手机号码个数必须11位！",
+                        "max_length": "手机号码个数必须为11位！"
+                        })
+    username = forms.CharField(
+        max_length=20,
+        min_length=3,
+        error_messages={
+            "required": "请输入用户名！",
+            "min_length": "用户名最少不能少于3个字符！",
+            "max_length": "用户名最多不能多于20个字符！"
+            })
+
+    class Meta:
+        model = User
+        # exclude = {} # 排除部分参数
+        fields = {"telephone", "username"}
+        # fields = "__all__"  # 全部参数
