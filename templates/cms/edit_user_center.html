@@ -23,12 +23,12 @@
                 {% if current_user %}
                     <label style="font-size: 18px" >用户信息：</label><br>
                     <p>用户名称：<input type="text" value="{{ current_user.username }}" name="username"></p>
-                    <label>手机号码：<input name="telephone" value="{{ current_user.telephone }}"></label>
+                    <p>手机号码：<input name="telephone" value="{{ current_user.telephone }}"></p>
                     <label>头像：</label><br>
                     <img src="https://goss2.vcg.com/creative/vcg/800/version23/VCG41546770582.jpg" alt="" style=" width: 500px">
                 {% endif %}<br>
                 <div style="width: 500px">
-                    <button class="pull-right" style="margin-left: 50px">提交</button>
+                    <button class="pull-right" style="margin-left: 50px">保存</button>
                 </div>
             </form>
 

@@ -488,6 +488,8 @@ class EditUserCenter(View):
     def get(self, request):
         """编辑页面"""
         current_user = request.user
+        print("current_user", type(current_user), current_user)
+
         if current_user:
             context = {'current_user': current_user}
         else:
@@ -496,13 +498,9 @@ class EditUserCenter(View):
 
     def post(self, request):
         """修改用户信息"""
-        print(".....")
-        current_user = request.user
+        current_user = request.user # 11位手机号
         telephone_old = current_user.telephone
-        print("telephone:", telephone_old)
         form = EditUserCenterForm(request.POST)
-        print ("form.is_valid:", form.is_valid ())
-
         if form.is_valid():
             telephone = form.cleaned_data.get("telephone")
             username = form.cleaned_data.get("username")
@@ -511,7 +509,7 @@ class EditUserCenter(View):
             print("tel, name", current_user)
             return render(request, "cms/user_center.html", context={"current_user": current_user})
         else:
-            return render(request, "cms/edit_user_center.html")
+            return render(request, "cms/edit_user_center.html", context={"current_user": current_user})
 
 
 class PayInfoList(View):
