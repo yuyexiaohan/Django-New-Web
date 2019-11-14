@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/templates/course/course_detail.html" afterPath="$PROJECT_DIR$/templates/course/course_detail.html" />
+      <change beforePath="$PROJECT_DIR$/templates/course/create_order.html" afterPath="$PROJECT_DIR$/templates/course/create_order.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,11 +59,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course_detail.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="course_detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/course/course_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="406">
               <caret line="33" column="61" lean-forward="true" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_order.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/course/create_order.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -156,7 +166,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/apps/ueditor/views.py" />
         <option value="$PROJECT_DIR$/apps/xfzauth/admin.py" />
         <option value="$PROJECT_DIR$/apps/news/admin.py" />
         <option value="$PROJECT_DIR$/templates/404.html" />
@@ -207,6 +216,7 @@
         <option value="$PROJECT_DIR$/apps/cms/staff_views.py" />
         <option value="$PROJECT_DIR$/apps/course/views.py" />
         <option value="$PROJECT_DIR$/templates/course/course_detail.html" />
+        <option value="$PROJECT_DIR$/templates/course/create_order.html" />
       </list>
     </option>
   </component>
@@ -458,13 +468,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
-    </task>
-    <task id="LOCAL-00047" summary="change auth:decorators.py">
-      <created>1541651714731</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1541651714731</updated>
     </task>
     <task id="LOCAL-00048" summary="Add django_01.log">
       <created>1541664959794</created>
@@ -802,7 +805,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573722004943</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="del notation">
+      <created>1573722045822</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1573722045822</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -941,13 +951,13 @@
     <MESSAGE value="add method" />
     <MESSAGE value="modify grammar" />
     <MESSAGE value="add test" />
-    <MESSAGE value="del notation" />
     <MESSAGE value="fix media path" />
     <MESSAGE value="add edit current_user massage" />
     <MESSAGE value="del debug code" />
     <MESSAGE value="del annotation" />
     <MESSAGE value="fix course views" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix course views" />
+    <MESSAGE value="del notation" />
+    <option name="LAST_COMMIT_MESSAGE" value="del notation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -956,13 +966,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/cms/write_news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="118" column="23" lean-forward="true" selection-start-line="118" selection-start-column="23" selection-end-line="118" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/writ_news.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="565">
@@ -1363,8 +1366,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/course/course_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="406">
           <caret line="33" column="61" lean-forward="true" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/course/create_order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding />
         </state>
       </provider>
