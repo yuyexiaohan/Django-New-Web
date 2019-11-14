@@ -61,30 +61,3 @@ class AddStaffView(View):
 def delete_staff(request):
     """删除员工"""
     pass
-
-
-'''t代码'''
-# @xfz_superuser_required
-# def staffs(request):
-#     context = {
-#         'staffs': User.objects.filter(Q(is_staff=True)|Q(is_superuser=True))
-#     }
-#     return render(request,'cms/staffs.html',context=context)
-#
-# @method_decorator(xfz_superuser_required,name='dispatch')
-# class AddStaffView(View):
-#     def get(self,request):
-#         context = {
-#             'groups': Group.objects.all()
-#         }
-#         return render(request,'cms/add_staff.html',context=context)
-#
-#     def post(self,request):
-#         telephone = request.POST.get('telephone')
-#         user = User.objects.get(telephone=telephone)
-#         user.is_staff = True
-#         groups_ids = request.POST.getlist('groups')
-#         groups = Group.objects.filter(pk__in=groups_ids)
-#         user.groups.set(groups)
-#         user.save()
-#         return redirect(reverse("cms:staffs"))
