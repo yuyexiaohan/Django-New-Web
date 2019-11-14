@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apps/course/views.py" afterPath="$PROJECT_DIR$/apps/course/views.py" />
       <change beforePath="$PROJECT_DIR$/templates/course/course_detail.html" afterPath="$PROJECT_DIR$/templates/course/course_detail.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -63,8 +62,8 @@
       <file leaf-file-name="course_detail.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/course/course_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1526">
-              <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="310">
+              <caret line="33" column="61" lean-forward="true" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -460,13 +459,6 @@
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
     </task>
-    <task id="LOCAL-00046" summary="add makedown-editor">
-      <created>1541172575758</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1541172575758</updated>
-    </task>
     <task id="LOCAL-00047" summary="change auth:decorators.py">
       <created>1541651714731</created>
       <option name="number" value="00047" />
@@ -803,7 +795,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573698804454</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="fix course views">
+      <created>1573722004943</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1573722004943</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -923,7 +922,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="cms\views:add the log code" />
     <MESSAGE value="add cms:test" />
     <MESSAGE value="add cms_course_category pag" />
     <MESSAGE value="fix search/cms:add-staff" />
@@ -948,7 +946,8 @@
     <MESSAGE value="add edit current_user massage" />
     <MESSAGE value="del debug code" />
     <MESSAGE value="del annotation" />
-    <option name="LAST_COMMIT_MESSAGE" value="del annotation" />
+    <MESSAGE value="fix course views" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix course views" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1364,8 +1363,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/course/course_detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1526">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="310">
+          <caret line="33" column="61" lean-forward="true" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
           <folding />
         </state>
       </provider>
