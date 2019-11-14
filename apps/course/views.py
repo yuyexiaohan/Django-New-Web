@@ -29,7 +29,7 @@ def course_index(request):
     return render(request, 'course/course_index.html', context=context)
 
 
-@method_decorator(login_required(login_url='/account/login/'))
+# @method_decorator(login_required(login_url='/account/login/'))
 @login_required
 def course_detail(request, course_id):
     course = Course.objects.get(pk=course_id)
