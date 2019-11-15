@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/apps/cms/views.py" afterPath="$PROJECT_DIR$/apps/cms/views.py" />
       <change beforePath="$PROJECT_DIR$/apps/course/serializers.py" afterPath="$PROJECT_DIR$/apps/course/serializers.py" />
       <change beforePath="$PROJECT_DIR$/apps/course/views.py" afterPath="$PROJECT_DIR$/apps/course/views.py" />
-      <change beforePath="$PROJECT_DIR$/apps/news/serializers.py" afterPath="$PROJECT_DIR$/apps/news/serializers.py" />
       <change beforePath="$PROJECT_DIR$/templates/cms/base.html" afterPath="$PROJECT_DIR$/templates/cms/base.html" />
       <change beforePath="$PROJECT_DIR$/templates/news/index.html" afterPath="$PROJECT_DIR$/templates/news/index.html" />
     </list>
@@ -601,13 +600,6 @@
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
     </task>
-    <task id="LOCAL-00053" summary="add cms:test">
-      <created>1541864258334</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1541864258335</updated>
-    </task>
     <task id="LOCAL-00054" summary="add cms:test">
       <created>1541951632423</created>
       <option name="number" value="00054" />
@@ -944,7 +936,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573810673570</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="fix name">
+      <created>1573810737090</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1573810737090</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TestHistory">
