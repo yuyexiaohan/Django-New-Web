@@ -60,8 +60,8 @@ def news_list(request):
         newses = News.objects.all()[start:end]
     else:
         newses = News.objects.filter(category_id=category_id)[start: end]
-    serizlizer = NewsSerializer(newses, many=True)
-    return restful.result(data=serizlizer.data)
+    serializer = NewsSerializer(newses, many=True)
+    return restful.result(data=serializer.data)
 
 
 # 如果在url中定义了参数
