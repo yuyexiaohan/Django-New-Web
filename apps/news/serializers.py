@@ -12,7 +12,7 @@ class NewsCategorySerizlizer(serializers. ModelSerializer):
         fields = ('id', 'name')
 
 
-class NewsSerializer(serializers. ModelSerializer):
+class NewsSerializer(serializers.ModelSerializer):
     # 当使用到到category时，会从NewsCategorySerizlizer类中获取
     category = NewsCategorySerizlizer()
     author = UserSerizlizer()
