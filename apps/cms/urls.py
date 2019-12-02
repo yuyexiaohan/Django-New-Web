@@ -2,6 +2,7 @@ from django.urls import path
 from . import views
 from . import course_views
 from . import staff_views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 app_name = 'cms'
 
@@ -30,6 +31,8 @@ urlpatterns += [
     path('add_course_category/', course_views.add_course_category, name='add_course_category'),
     path('edit_course_category/', course_views.edit_course_category, name='edit_course_category'),
     path('delete_course_category/', course_views.delete_course_category, name='delete_course_category'),
+    path('course_teacher/', course_views.CourseTeacherList.as_view(), name='course_teacher'),
+    path('course_teacher/<pk>/', course_views.CourseTeacherDetail.as_view(), name='course_teacher_detail'),
 ]
 
 # 分享资料url
@@ -44,3 +47,5 @@ urlpatterns += [
     path('user_center/', views.UserCenter.as_view(), name='user_center'),
     path('edit_user_center/', views.EditUserCenter.as_view(), name='edit_user_center'),
 ]
+
+urlpatterns = format_suffix_patterns(urlpatterns)
