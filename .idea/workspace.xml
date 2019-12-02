@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="import Teacher">
+    <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apps/cms/course_views.py" afterPath="$PROJECT_DIR$/apps/cms/course_views.py" />
-      <change beforePath="$PROJECT_DIR$/apps/cms/urls.py" afterPath="$PROJECT_DIR$/apps/cms/urls.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -569,13 +567,6 @@
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
     </task>
-    <task id="LOCAL-00058" summary="add cms:test">
-      <created>1542382515650</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1542382515650</updated>
-    </task>
     <task id="LOCAL-00059" summary="pep8">
       <created>1542556593501</created>
       <option name="number" value="00059" />
@@ -912,7 +903,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575274283276</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="add rest_framework">
+      <created>1575274392125</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1575274392125</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1018,7 +1016,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="key_protect" />
     <MESSAGE value="pep8" />
     <MESSAGE value="存储文件路径修改" />
     <MESSAGE value="修改云存储路径" />
@@ -1043,7 +1040,8 @@
     <MESSAGE value="add course_teacher button" />
     <MESSAGE value="add course_teacher serializers" />
     <MESSAGE value="import Teacher" />
-    <option name="LAST_COMMIT_MESSAGE" value="import Teacher" />
+    <MESSAGE value="add rest_framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="add rest_framework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
