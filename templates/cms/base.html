@@ -138,15 +138,22 @@
                             <span>妙想分类</span>
                         </a>
                     </li>
+
                 {% endif %}
                 {% if user.is_superuser %}
                     <li class="header">人员管理</li>
                     <li>
-                    <a href="{% url 'cms:staffs' %}">
-                        <i class="fa fa-group"></i>
-                        <span>人员管理</span>
-                    </a>
-                </li>
+                        <a href="{% url 'cms:staffs' %}">
+                            <i class="fa fa-group"></i>
+                            <span>用户管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'cms:course_teacher' %}">
+                            <i class="fa fa-cog"></i>
+                            <span>教师管理</span>
+                        </a>
+                    </li>
                 {% endif %}
                 {% if user.is_superuser %}
                     <li class="header">资料管理</li>

@@ -1,11 +1,40 @@
 {% extends 'cms/base.html' %}
-
+{% load rest_framework %}
 {% block title %}
     课程老师
 {% endblock %}
 
 {% block head %}
+    <script src="{% static 'js/template-web.js' %}"></script>
     <script src="{% static 'js/course_teacher.js' %}"></script>
+
+        <script id="news-item" type="text/html">
+    {# 该标签是django标签，用于指示包裹的文件不处理，只作为字符串 #}
+        {% verbatim %}
+        {{ each newses news index }}
+            <li>
+                <div class="thumbnail-group">
+                    <a href="/detail/{{ news.id }}">
+                        <img src="{{ news.thumbnail }}" alt="">
+                    </a>
+                </div>
+                <div class="news-group">
+                    <div class="title">
+                        <a href="/detail/{{ news.id }}">{{ news.title }}</a>
+                    </div>
+                    <p class="desc">{{ news.desc }}</p>
+                    <div class="news-more-group">
+                        <span class="category">{{ news.category.name }}</span>
+                        <span class="pub-time">{{ news.pub_time|timeSince }}</span>
+                        <span class="author">{{ news.author.username }}</span>
+
+                    </div>
+                </div>
+            </li>
+        {{ /each }}
+        {% endverbatim %}
+    </script>
+
 {% endblock %}
 
 {% block content-header %}
@@ -33,34 +62,30 @@
                     <tbody>
                     {# 获取新闻分类页的内容：分类，分类数量，编辑删除等 #}
                     {# 方法1： #}
-                        {% for key ,value in category_nums.items %} {# 在html中获取字典的键值是难点，.items是返回字典的各个项#}
-                            <tr data-pk="{{ key.pk }} " data-name="{{ key.name }}">
-                                <td>{{ key.name }}</td>
-                                <td>{{ value }}</td>
-                                <td>
-                                    <button class="btn btn-warning btn-xs edit-btn">编辑</button>
-                                    <button class="btn btn-danger btn-xs delete-btn">删除</button>
-                                </td>
-                            </tr>
-                        {% endfor %}
-
-                    {# 方法2： #}
-{#                        {% for category in categories %}#}
-{#                            <tr data-pk="{{ category.pk }} " data-name="{{ category.name }}">#}
-{#                                <td>{{ category.name }}</td>#}
-                                  {# 从后端获取的字典{ 'cat':'nums' }中获取所有的key与 #}
-                                 {# 此时的category作比较，相等就将获取value值，即nums(该分类所的新闻数目) #}
-{#                                {% for key ,value in category_nums.items %} {# 在html中获取字典的键值是难点，.items是返回字典的各个项#}
-{#                                    {% if key == category %}#}
-{#                                        <td>{{ value }}</td>#}
-{#                                   {% endif %}#}
-{#                                {% endfor %}#}
+{#                        {% for key ,value in category_nums.items %} {# 在html中获取字典的键值是难点，.items是返回字典的各个项#}
+{#                            <tr data-pk="{{ key.pk }} " data-name="{{ key.name }}">#}
+{#                                <td>{{ key.name }}</td>#}
+{#                                <td>{{ value }}</td>#}
 {#                                <td>#}
 {#                                    <button class="btn btn-warning btn-xs edit-btn">编辑</button>#}
 {#                                    <button class="btn btn-danger btn-xs delete-btn">删除</button>#}
 {#                                </td>#}
 {#                            </tr>#}
 {#                        {% endfor %}#}
+
+                    {# 方法2： #}
+                        {% for teacher in teachers %}
+                            <tr data-pk="{{ teacher.pk }} " data-name="{{ teacher.username }}">
+                                <td>{{ teacher.username }}</td>
+                                <td>{{ teacher.jobtitle }}</td>
+                                <td>{{ teacher.profile }}</td>
+                                <td>{{ teacher.avatar}}</td>
+                                <td>
+                                    <button class="btn btn-warning btn-xs edit-btn">编辑</button>
+                                    <button class="btn btn-danger btn-xs delete-btn">删除</button>
+                                </td>
+                            </tr>
+                        {% endfor %}
                         
                     </tbody>
                 </table>

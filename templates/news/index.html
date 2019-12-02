@@ -3,7 +3,7 @@
 {% load news_filters %}
 {# 加载时间过滤器，用于页面时间的显示样式 #}
 {% block title %}
-    achjiang博客首页
+    achjiang网站首页
 {% endblock %}
 
 {% block head %}
@@ -15,33 +15,34 @@
 {#  引入arttemplat  #}
     <script src="{% static 'js/template-web.js' %}"></script>
     <script src="{% static 'js/index.js' %}"></script>
-<script id="news-item" type="text/html">
-{# 该标签是django标签，用于指示包裹的文件不处理，只作为字符串 #}
-{% verbatim %}
-{{ each newses news index }}
-    <li>
-        <div class="thumbnail-group">
-            <a href="/detail/{{ news.id }}">
-                <img src="{{ news.thumbnail }}" alt="">
-            </a>
-        </div>
-        <div class="news-group">
-            <div class="title">
-                <a href="/detail/{{ news.id }}">{{ news.title }}</a>
-            </div>
-            <p class="desc">{{ news.desc }}</p>
-            <div class="news-more-group">
-                <span class="category">{{ news.category.name }}</span>
-                <span class="pub-time">{{ news.pub_time|timeSince }}</span>
-                <span class="author">{{ news.author.username }}</span>
 
-            </div>
-        </div>
-    </li>
-{{ /each }}
-{% endverbatim %}
+    <script id="news-item" type="text/html">
+    {# 该标签是django标签，用于指示包裹的文件不处理，只作为字符串 #}
+        {% verbatim %}
+        {{ each newses news index }}
+            <li>
+                <div class="thumbnail-group">
+                    <a href="/detail/{{ news.id }}">
+                        <img src="{{ news.thumbnail }}" alt="">
+                    </a>
+                </div>
+                <div class="news-group">
+                    <div class="title">
+                        <a href="/detail/{{ news.id }}">{{ news.title }}</a>
+                    </div>
+                    <p class="desc">{{ news.desc }}</p>
+                    <div class="news-more-group">
+                        <span class="category">{{ news.category.name }}</span>
+                        <span class="pub-time">{{ news.pub_time|timeSince }}</span>
+                        <span class="author">{{ news.author.username }}</span>
 
-</script>
+                    </div>
+                </div>
+            </li>
+        {{ /each }}
+        {% endverbatim %}
+    </script>
+
 {% endblock %}
 
 {% block main %}
@@ -109,7 +110,7 @@
               </a>
             </div>
 
-            {# 先问主题部分 #}
+            {# news主体部分 #}
             <div class="list-outer-group">
                 <ul class="list-tab-group">
 {#  class="active" 是默认选中状态   #}

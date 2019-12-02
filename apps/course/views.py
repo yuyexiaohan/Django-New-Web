@@ -16,13 +16,11 @@ from django.contrib.auth.decorators import login_required  # 导入登录验证�
 from django.utils.decorators import method_decorator  # 验证登录才能访问函数的装饰器
 
 
-"""课程的视图函数"""
 # method_decorator是一个将装饰器函数，转换为装饰器方法的
 # @method_decorator(xfz_permission_required(Course),name='dispatch')
 # @xfz_permission_required
-
-
 def course_index(request):
+    """课程的视图函数"""
     context = {
         'courses': Course.objects.all()  # 获取所有课程信息
     }
@@ -71,10 +69,8 @@ def course_token(request):
     return restful.result(data={'token': token})
 
 
-"""课程支付函数"""
-
-
 def course_order(request):
+    """课程支付函数"""
     course_id = request.GET.get('course_id')
     course = Course.objects.get(pk=course_id)
     order = CourseOrder.objects.create(
@@ -101,10 +97,8 @@ def course_order(request):
     return render(request, 'course/create_order.html', context=context)
 
 
-"""支付加密视图函数"""
-
-
 def order_key(request):
+    """支付加密视图函数"""
     goodsname = request.POST.get('goodsname')
     istype = request.POST.get('istype')
     notify_url = request.POST.get('notify_url')
