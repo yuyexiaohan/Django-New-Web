@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/course_teacher.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/js/courses_teacher.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/apps/cms/course_views.py" afterPath="$PROJECT_DIR$/apps/cms/course_views.py" />
       <change beforePath="$PROJECT_DIR$/apps/cms/urls.py" afterPath="$PROJECT_DIR$/apps/cms/urls.py" />
       <change beforePath="$PROJECT_DIR$/apps/cms/views.py" afterPath="$PROJECT_DIR$/apps/cms/views.py" />
-      <change beforePath="$PROJECT_DIR$/apps/course/serializers.py" afterPath="$PROJECT_DIR$/apps/course/serializers.py" />
-      <change beforePath="$PROJECT_DIR$/apps/course/views.py" afterPath="$PROJECT_DIR$/apps/course/views.py" />
-      <change beforePath="$PROJECT_DIR$/django_01/settings.py" afterPath="$PROJECT_DIR$/django_01/settings.py" />
-      <change beforePath="$PROJECT_DIR$/static/js/index.js" afterPath="$PROJECT_DIR$/static/js/index.js" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/base.html" afterPath="$PROJECT_DIR$/templates/cms/base.html" />
-      <change beforePath="$PROJECT_DIR$/templates/cms/course_teacher.html" afterPath="$PROJECT_DIR$/templates/cms/course_teacher.html" />
-      <change beforePath="$PROJECT_DIR$/templates/news/index.html" afterPath="$PROJECT_DIR$/templates/news/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -579,13 +570,6 @@
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
     </task>
-    <task id="LOCAL-00055" summary="add cms:test">
-      <created>1542205465867</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1542205465867</updated>
-    </task>
     <task id="LOCAL-00056" summary="add cms:test">
       <created>1542207988554</created>
       <option name="number" value="00056" />
@@ -922,7 +906,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573810823286</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="add course_teacher serializers">
+      <created>1575274189253</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1575274189283</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1028,7 +1019,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改前端页面" />
     <MESSAGE value="修复cms想法分类的动态增删改" />
     <MESSAGE value="key_protect" />
     <MESSAGE value="pep8" />
@@ -1053,7 +1043,8 @@
     <MESSAGE value="fix time" />
     <MESSAGE value="fix name" />
     <MESSAGE value="add course_teacher button" />
-    <option name="LAST_COMMIT_MESSAGE" value="add course_teacher button" />
+    <MESSAGE value="add course_teacher serializers" />
+    <option name="LAST_COMMIT_MESSAGE" value="add course_teacher serializers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
