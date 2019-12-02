@@ -23,6 +23,7 @@ from django.contrib.auth.decorators import permission_required
 from apps.xfzauth.decorators import xfz_permission_required
 import logging
 from apps.xfzauth.models import User
+from apps.course.models import Teacher
 
 logger = logging.getLogger('django')  # 'django'与配置文件中的logger名称一致
 # 调用staff_member_required函数来验证staff处的值是否为Ture，

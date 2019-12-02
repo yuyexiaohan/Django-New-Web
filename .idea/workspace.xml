@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
+    <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="import Teacher">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/apps/cms/course_views.py" afterPath="$PROJECT_DIR$/apps/cms/course_views.py" />
       <change beforePath="$PROJECT_DIR$/apps/cms/urls.py" afterPath="$PROJECT_DIR$/apps/cms/urls.py" />
@@ -570,13 +570,6 @@
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
     </task>
-    <task id="LOCAL-00056" summary="add cms:test">
-      <created>1542207988554</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1542207988554</updated>
-    </task>
     <task id="LOCAL-00057" summary="add cms:test">
       <created>1542382492886</created>
       <option name="number" value="00057" />
@@ -913,7 +906,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575274189283</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="import Teacher">
+      <created>1575274247687</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1575274247687</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1019,7 +1019,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修复cms想法分类的动态增删改" />
     <MESSAGE value="key_protect" />
     <MESSAGE value="pep8" />
     <MESSAGE value="存储文件路径修改" />
@@ -1044,7 +1043,8 @@
     <MESSAGE value="fix name" />
     <MESSAGE value="add course_teacher button" />
     <MESSAGE value="add course_teacher serializers" />
-    <option name="LAST_COMMIT_MESSAGE" value="add course_teacher serializers" />
+    <MESSAGE value="import Teacher" />
+    <option name="LAST_COMMIT_MESSAGE" value="import Teacher" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
