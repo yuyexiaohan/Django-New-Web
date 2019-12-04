@@ -109,16 +109,16 @@ def search(request):
         if newes:
             flag = 2
         else:
-            page = int (request.GET.get ('p', 1))
+            page = int(request.GET.get('p', 1))
             start = settings.ONE_PAGE_NEWS_COUNT * (page - 1)
             end = start + settings.ONE_PAGE_NEWS_COUNT
-            newes = News.objects.all ()[start:end]
+            newes = News.objects.all()[start:end]
             flag = 1
     else:
-        page = int(request.GET.get ('p', 1))
+        page = int(request.GET.get('p', 1))
         start = settings.ONE_PAGE_NEWS_COUNT * (page - 1)
         end = start + settings.ONE_PAGE_NEWS_COUNT
-        newes = News.objects.all ()[start:end]
+        newes = News.objects.all()[start:end]
         flag = 0
 
     context = {'newes': newes, 'flag': flag}
