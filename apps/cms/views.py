@@ -321,7 +321,7 @@ def add_news_category(request):
 @require_POST
 @xfz_permission_required(NewCategory)
 def edit_news_category(request):
-    """# 定义编辑的视图函数"""
+    """编辑新闻分类"""
     form = EditNewsCategoryForm(request.POST)
     if form.is_valid():
         pk = form.cleaned_data.get('pk')
@@ -340,7 +340,7 @@ def edit_news_category(request):
 @require_POST
 @xfz_permission_required(NewCategory)
 def delete_news_category(request):
-    """# 定义一个删除分类的视图函数"""
+    """删除分类"""
     pk = request.POST.get('pk')
     try:
         NewCategory.objects.filter(pk=pk).delete()
@@ -360,7 +360,7 @@ def delete_news_category(request):
 
 @xfz_permission_required(Banner)
 def banners(request):
-    """#1 展示轮播图界面的视图函数"""
+    """#1 展示轮播图"""
     return render(request, 'cms/banners.html')
 
 
@@ -384,7 +384,7 @@ def banner_list(request):
 
 @xfz_permission_required(Banner)
 def add_banner(request):
-    """#3 添加轮播图函数"""
+    """#3 添加轮播图"""
     form = AddBannerForm(request.POST)  # 表单赋值
     if form.is_valid():  # 如果表单验证成功
         # 获取表单那中的参数
@@ -405,7 +405,7 @@ def add_banner(request):
 
 @xfz_permission_required(Banner)
 def delete_banner(request):
-    """删除轮播图函数"""
+    """删除轮播图"""
     banner_id = request.POST.get('banner_id')  # 获取要删除的轮播图id
     Banner.objects.filter(pk=banner_id).delete()  # 按id查找数据，并删除
     logger.info('删除轮播图成功！')
@@ -414,7 +414,7 @@ def delete_banner(request):
 
 @xfz_permission_required(Banner)
 def edit_banner(request):
-    """编辑轮播图数据"""
+    """编辑轮播图"""
     form = EditBannerForm(request.POST)
     if form.is_valid():
         pk = form.cleaned_data.get('pk')
@@ -437,7 +437,7 @@ def edit_banner(request):
 @require_POST
 @staff_member_required(login_url='/')  # ?
 def upload_file(request):
-    # 定义一个变量用来获取上传文件
+    # 上传文件
     # file变量就是 'InMemoryUploadedFile'类型的函数
     file = request.FILES.get('upfile')
     if not file:
@@ -485,7 +485,7 @@ class UserCenter(View):
 
 
 class EditUserCenter(View):
-    """用户个人信息编辑"""
+    """个人信息编辑"""
     def get(self, request):
         """编辑页面"""
         current_user = request.user
@@ -514,7 +514,7 @@ class EditUserCenter(View):
 
 
 class PayInfoList(View):
-    """定义一个新闻列表管理页面，使用类的方式构建函数便于继承相关的方法"""
+    """订单列表"""
 
     def get(self, request):
         page = int(request.GET.get('p', 1))  # 获取当前所在页数
