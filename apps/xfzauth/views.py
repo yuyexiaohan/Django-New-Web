@@ -131,7 +131,7 @@ def sms_captcha(request):
     print('code:', code)
     # 获取方式是/account/sms_captcha/?telephone=12345678900
     telephone = request.GET.get('telephone')
-    result = aliyun.send_sms(telephone, code=code)  # 前端会用到该参数
+    aliyun.send_sms(telephone, code=code)  # 前端会用到该参数
     print(telephone, code)
     request.session['sms_captcha'] = code
     return HttpResponse('success')
