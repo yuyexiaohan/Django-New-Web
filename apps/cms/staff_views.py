@@ -12,7 +12,7 @@ from django.contrib import messages
 
 @xfz_superuser_required
 def staffs(request):
-    """员工用户管理函数"""
+    """员工用户管理"""
     staffs = User.objects.filter(Q(is_staff=True) | Q(is_superuser=True))
     context = {
         'staffs': staffs
@@ -22,7 +22,7 @@ def staffs(request):
 
 @method_decorator(xfz_superuser_required, name='dispatch')
 class AddStaffView(View):
-    """添加用户视图函数"""
+    """添加用户视图"""
 
     def get(self, request):
         # 获取Group表中的所有数据
@@ -34,7 +34,7 @@ class AddStaffView(View):
 
     def post(self, request):
         telephone = request.POST.get('telephone')
-        username = request.POST.get('username')
+        # username = request.POST.get('username')
         user = User.objects.filter(telephone=telephone)
         if user:
             user.is_staff = True  # 默认设置为公司员工
@@ -58,6 +58,6 @@ class AddStaffView(View):
             return redirect(reverse("cms:add_staff"))
 
 
-def delete_staff(request):
+def delete_staff():
     """删除员工"""
     pass
