@@ -86,7 +86,8 @@ $(function () {
                     };
                     var config = {
                         useCdnDomain:true,
-                        region:qiniu.region.z0 //qiniu.region.z0: 代表华东区域 qiniu.region.z1: 代表华北区域 qiniu.region.z2: 代表华南区域 qiniu.region.na0: 代表北美区域 qiniu.region.as0: 代表新加坡区域 根据实际情况进行修改
+                        region:qiniu.region.z0
+                        /*qiniu.region.z0: 代表华东区域 qiniu.region.z1: 代表华北区域 qiniu.region.z2: 代表华南区域 qiniu.region.na0: 代表北美区域 qiniu.region.as0: 代表新加坡区域 根据实际情况进行修改*/
                     };
                     var observable = qiniu.upload(file,key,token,putExtra,config);
                     observable.subscribe({
