@@ -1,7 +1,7 @@
 # coding=utf-8
 from django.shortcuts import render, redirect, reverse
 from django.contrib.admin.views.decorators import staff_member_required
-#  导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
+# 导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
 from django.views.generic import View  # 使用类定义函数时，变量需要引入该模块
 # 限制函数，只能使用post的请求，才能访问某个函数
 from django.views.decorators.http import require_POST, require_GET
@@ -25,23 +25,24 @@ import logging
 from apps.xfzauth.models import User
 from apps.course.models import Teacher
 
+
 logger = logging.getLogger('django')  # 'django'与配置文件中的logger名称一致
-# 调用staff_member_required函数来验证staff处的值是否为Ture，
+# 调用staff_member_required函数来验证staff处的值是否为True，
 # 不为真就跳转到login_url='...'对应的链接。如果为真则执行后面的函数
 
 
-@staff_member_required(login_url='/account/login/')  # 这里跳转到登录页
+@staff_member_required(login_url='/account/login/')
 def index(request):
-    """# 1.定义一个cms管理的视图函数，返回一个cms管理界面"""
+    """# 1.cms主界面"""
     return render(request, 'cms/index.html')
-
-
-# method_decorator是一个将装饰器函数转换为装饰器方法的，参数1：装饰器，参数2：
 
 
 @method_decorator([xfz_permission_required(News)], name='dispatch')
 class NewsList(View):
-    """定义一个新闻列表管理页面，使用类的方式构建函数便于继承相关的方法"""
+    """
+    新闻列表
+    # method_decorator是一个将装饰器函数转换为装饰器方法的，参数1：装饰器，参数2：
+    """
 
     def get(self, request):
         page = int(request.GET.get('p', 1))  # 获取当前所在页数
@@ -114,11 +115,12 @@ class NewsList(View):
         context.update(pagination_data)
         return render(request, 'cms/news_list.html', context=context)
 
-    # 定义一个分页函数
-    # < 1...5,6,7,8,9...13 >基本模式，即选中页前后留出2页，多出的用...代替。当选择最前或最后前后两页包含或者临近第一页或最后一页，那么取消显示...
-
     def get_pagination_data(self, paginator, page_obj, around_count=1):
-        """分页功能"""
+        """
+        分页功能
+        < 1...5,6,7,8,9...13 >基本模式，即选中页前后留出2页，多出的用...代替。
+        当选择最前或最后前后两页包含或者临近第一页或最后一页，那么取消显示...
+        """
         current_page = page_obj.number  # 获取当前页码
         num_pages = paginator.num_pages
 
@@ -156,17 +158,10 @@ class NewsList(View):
         }
 
 
-# 加入装饰器验证是否登录，登录执行该函数，未登录直接跳转到对应的url中
-
-
 @method_decorator([login_required(login_url='/account/login/'),
                    xfz_permission_required(News)], name='dispatch')
-# dispatch 是什么方法？
 class WriteNewsView(View):
-    """
-    # 定义一个写入页面函数，并返回一个编辑界面
-    # 在编辑界面中获取页面数据并出入数据库
-    """
+    """编辑页面"""
 
     def get(self, request):
         context = {
@@ -186,8 +181,8 @@ class WriteNewsView(View):
             thumbnail = form.cleaned_data.get('thumbnail')
             content = form.cleaned_data.get('content')
             category_id = form.cleaned_data.get('category')
-        # 获取分类id,因为是通过外键获取的id,
-        # 需要通过NewCategory来获取实际分类名称
+            # 获取分类id,因为是通过外键获取的id,
+            # 需要通过NewCategory来获取实际分类名称
             category = NewCategory.objects.get(pk=category_id)  # 获取分类名
             News.objects.create(
                 title=title,
@@ -201,23 +196,19 @@ class WriteNewsView(View):
             return restful.params_error(message=form.get_error())
 
 
-"""
-# dispatch函数解释,当把装饰器命名未dispatch方法时，它就会对请求进行判断，
-# 如果时get请求，就调用get函数；如果请求时post请求时，
-就调用post请求。这样装饰器就可以把两种请求都涉及到
-def dispatch(self, request, *args, **kwargs):
-	if request.method == 'GET':
-		return self.get(request)
-	elif request.method == 'POST':
-		return self.post(request)
-"""
-# 加入装饰器验证是否登录，登录执行该函数，未登录直接跳转到对应的url中
-
-
 @method_decorator([login_required(login_url='/account/login/'),
                    xfz_permission_required(News)], name='dispatch')
 class EditNewsViem(View):
-    """定义一个编辑新闻的视图函数"""
+    """编辑新闻
+    # dispatch函数解释,当把装饰器命名未dispatch方法时，它就会对请求进行判断，
+    # 如果时get请求，就调用get函数；如果请求时post请求时，
+    就调用post请求。这样装饰器就可以把两种请求都涉及到
+    def dispatch(self, request, *args, **kwargs):
+        if request.method == 'GET':
+            return self.get(request)
+        elif request.method == 'POST':
+            return self.post(request)
+    """
 
     def get(self, request):
         pk = request.GET.get('pk')
@@ -255,20 +246,22 @@ class EditNewsViem(View):
 
 @xfz_permission_required(News)
 def delete_news(request):
-    """定义一个删除新闻的视图函数"""
+    """删除新闻"""
     pk = request.POST.get('pk')
-    newes = News.objects.filter(pk=pk)
-    newes.delete()
-    logger.warning('删除新闻%s!' % newes.values('title'))
+    news = News.objects.filter(pk=pk)
+    news.delete()
+    logger.warning('删除新闻%s!' % news.values('title'))
     return restful.ok()
 
 
 @method_decorator([login_required(login_url='/account/login/'),
                    xfz_permission_required(NewCategory)], name='dispatch')
-# @xfz_permission_required(NewCategory) ### 对于使用class定义的函数，装饰器的使用需要注意，不能使用这种方式，这种只适合def直接定义的函数
+# @xfz_permission_required(NewCategory)
+# 对于使用class定义的函数，装饰器的使用需要注意，不能使用这种方式，这种只适合def直接定义的函数
 class NewsCategoryViem(View):
     """
-    # 定义一个分类函数,返回一个分类页界面
+    新闻分类函数
+    :return
     """
 
     def get(self, request):
@@ -281,7 +274,7 @@ class NewsCategoryViem(View):
 
         # 通过一个循环得到分类名及对应分类新闻的数量，并将两者以键值对的形式存在字典category_nums中
         for category in categories:
-            '''获取各分类数量'''
+            # 获取各分类数量
             # 方法1：使用len()方法获取长度：
             # 通过分类名对newses数据进行过滤，用len()获取该分类新闻的数量
             nums = len(newses.filter(category__name=category.name))
@@ -299,15 +292,15 @@ class NewsCategoryViem(View):
         return render(request, 'cms/news_category.html', context=context)
 
 
-@require_POST  # 限制这个视图函数只能通过post请求才能够进行访问
+@require_POST
 @xfz_permission_required(NewCategory)
 def add_news_category(request):
     """
-    # 定义一个添加分类的视图函数，对添加信息进行判断，
-    不存在就添加，存在就返回‘已经存在信息
+    添加新闻分类，
+    对添加信息进行判断，不存在就添加，存在就返回已经存在信息
     """
     name = request.POST.get('name')
-    # 对名称做一个确认，使用以下定义，如果存在会返回一个Ture，否则返回一个Flase
+    # 对名称做一个确认，使用以下定义，如果存在会返回一个True，否则返回一个False
     exists = NewCategory.objects.filter(name=name).exists()
     if not exists:
         NewCategory.objects.create(name=name)
@@ -373,13 +366,6 @@ def banner_list(request):
     banners = list(Banner.objects.all().values())  # 直接将获取数据转换为列表
     print("banners:", banners)
     return restful.result(data={"banners": banners})
-
-
-''' 测试用语句：
-	for banner in banners:
-		print(banner['id']) # 测试输出数据库数据的id
-	return restful.ok()
-'''
 
 
 @xfz_permission_required(Banner)
@@ -458,7 +444,7 @@ def upload_file(request):
 
 
 @require_GET
-@staff_member_required(login_url='/')  # ?
+@staff_member_required(login_url='/')
 def qntoken(request):
     # 七牛云中给出的访问和私有密钥
     q = qiniu.Auth(settings.UEDITOR_QINIU_ACCESS_KEY, settings.UEDITOR_QINIU_SECRET_KEY)
@@ -499,13 +485,14 @@ class EditUserCenter(View):
 
     def post(self, request):
         """修改用户信息"""
-        current_user = request.user # 11位手机号
+        current_user = request.user  # 11位手机号
         telephone_old = current_user.telephone
         form = EditUserCenterForm(request.POST)
         if form.is_valid():
             telephone = form.cleaned_data.get("telephone")
             username = form.cleaned_data.get("username")
-            User.objects.filter(telephone=telephone_old).update(telephone=telephone ,username=username)
+            User.objects.filter(telephone=telephone_old).update(telephone=telephone,
+                                                                username=username)
             current_user = request.user
             print("tel, name", current_user)
             return render(request, "cms/user_center.html", context={"current_user": current_user})
@@ -533,7 +520,7 @@ class PayInfoList(View):
 
         # 通过分页函数返回分页数据，获取每一页的数据
         pagination_data = self.get_pagination_data(paginator, page_obj)
-        '''查询内容组成的查询url是否应该带'''
+        # 查询内容组成的查询url是否应该带
         # 方法1：
         # if (start and end) or title or category_id!=0 :
         # 	url_query = '&' + parse.urlencode ({
@@ -565,7 +552,7 @@ class PayInfoList(View):
         context.update(pagination_data)
         return render(request, 'cms/pay_order_list.html', context=context)
 
-    # 定义一个分页函数
+    # 分页函数
     # < 1...5,6,7,8,9...13 >基本模式，即选中页前后留出2页，多出的用...代替。当选择最前或最后前后两页包含或者临近第一页或最后一页，那么取消显示...
 
     def get_pagination_data(self, paginator, page_obj, around_count=1):

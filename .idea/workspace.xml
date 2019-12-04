@@ -74,8 +74,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="757">
-              <caret line="607" column="0" lean-forward="true" selection-start-line="607" selection-start-column="0" selection-end-line="607" selection-end-column="0" />
+            <state relative-caret-position="-1248">
+              <caret line="358" column="0" lean-forward="true" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
               <folding>
                 <element signature="e#15#69#0" expanded="true" />
               </folding>
@@ -554,13 +554,6 @@
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
     </task>
-    <task id="LOCAL-00060" summary="pep8">
-      <created>1542556636068</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1542556636068</updated>
-    </task>
     <task id="LOCAL-00061" summary="pep8">
       <created>1542556673413</created>
       <option name="number" value="00061" />
@@ -897,7 +890,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575274477865</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="change notation">
+      <created>1575444558321</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1575444558321</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1003,7 +1003,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pep8" />
     <MESSAGE value="存储文件路径修改" />
     <MESSAGE value="修改云存储路径" />
     <MESSAGE value="修改图片存储和静态文件读取路径" />
@@ -1028,7 +1027,8 @@
     <MESSAGE value="add course_teacher serializers" />
     <MESSAGE value="import Teacher" />
     <MESSAGE value="add rest_framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="add rest_framework" />
+    <MESSAGE value="change notation" />
+    <option name="LAST_COMMIT_MESSAGE" value="change notation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1426,8 +1426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/cms/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="607" column="0" lean-forward="true" selection-start-line="607" selection-start-column="0" selection-end-line="607" selection-end-column="0" />
+        <state relative-caret-position="-1248">
+          <caret line="358" column="0" lean-forward="true" selection-start-line="358" selection-start-column="0" selection-end-line="358" selection-end-column="0" />
           <folding>
             <element signature="e#15#69#0" expanded="true" />
           </folding>
