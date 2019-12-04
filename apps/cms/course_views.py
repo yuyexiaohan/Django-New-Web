@@ -9,6 +9,14 @@ from django.utils.decorators import method_decorator
 from apps.xfzauth.decorators import xfz_permission_required
 from apps.course.serializers import TeacherSerializers
 
+# restful表格处理
+from django.shortcuts import get_object_or_404, redirect
+from apps.course.models import Teacher
+from rest_framework.renderers import TemplateHTMLRenderer
+from rest_framework.views import APIView
+from django.http import Http404
+from rest_framework.response import Response
+
 
 logger = logging.getLogger("django")  # 初始化logger模块
 
@@ -246,21 +254,12 @@ def delete_course_category(request):
 #     serializer_class = TeacherSerializers
 
 
-# restful表格处理
-from django.shortcuts import get_object_or_404, redirect
-from apps.course.models import Teacher
-from rest_framework.renderers import TemplateHTMLRenderer
-from rest_framework.views import APIView
-from django.http import Http404, JsonResponse
-from rest_framework.response import Response
-
-
 class CourseTeacherList(APIView):
     """课程老师信息的增删改"""
     render_classes = [TemplateHTMLRenderer]
     template_name = "cms/course_teacher.html"
 
-    def get(self, request, format=None):
+    def get(self, request):
         """获取老师信息列表"""
         queryset = Teacher.objects.all()
         return Response({'teachers': queryset})
@@ -285,7 +284,7 @@ class CourseTeacherDetail(APIView):
         except Teacher.DoesNotExist:
             raise Http404
 
-    def get(self, request, pk, format=None):
+    def get(self, request, pk):
         """获取"""
         # teacher = self.get_object(pk)
         teacher = get_object_or_404(Teacher, pk=pk)
@@ -302,7 +301,7 @@ class CourseTeacherDetail(APIView):
         serializer.save()
         return redirect('cms: course_teacher')
 
-    def put(self, request, pk ,format=None):
+    def put(self, request, pk):
         """更新"""
         # teacher = self.get_object(pk)
         teacher = get_object_or_404(Teacher, pk=pk)
