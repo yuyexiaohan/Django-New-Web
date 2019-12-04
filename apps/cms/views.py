@@ -421,7 +421,7 @@ def edit_banner(request):
 
 
 @require_POST
-@staff_member_required(login_url='/')  # ?
+@staff_member_required(login_url='/')
 def upload_file(request):
     # 上传文件
     # file变量就是 'InMemoryUploadedFile'类型的函数
