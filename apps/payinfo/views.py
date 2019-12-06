@@ -10,7 +10,7 @@ import os
 
 
 def index(request):
-    """付费资讯主页面"""
+    """付费资讯"""
     payinfos = Payinfo.objects.all()
     context = {
         'payinfos': payinfos
@@ -19,7 +19,7 @@ def index(request):
 
 
 def payinfo_order(request):
-    """付费资讯的支付界面"""
+    """付费资讯的支付"""
     payinfo_id = request.GET.get('payinfo_id')
     payinfo = Payinfo.objects.get(pk=payinfo_id)
     buyed = PayinfoOrder.objects.filter(
@@ -46,10 +46,8 @@ def payinfo_order(request):
     return render(request, 'payinfo/create_order.html', context=context)
 
 
-"""支付加密视图函数"""
-
-
 def order_key(request):
+    """支付加密"""
     goodsname = request.POST.get('goodsname')
     istype = request.POST.get('istype')
     notify_url = request.POST.get('notify_url')
@@ -95,7 +93,6 @@ def notify_view(request):
 
 def download_payinfo(request):
     """下载文件视图函数"""
-
     # 如果用户没有购买这个付费信息时，那么不能够让他下载
     payinfo_id = request.GET.get('payinfo_id')
     payinfo = Payinfo.objects.get(pk=payinfo_id)
