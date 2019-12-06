@@ -45,5 +45,3 @@ class CourseOrder(models.Model):
 	对于修改模型内容，例如表结构时，可能之前已经存在一些数据，这样直接添加一个表属性时，会在执行makemigrations appname时报错。
 	可以通过，在定义该变量后面，申明null=True
 """
-
-
