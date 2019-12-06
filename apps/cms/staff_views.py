@@ -22,7 +22,7 @@ def staffs(request):
 
 @method_decorator(xfz_superuser_required, name='dispatch')
 class AddStaffView(View):
-    """添加用户视图"""
+    """添加用户"""
 
     def get(self, request):
         # 获取Group表中的所有数据
