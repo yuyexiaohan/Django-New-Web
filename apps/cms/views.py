@@ -169,7 +169,6 @@ class WriteNewsView(View):
         }
         return render(request, 'cms/write_news.html', context=context)
 
-    # 写一个获取数据请求函数，应该考虑设计一张表来对数据进行验证
     def post(self, request):
         form = WriteNewsForm(request.POST)
         if form.is_valid():
