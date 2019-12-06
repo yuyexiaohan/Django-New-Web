@@ -15,13 +15,13 @@ from apps.xfzauth.decorators import xfz_login_required   # y导入自定义的�
 # 当我们在查询的条件中需要组合条件时(例如两个条件“且”或者“或”)时。
 # 我们可以使用Q()查询对象
 from django.db.models import Q
-import random
 
 
 def index(request):
-    """定义一个新闻显示页,加入轮播图"""
+    """新闻显示页,加入轮播图"""
     # newses = News.objects.all()
-    # 用于加载界面显示新闻的个数，settings中设置的ONE_PAGE_NEWS_COUNT是1，这里配置后，界面只会展示1篇文章
+    # 用于加载界面显示新闻的个数，settings中设置的ONE_PAGE_NEWS_COUNT是1，
+    # 这里配置后，界面只会展示1篇文章
     newses = News.objects.select_related('category', 'author')[
         0:settings.ONE_PAGE_NEWS_COUNT]
     categories = NewCategory.objects.all()
@@ -39,10 +39,11 @@ def index(request):
 @require_GET
 def news_list(request):
     """
-    # 定义一个新闻列表函数,用于当加载更多时，翻页
+    新闻列表,用于当加载更多时，翻页
     """
     # /news/list/?p=3
-    page = int(request.GET.get('p', 1))  # 对于没有捕获的p参数，我们后面加一个默认参数，避免浏览器获取数据类型错误
+    # 对于没有捕获的p参数，我们后面加一个默认参数，避免浏览器获取数据类型错误
+    page = int(request.GET.get('p', 1))
     # 分类的id就叫做"category_id"
     category_id = int(request.GET.get('category_id', 0))  # 获取分类id
     # offer,limit
@@ -54,7 +55,7 @@ def news_list(request):
     # value:将QuerySet中的模型对象（比如News()对象）转换为字典
     # 加list直接强制将QuerySet转换为列表
 
-    # """ 当定义好Newserializers并引入后，就可以直接使用***serializer定义 """
+    # 当定义好Newserializers并引入后，就可以直接使用***serializer定义
     if category_id == 0:
         # 如果category_id等于0，说明用户未创建分类
         newses = News.objects.all()[start:end]
@@ -64,10 +65,8 @@ def news_list(request):
     return restful.result(data=serializer.data)
 
 
-# 如果在url中定义了参数
-# 那么在相应的视图函数中也要定义相应的参数，否则会报错
 def news_detail(request, news_id):
-    """ 定义一个新闻详情的视图函数 """
+    """新闻详情 """
     try:
         news = News.objects.select_related(
             'category', 'author').get(
@@ -83,7 +82,7 @@ def news_detail(request, news_id):
 @require_POST
 @xfz_login_required
 def add_comment(request):
-    """定义一个评论视图函数"""
+    """评论"""
     # 对于django种如果没有登录用户，也还是会有一个request.user ->AnonymousUser的一个假用户，
     # 这个用户数据是不能存储在数据库的
     form = AddCommentForm(request.POST)
@@ -100,7 +99,7 @@ def add_comment(request):
 
 
 def search(request):
-    """ 定义的一个查询函数，返回一个查询页面 """
+    """查询，返回一个查询页面 """
     q = request.GET.get('q')
     if q:
         # 搜索对象为：title或者content中包含的关键字，有就返回
