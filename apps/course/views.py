@@ -134,7 +134,6 @@ def order_key(request):
     return restful.result(data={'key': key})
 
 
-#
 @csrf_exempt
 def notify_view(request):
     """第三方支付paysAPI要求返回的回调函数"""
