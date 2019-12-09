@@ -20,7 +20,10 @@ from utils import restful
 
 
 class LoginView(View):
-    """登录  2.使用类写法"""
+    """
+    登录
+    2使用类写法
+    """
 
     def get(self, request):
         return render(request, 'auth/login.html')
