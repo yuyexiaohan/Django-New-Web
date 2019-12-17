@@ -1,6 +1,6 @@
 {% extends 'base/front_base.html' %}
 
-{% block title %}奇思妙想-课程详情页{% endblock %}
+{% block title %}课程咨讯详情页{% endblock %}
 
 {% block head %}
     <script src="{% static 'videojs/video.min.js' %}"></script>
@@ -26,7 +26,9 @@
                     </div>
                     <div class="buy-course-group">
                         {% if course.price > 0 %}
-                            {% if not buyed %}
+                            {% if buyed %}
+                                <span class="free-text">已购买</span>
+                            {% else %}
                                 <a href="{% url 'course:course_order' %}?course_id={{ course.pk }}" class="buy-course-btn">购买课程</a>
                                 <span class="price-text">￥{{ course.price }}</span>
                             {% endif %}

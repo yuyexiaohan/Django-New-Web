@@ -126,16 +126,16 @@
                     </li>
                 {% endif %}
                 {% if perms.course.change_course %}
-                    <li class="header">奇思妙想管理</li>
+                    <li class="header">课程资讯管理</li>
                     <li><a href="{% url 'cms:pub_course' %}">
                     <i class="fa fa-tv">
-                        <span>发布妙想</span>
+                        <span>发布课程资讯</span>
                     </i>
                 </a></li>
                     <li>
                         <a href="{% url 'cms:course_category' %}">
                             <i class="fa fa-tag"></i>
-                            <span>妙想分类</span>
+                            <span>课程资讯分类</span>
                         </a>
                     </li>
 
@@ -149,7 +149,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{% url 'cms:course_teacher' %}">
+{#                        <a href="{% url 'cms:course_teacher' %}">#}
+                        <a href="#">
                             <i class="fa fa-cog"></i>
                             <span>教师管理</span>
                         </a>

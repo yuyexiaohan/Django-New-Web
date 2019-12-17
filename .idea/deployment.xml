@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="aly_server">
+  <component name="PublishConfigData" autoUpload="On explicit save action" serverName="tencent_cloud_01">
     <serverData>
-      <paths name="aly_server">
+      <paths name="tencent_cloud_01">
         <serverdata>
           <mappings>
-            <mapping deploy="/study/django/django_01" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/django_01" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

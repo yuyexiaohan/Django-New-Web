@@ -237,32 +237,32 @@ def delete_course_category(request):
 #         return self.delete(request, *args, **kwargs)
 
 # 2-3 使用通用的类视图
-# from apps.course.models import Teacher
-# from apps.course.serializers import TeacherSerializers
-# from rest_framework import generics
-#
-#
-# class CourseTeacherList(generics.ListCreateAPIView):
-#     """课程老师信息的增删改"""
-#     queryset = Teacher.objects.all()
-#     serializer_class = TeacherSerializers
-#
-#
-# class CourseTeacherDetail(generics.RetrieveUpdateDestroyAPIView):
-#     """查找更新一个实例"""
-#     queryset = Teacher.objects.all()
-#     serializer_class = TeacherSerializers
+from apps.course.models import Teacher
+from apps.course.serializers import TeacherSerializers
+from rest_framework import generics
 
 
-class CourseTeacherList(APIView):
+class CourseTeacherList(generics.ListCreateAPIView):
     """课程老师信息的增删改"""
-    render_classes = [TemplateHTMLRenderer]
-    template_name = "cms/course_teacher.html"
+    queryset = Teacher.objects.all()
+    serializer_class = TeacherSerializers
 
-    def get(self, request):
-        """获取老师信息列表"""
-        queryset = Teacher.objects.all()
-        return Response({'teachers': queryset})
+
+class CourseTeacherDetail(generics.RetrieveUpdateDestroyAPIView):
+    """查找更新一个实例"""
+    queryset = Teacher.objects.all()
+    serializer_class = TeacherSerializers
+
+
+# class CourseTeacherList(APIView):
+#     """课程老师信息的增删改"""
+#     render_classes = [TemplateHTMLRenderer]
+#     template_name = "cms/course_teacher.html"
+#
+#     def get(self, request):
+#         """获取老师信息列表"""
+#         queryset = Teacher.objects.all()
+#         return Response({'teachers': queryset})
 
 #     def post(self, request, format=None):
 #         """提交老师信息"""
@@ -273,39 +273,39 @@ class CourseTeacherList(APIView):
 #         return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
 
 
-class CourseTeacherDetail(APIView):
-    """查找更新一个实例"""
-    renderer_classes = [TemplateHTMLRenderer]
-    template_name = "cms/course_teacher_detail.html"
-
-    def get_object(self, pk):
-        try:
-            return Teacher.objects.get(pk=pk)
-        except Teacher.DoesNotExist:
-            raise Http404
-
-    def get(self, request, pk):
-        """获取"""
-        # teacher = self.get_object(pk)
-        teacher = get_object_or_404(Teacher, pk=pk)
-        serializer = TeacherSerializers(teacher)
-        return Response({"serializer": serializer, "teacher": teacher})
-
-    def post(self, request, pk):
-        """创建"""
-        # teacher = self.get_object(pk)
-        teacher = get_object_or_404(Teacher, pk=pk)
-        serializer = TeacherSerializers(teacher, data=request.data)
-        if not serializer.is_valid():
-            return Response({'serializer': serializer, 'teacher': teacher})
-        serializer.save()
-        return redirect('cms: course_teacher')
-
-    def put(self, request, pk):
-        """更新"""
-        # teacher = self.get_object(pk)
-        teacher = get_object_or_404(Teacher, pk=pk)
-        serializer = TeacherSerializers(teacher, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer)
+# class CourseTeacherDetail(APIView):
+#     """查找更新一个实例"""
+#     renderer_classes = [TemplateHTMLRenderer]
+#     template_name = "cms/course_teacher_detail.html"
+#
+#     def get_object(self, pk):
+#         try:
+#             return Teacher.objects.get(pk=pk)
+#         except Teacher.DoesNotExist:
+#             raise Http404
+#
+#     def get(self, request, pk):
+#         """获取"""
+#         # teacher = self.get_object(pk)
+#         teacher = get_object_or_404(Teacher, pk=pk)
+#         serializer = TeacherSerializers(teacher)
+#         return Response({"serializer": serializer, "teacher": teacher})
+#
+#     def post(self, request, pk):
+#         """创建"""
+#         # teacher = self.get_object(pk)
+#         teacher = get_object_or_404(Teacher, pk=pk)
+#         serializer = TeacherSerializers(teacher, data=request.data)
+#         if not serializer.is_valid():
+#             return Response({'serializer': serializer, 'teacher': teacher})
+#         serializer.save()
+#         return redirect('cms: course_teacher')
+#
+#     def put(self, request, pk):
+#         """更新"""
+#         # teacher = self.get_object(pk)
+#         teacher = get_object_or_404(Teacher, pk=pk)
+#         serializer = TeacherSerializers(teacher, data=request.data)
+#         if serializer.is_valid():
+#             serializer.save()
+#             return Response(serializer)
