@@ -20,7 +20,7 @@ from django.utils.decorators import method_decorator  # 验证登录才能访问
 # @method_decorator(xfz_permission_required(Course),name='dispatch')
 # @xfz_permission_required
 def course_index(request):
-    """课程的视图函数"""
+    """课程资讯"""
     context = {
         'courses': Course.objects.all()  # 获取所有课程信息
     }
@@ -28,7 +28,7 @@ def course_index(request):
 
 
 # @method_decorator(login_required(login_url='/account/login/'))
-@login_required
+# @login_required
 def course_detail(request, course_id):
     course = Course.objects.get(pk=course_id)
     # if request.user.is_authenticated():
@@ -36,7 +36,7 @@ def course_detail(request, course_id):
     # else:
     # 	buyed = True
     buyed = CourseOrder.objects.filter(
-        buyer=request.user, course=course, status=2)
+        buyer=request.user, course=course, status=2).exists()
     context = {
         'course': course,
         'buyed': buyed
@@ -48,10 +48,14 @@ def course_token(request):
     video_url = request.GET.get('video_url')
     course_id = request.GET.get('course_id')
 
-    buyed = CourseOrder.objects.filter(
-        course_id=course_id, buyer=request.user, status=2)
-    if not buyed:
-        return restful.params_error(message='请先购买课程！')
+    # 判断课程是否免费，免费直接获取token值，付费则进行订单支付后获取token值
+    course_price = Course.objects.get(pk=course_id).price
+    if course_price != 0:
+        buyed = CourseOrder.objects.filter(
+            course_id=course_id, buyer=request.user, status=2).exists()
+        if not buyed:
+            return restful.params_error(message='请先购买课程！')
+
     expiration_time = int(time.time()) + 2 * 60 * 60
 
     USER_ID = settings.BAIDU_CLOUD_USER_ID
@@ -66,6 +70,7 @@ def course_token(request):
     message = '/{0}/{1}'.format(media_id, expiration_time).encode('utf-8')
     signature = hmac.new(key, message, digestmod=hashlib.sha256).hexdigest()
     token = '{0}_{1}_{2}'.format(signature, USER_ID, expiration_time)
+    print("course_token:", token)
     return restful.result(data={'token': token})
 
 
@@ -73,19 +78,19 @@ def course_order(request):
     """课程支付函数"""
     course_id = request.GET.get('course_id')
     course = Course.objects.get(pk=course_id)
-    order = CourseOrder.objects.create(
-        amount=course.price,
-        course=course,
-        buyer=request.user,
-        status=1)
     buyed = CourseOrder.objects.filter(
-        buyer=request.user, course=course, status=2)
+        buyer=request.user, course=course, status=2).exists()
     if buyed:
         return redirect(
             reverse(
                 "course:course_detail",
                 kwargs={
                     'course_id': course.pk}))
+    order = CourseOrder.objects.create(
+        amount=course.price,
+        course=course,
+        buyer=request.user,
+        status=1)
     context = {
         'course': course,
         # .build_absolute_uri()是一个构建绝对路径或相对路径的url

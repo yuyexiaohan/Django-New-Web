@@ -35,6 +35,7 @@ $(function () {
                 if(result['code'] === 200){
                     var token = result['data']['token'];
                     player.setToken(e.file,token);
+                    // console.log("token返回成功！")
                 }else {
                     window.messageBox.showError(result['message']);
                     player.stop();
