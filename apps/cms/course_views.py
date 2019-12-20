@@ -142,11 +142,14 @@ def delete_course_category(request):
 class CourseTeacher(View):
     """授课老师展示"""
 
-    def get(self, request):
-        course_teachers = Teacher.objects.all().order_by('-id')
-        context = {'course_teachers': course_teachers}
-        return render(request, "cms/course_teacher.html", context)
+    # def get(self, request):
+    #     course_teachers = Teacher.objects.all().order_by('-id')
+    #     context = {'course_teachers': course_teachers}
+    #     return render(request, "cms/course_teacher.html", context)
 
+    def get(self, request):
+
+        return render(request, "cms/course_teacher.html")
 
 # restful API接口规范化
 # 方法1：方法的restful

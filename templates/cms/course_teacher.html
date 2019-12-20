@@ -6,7 +6,9 @@
 
 {% block head %}
     <script src="{% static 'js/template-web.js' %}"></script>
+    <script src="{% static 'js/template.js' %}"></script>
     <script src="{% static 'js/course_teacher.js' %}"></script>
+
 {% endblock %}
 
 {% block content-header %}
@@ -14,25 +16,74 @@
 {% endblock %}
 
 {% block content %}
-<div class="row">
+
+
+    <div class="row">
     <div class="col-md-12">
         <div class="box box-primary">
             <div class="box-header">
-                <a href="{% url "cms:course_teacher_list" %}"><button id="add-btn" class="btn btn-primary pull-right" >添加分类</button></a>
+                <a href="{% url "cms:course_teacher_list" %}"><button id="add-btn" class="btn btn-primary pull-right" >添加教师</button></a>
+
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">添加教师</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">添加老师信息</h4>
+      </div>
+      <div class="modal-body">
+        <form id="course-teacher-data" action="" method="post">
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">姓名:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div><div class="form-group">
+            <label for="recipient-name" class="control-label">职称:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div><div class="form-group">
+            <label for="recipient-name" class="control-label">简介:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">头像:</label>
+{#            <input type="file" class="form-control" id="recipient-name">#}
+              <div class="input-group">
+                  <input type="text" name="thumbnail" class="form-control" id="thumbnail-form">
+                  <span class="input-group-btn">
+                      <label class="btn btn-default btn-file">
+                          上传图片 <input hidden="" type="file" class="btn btn-default" id="upload-btn">
+                      </label>
+                  </span>
+              </div>
+
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
             </div>
             <div class="box-body">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>老师姓名</th>
+                            <th>姓名</th>
                             <th>职称</th>
                             <th>简介</th>
                             <th>头像</th>
                             <th>操作</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        {% for teacher in course_teachers %}
+                    <tbody id="course-teacher-list">
+                    <script id="course-teacher-list-tmpl" type="text/html">
+                    {% verbatim %}
+                    {{ each course_teachers as teacher }}
                             <tr data-pk="{{ teacher.pk }} " data-name="{{ teacher.username }}">
                                 <td>{{ teacher.username }}</td>
                                 <td>{{ teacher.jobtitle }}</td>
@@ -43,12 +94,53 @@
                                     <a href="#"><button class="btn btn-danger btn-xs delete-btn">删除</button></a>
                                 </td>
                             </tr>
-                        {% endfor %}
-                        
+{#                        {% endfor %}#}
+                        {{ /each }}
+                    {% endverbatim %}
+                    </script>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
 </div>
+
+
+{#<div class="row">#}
+{#    <div class="col-md-12">#}
+{#        <div class="box box-primary">#}
+{#            <div class="box-header">#}
+{#                <a href="{% url "cms:course_teacher_list" %}"><button id="add-btn" class="btn btn-primary pull-right" >添加教师</button></a>#}
+{#            </div>#}
+{#            <div class="box-body">#}
+{#                <table class="table table-bordered">#}
+{#                    <thead>#}
+{#                        <tr>#}
+{#                            <th>老师姓名</th>#}
+{#                            <th>职称</th>#}
+{#                            <th>简介</th>#}
+{#                            <th>头像</th>#}
+{#                            <th>操作</th>#}
+{#                        </tr>#}
+{#                    </thead>#}
+{#                    <tbody>#}
+{#                        {% for teacher in course_teachers %}#}
+{#                            <tr data-pk="{{ teacher.pk }} " data-name="{{ teacher.username }}">#}
+{#                                <td>{{ teacher.username }}</td>#}
+{#                                <td>{{ teacher.jobtitle }}</td>#}
+{#                                <td>{{ teacher.profile }}</td>#}
+{#                                <td><img src="{{ teacher.avatar}}" alt="" style="height: 40px"></td>#}
+{#                                <td>#}
+{#                                    <a href="{% url "cms:course_teacher_detail" pk=teacher.id %}"><button class="btn btn-warning btn-xs edit-btn">编辑</button></a>#}
+{#                                    <a href="#"><button class="btn btn-danger btn-xs delete-btn">删除</button></a>#}
+{#                                </td>#}
+{#                            </tr>#}
+{#                        {% endfor %}#}
+{#                        #}
+{#                    </tbody>#}
+{#                </table>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</div>#}
 {% endblock %}

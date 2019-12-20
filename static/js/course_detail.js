@@ -26,21 +26,21 @@ $(function () {
         }
 
         xfzajax.get({
-            'url':'/course/course_token/',
-            'data':{
-                'video_url':video_url,
-                'course_id':course_id
+            'url': '/course/course_token/',
+            'data': {
+                'video_url': video_url,
+                'course_id': course_id
             },
-            'success':function (result) {
+            'success': function (result) {
                 if(result['code'] === 200){
                     var token = result['data']['token'];
-                    player.setToken(e.file,token);
-                    // console.log("token返回成功！")
+                    player.setToken(e.file, token);
+                    console.log("..start..",player.setToken(e.file,token));
                 }else {
                     window.messageBox.showError(result['message']);
                     player.stop();
                 }
             }
-        })
+        });
     });
 });
