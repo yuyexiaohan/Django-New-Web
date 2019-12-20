@@ -22,9 +22,9 @@
     <div class="col-md-12">
         <div class="box box-primary">
             <div class="box-header">
-                <a href="{% url "cms:course_teacher_list" %}"><button id="add-btn" class="btn btn-primary pull-right" >添加教师</button></a>
-
-                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">添加教师</button>
+{#                django-restframework自带的HTML接口API#}
+{#                <a href="{% url "cms:course_teacher_list" %}"><button id="add-btn" class="btn btn-primary pull-right" >添加教师</button></a>#}
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">添加教师信息</button>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
@@ -35,21 +35,22 @@
       </div>
       <div class="modal-body">
         <form id="course-teacher-data" action="" method="post">
+            {% csrf_token %}
           <div class="form-group">
             <label for="recipient-name" class="control-label">姓名:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" name="teacher-name">
           </div><div class="form-group">
             <label for="recipient-name" class="control-label">职称:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <input type="text" class="form-control" name="teacher-job-title">
           </div><div class="form-group">
             <label for="recipient-name" class="control-label">简介:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" name="teacher-profile"></textarea>
           </div>
           <div class="form-group">
             <label for="message-text" class="control-label">头像:</label>
 {#            <input type="file" class="form-control" id="recipient-name">#}
               <div class="input-group">
-                  <input type="text" name="thumbnail" class="form-control" id="thumbnail-form">
+                  <input type="text" name="teacher-avatar" class="form-control" id="thumbnail-form">
                   <span class="input-group-btn">
                       <label class="btn btn-default btn-file">
                           上传图片 <input hidden="" type="file" class="btn btn-default" id="upload-btn">
@@ -58,12 +59,13 @@
               </div>
 
           </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button id="submit-btn-add-teacher" type="button" class="btn btn-primary">提交</button>
+            </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
+
     </div>
   </div>
 </div>
@@ -76,8 +78,8 @@
                             <th>姓名</th>
                             <th>职称</th>
                             <th>简介</th>
-                            <th>头像</th>
                             <th>操作</th>
+                            <th>头像</th>
                         </tr>
                     </thead>
                     <tbody id="course-teacher-list">
@@ -85,6 +87,7 @@
                     {% verbatim %}
                     {{ each course_teachers as teacher }}
                             <tr data-pk="{{ teacher.pk }} " data-name="{{ teacher.username }}">
+
                                 <td>{{ teacher.username }}</td>
                                 <td>{{ teacher.jobtitle }}</td>
                                 <td>{{ teacher.profile }}</td>
