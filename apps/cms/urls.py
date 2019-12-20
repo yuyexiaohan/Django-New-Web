@@ -3,8 +3,13 @@ from . import views
 from . import course_views
 from . import staff_views
 from rest_framework.urlpatterns import format_suffix_patterns
+# from rest_framework import routers
+
 
 app_name = 'cms'
+
+# router = routers.DefaultRouter()
+# router.register(path('',))
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -31,7 +36,8 @@ urlpatterns += [
     path('add_course_category/', course_views.add_course_category, name='add_course_category'),
     path('edit_course_category/', course_views.edit_course_category, name='edit_course_category'),
     path('delete_course_category/', course_views.delete_course_category, name='delete_course_category'),
-    path('course_teacher/', course_views.CourseTeacherList.as_view(), name='course_teacher'),
+    path('course_teacher/', course_views.CourseTeacher.as_view(), name='course_teacher'),
+    path('course_teacher_list/', course_views.CourseTeacherList.as_view(), name='course_teacher_list'),
     path('course_teacher/<pk>/', course_views.CourseTeacherDetail.as_view(), name='course_teacher_detail'),
 ]
 

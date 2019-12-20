@@ -139,6 +139,15 @@ def delete_course_category(request):
         return restful.params_error(message="这个分类不存在或已被删除，请刷新界面重新查看！")
 
 
+class CourseTeacher(View):
+    """授课老师展示"""
+
+    def get(self, request):
+        course_teachers = Teacher.objects.all().order_by('-id')
+        context = {'course_teachers': course_teachers}
+        return render(request, "cms/course_teacher.html", context)
+
+
 # restful API接口规范化
 # 方法1：方法的restful
 

@@ -7,34 +7,6 @@
 {% block head %}
     <script src="{% static 'js/template-web.js' %}"></script>
     <script src="{% static 'js/course_teacher.js' %}"></script>
-
-        <script id="news-item" type="text/html">
-    {# 该标签是django标签，用于指示包裹的文件不处理，只作为字符串 #}
-        {% verbatim %}
-        {{ each newses news index }}
-            <li>
-                <div class="thumbnail-group">
-                    <a href="/detail/{{ news.id }}">
-                        <img src="{{ news.thumbnail }}" alt="">
-                    </a>
-                </div>
-                <div class="news-group">
-                    <div class="title">
-                        <a href="/detail/{{ news.id }}">{{ news.title }}</a>
-                    </div>
-                    <p class="desc">{{ news.desc }}</p>
-                    <div class="news-more-group">
-                        <span class="category">{{ news.category.name }}</span>
-                        <span class="pub-time">{{ news.pub_time|timeSince }}</span>
-                        <span class="author">{{ news.author.username }}</span>
-
-                    </div>
-                </div>
-            </li>
-        {{ /each }}
-        {% endverbatim %}
-    </script>
-
 {% endblock %}
 
 {% block content-header %}
@@ -46,43 +18,29 @@
     <div class="col-md-12">
         <div class="box box-primary">
             <div class="box-header">
-                <button id="add-btn" class="btn btn-primary pull-right" >添加分类</button>
+                <a href="{% url "cms:course_teacher_list" %}"><button id="add-btn" class="btn btn-primary pull-right" >添加分类</button></a>
             </div>
             <div class="box-body">
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th>老师编号</th>
                             <th>老师姓名</th>
                             <th>职称</th>
+                            <th>简介</th>
                             <th>头像</th>
                             <th>操作</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {# 获取新闻分类页的内容：分类，分类数量，编辑删除等 #}
-                    {# 方法1： #}
-{#                        {% for key ,value in category_nums.items %} {# 在html中获取字典的键值是难点，.items是返回字典的各个项#}
-{#                            <tr data-pk="{{ key.pk }} " data-name="{{ key.name }}">#}
-{#                                <td>{{ key.name }}</td>#}
-{#                                <td>{{ value }}</td>#}
-{#                                <td>#}
-{#                                    <button class="btn btn-warning btn-xs edit-btn">编辑</button>#}
-{#                                    <button class="btn btn-danger btn-xs delete-btn">删除</button>#}
-{#                                </td>#}
-{#                            </tr>#}
-{#                        {% endfor %}#}
-
-                    {# 方法2： #}
-                        {% for teacher in teachers %}
+                        {% for teacher in course_teachers %}
                             <tr data-pk="{{ teacher.pk }} " data-name="{{ teacher.username }}">
                                 <td>{{ teacher.username }}</td>
                                 <td>{{ teacher.jobtitle }}</td>
                                 <td>{{ teacher.profile }}</td>
-                                <td>{{ teacher.avatar}}</td>
+                                <td><img src="{{ teacher.avatar}}" alt="" style="height: 40px"></td>
                                 <td>
-                                    <button class="btn btn-warning btn-xs edit-btn">编辑</button>
-                                    <button class="btn btn-danger btn-xs delete-btn">删除</button>
+                                    <a href="{% url "cms:course_teacher_detail" pk=teacher.id %}"><button class="btn btn-warning btn-xs edit-btn">编辑</button></a>
+                                    <a href="#"><button class="btn btn-danger btn-xs delete-btn">删除</button></a>
                                 </td>
                             </tr>
                         {% endfor %}

@@ -28,7 +28,7 @@ def course_index(request):
 
 
 # @method_decorator(login_required(login_url='/account/login/'))
-# @login_required
+@login_required(login_url='/account/login/')
 def course_detail(request, course_id):
     course = Course.objects.get(pk=course_id)
     # if request.user.is_authenticated():
@@ -75,7 +75,7 @@ def course_token(request):
 
 
 def course_order(request):
-    """课程支付函数"""
+    """课程支付"""
     course_id = request.GET.get('course_id')
     course = Course.objects.get(pk=course_id)
     buyed = CourseOrder.objects.filter(
@@ -103,7 +103,7 @@ def course_order(request):
 
 
 def order_key(request):
-    """支付加密视图函数"""
+    """支付加密"""
     goodsname = request.POST.get('goodsname')
     istype = request.POST.get('istype')
     notify_url = request.POST.get('notify_url')
@@ -141,7 +141,7 @@ def order_key(request):
 
 @csrf_exempt
 def notify_view(request):
-    """第三方支付paysAPI要求返回的回调函数"""
+    """第三方支付paysAPI要求返回的回调"""
     orderid = request.POST.get('orderid')
     CourseOrder.objects.filter(pk=orderid).update(status=2)
     return restful.ok()

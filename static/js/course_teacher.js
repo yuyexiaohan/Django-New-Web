@@ -37,33 +37,17 @@ $(function () {
     });
 });
 
-// 定义点击分类获取分类新闻
-$(function () {
-    // 获取category分类的标签元素，可以通过class获取ui标签，然后同children获取ui下的子元素
-   var categoryUl = $(".list-tab-group");
-   var liTags = categoryUl.children(); // children 是直接获取categorUI标签下的子元素（子元素：指这个标签的下一级元素，不包括下2级等元素）
-    var loadBtn = $(".load-more-btn");
-   liTags.click(function () {
-        var li = $(this);
-        var categoryId = li.attr('data-category-id');
-        xfzajax.get({
-            'url':'/list/',
-            'data': {
-                'category_id':categoryId
-            },
-            'success': function (result) {
-                // console.log(result);// 打印测试
-                var newses = result['data'];
-                // console.log(newses); // 打印获取的新闻
-                var tpl = template("news-item",{"newses":newses}); // 将查询到的新闻内容放到显示界面，并清除之前显示的数据
-                var newsListGroup = $(".news-list-group");
-                // empay: 可以将newsListGroup下的所有标签都清除掉
-                newsListGroup.empty();
-                newsListGroup.append(tpl);// 添加新的新闻数据
-                li.addClass('active').siblings().removeClass('active');
-                loadBtn.attr('data-page',2); // 一旦点击分类标签后，每页展示内容默认为2
-            }
-        });
-   });
-});
 
+function getCookies(name) {
+    var r = document.cookie.match("\\b" + name + "=([^;]*)\\b");
+    return r ?r[1] :undefined;
+}
+
+// 定义老师信息获取
+$(document).ready(function () {
+    $.get("/cms/course_teacher/?format=json", function (resp) {
+        if(resp.errno === '0'){
+            console.log("resp.errno:", resp.data());
+        }
+    });
+});

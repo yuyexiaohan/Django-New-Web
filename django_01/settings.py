@@ -153,7 +153,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = True  # 为True时，数据库时间与系统时间相差8小时
+# USE_TZ = False  # 为True时，数据库时间与系统时间相差8小时
 
 
 # Static files (CSS, JavaScript, Images)
