@@ -75,6 +75,7 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
+                            <th>id</th>
                             <th>姓名</th>
                             <th>职称</th>
                             <th>简介</th>
@@ -88,12 +89,13 @@
                     {{ each course_teachers as teacher }}
                             <tr data-pk="{{ teacher.pk }} " data-name="{{ teacher.username }}">
 
+                                <td>{{ teacher.id }}</td>
                                 <td>{{ teacher.username }}</td>
                                 <td>{{ teacher.jobtitle }}</td>
                                 <td>{{ teacher.profile }}</td>
                                 <td><img src="{{ teacher.avatar}}" alt="" style="height: 40px"></td>
                                 <td>
-                                    <a href="{% url "cms:course_teacher_detail" pk=teacher.id %}"><button class="btn btn-warning btn-xs edit-btn">编辑</button></a>
+                                    <button id="edit-btn" type="button" class="btn btn-primary btn-warning btn-xs edit-btn" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">编辑</button>
                                     <a href="#"><button class="btn btn-danger btn-xs delete-btn">删除</button></a>
                                 </td>
                             </tr>

@@ -53,5 +53,20 @@ $(function () {
 });
 
 $(function () {
-    // var editBtn =
+    var editBtn = $("#edit-btn");
+    editBtn.click(function (event) {
+        event.preventDefault();
+        var currentBtn = $(this);
+        var tr = currentBtn.parent().parent();
+        var teacherId = tr.attr('data-name');
+        var teacherName = $("input[name='teacher-name']").val();
+        var teacherJobTitle = $("input[name='teacher-job-title']").val();
+        var teacherProfile = $("textarea[name='teacher-profile']").val();
+        var teacherAvatar = $("input[name='teacher-avatar']").val();
+
+        $.ajax({
+            url: "",
+            type: 'put'
+        })
+    });
 });
