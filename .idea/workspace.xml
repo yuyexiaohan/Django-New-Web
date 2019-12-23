@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="update cyberplayer">
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/cyberplayer.flash.swf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/cyberplayer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/cyberplayer.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/flv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/flv.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/bce.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/beelden.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/bekle.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/five.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/glow.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/roundster.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/seven.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/six.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/stormtrooper.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/skins/vapor.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/videojs/videojs-contrib-hls.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/django_01/settings.py" afterPath="$PROJECT_DIR$/django_01/settings.py" />
-      <change beforePath="$PROJECT_DIR$/static/js/course_detail.js" afterPath="$PROJECT_DIR$/static/js/course_detail.js" />
-      <change beforePath="$PROJECT_DIR$/static/videojs/video.min.js" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/videojs/video.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/videojs/videojs-contrib-hls.min.js" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/videojs/videojs-contrib-hls.min.js" />
-      <change beforePath="$PROJECT_DIR$/static/videojs/videojs-contrib-quality-levels.min.js" afterPath="$PROJECT_DIR$/static/cyberplayer-3.4.1/videojs/videojs-contrib-quality-levels.min.js" />
-      <change beforePath="$PROJECT_DIR$/templates/course/course_detail.html" afterPath="$PROJECT_DIR$/templates/course/course_detail.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -466,13 +445,6 @@
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
     </task>
-    <task id="LOCAL-00087" summary="modify grammar">
-      <created>1566396663719</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1566396663719</updated>
-    </task>
     <task id="LOCAL-00088" summary="add test">
       <created>1566476498976</created>
       <option name="number" value="00088" />
@@ -809,7 +781,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576940656821</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <task id="LOCAL-00136" summary="update cyberplayer">
+      <created>1577081325131</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1577081325131</updated>
+    </task>
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -828,8 +807,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28392246" sideWeight="0.5193133" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611173" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
