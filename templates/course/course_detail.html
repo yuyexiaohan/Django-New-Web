@@ -1,13 +1,15 @@
 {% extends 'base/front_base.html' %}
+{% load static %}
 
 {% block title %}课程咨讯详情页{% endblock %}
 
 {% block head %}
-    <script src="{% static 'videojs/video.min.js' %}"></script>
-    <script src="{% static 'videojs/videojs-contrib-hls.min.js' %}"></script>
-    <script src="{% static 'videojs/videojs-contrib-quality-levels.min.js' %}"></script>
-    <script type="text/javascript" src="https://cdn.bdstatic.com/jwplayer/latest/cyberplayer.js"></script>
-    <script src="{% static 'js/course_detail.js' %}"></script>
+    <script type="text/javascript" src="{% static 'cyberplayer-3.4.1/videojs/video.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'cyberplayer-3.4.1/videojs/videojs-contrib-hls.js' %}"></script>
+    <script type="text/javascript" src="{% static 'cyberplayer-3.4.1/videojs/videojs-contrib-hls.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'cyberplayer-3.4.1/videojs/videojs-contrib-quality-levels.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'cyberplayer-3.4.1/cyberplayer.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/course_detail.js' %}"></script>
     <link rel="stylesheet" href="{% static "css/course/course_detail.css" %}">
 {% endblock %}
 

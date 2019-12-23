@@ -34,8 +34,8 @@ $(function () {
             'success': function (result) {
                 if(result['code'] === 200){
                     var token = result['data']['token'];
+                    console.log("token:", token);
                     player.setToken(e.file, token);
-                    console.log("..start..",player.setToken(e.file,token));
                 }else {
                     window.messageBox.showError(result['message']);
                     player.stop();
