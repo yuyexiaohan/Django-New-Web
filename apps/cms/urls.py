@@ -37,8 +37,9 @@ urlpatterns += [
     path('edit_course_category/', course_views.edit_course_category, name='edit_course_category'),
     path('delete_course_category/', course_views.delete_course_category, name='delete_course_category'),
     path('course_teacher/', course_views.CourseTeacher.as_view(), name='course_teacher'),
-    path('course_teacher_list/', course_views.CourseTeacherList.as_view(), name='course_teacher_list'),
     path('course_teacher/<pk>/', course_views.CourseTeacherDetail.as_view(), name='course_teacher_detail'),
+    path('course_teacher_list/', course_views.CourseTeacherList.as_view(), name='course_teacher_list'),
+    path('course_teacher_list/<pk>/', course_views.CourseTeacherListDetail.as_view(), name='course_teacher_list_detail'),
 ]
 
 # 分享资料url

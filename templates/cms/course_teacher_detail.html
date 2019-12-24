@@ -1,0 +1,63 @@
+{% extends 'cms/base.html' %}
+{% load rest_framework %}
+{% block title %}
+    课程老师信息编辑
+{% endblock %}
+
+{% block head %}
+    <script src="{% static 'js/template-web.js' %}"></script>
+    <script src="{% static 'js/template.js' %}"></script>
+    <script src="{% static 'js/course_teacher_detail.js' %}"></script>
+{% endblock %}
+
+{% block content-header %}
+    <h1>课程老师信息编辑</h1>
+{% endblock %}
+
+{% block content %}
+
+{% if teacher %}
+    <div class="modal-body" data-id="{{ teacher.id }}">
+        <form id="course-teacher-data" action="" method="post">
+            {% csrf_token %}
+          <div class="form-group">
+              <label for="name-input" class="control-label">姓名:</label>
+            <input type="text" class="form-control" name="teacher-name" value="{{ teacher.username }}">
+          </div><div class="form-group">
+            <label for="recipient-name" class="control-label">职称:</label>
+            <input type="text" class="form-control" name="teacher-job-title" value="{{ teacher.jobtitle }}">
+          </div>
+            <div class="form-group">
+            <label for="recipient-name" class="control-label">简介:</label>
+            <input class="form-control" name="teacher-profile" value="{{ teacher.profile }}">
+          </div>
+          <div class="form-group">
+            <label for="form-group" class="control-label">头像:</label>
+              <div class="input-group">
+                  <input type="text" name="teacher-avatar" class="form-control" id="thumbnail-form" placeholder="填写图像url或上传图片" value="{{ teacher.avatar }}">
+                  <span class="input-group-btn">
+                      <label class="btn btn-default btn-file">
+                          上传图片 <input hidden="" type="file" class="btn btn-default" id="upload-btn">
+                      </label>
+                  </span>
+
+              </div>
+              <div class="form-group">
+                  <br>
+                  <span>图片预览</span>
+                  <span><img src="{{ teacher.avatar }}" alt=""></span>
+              </div>
+          </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button id="submit-btn-teacher" type="button" class="btn btn-primary">提交</button>
+            </div>
+        </form>
+      </div>
+    {% else %}
+    <div class="" style="color: red"><h4>未找到相关信息！</h4></div>
+{% endif %}
+
+
+
+{% endblock %}

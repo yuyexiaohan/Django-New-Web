@@ -143,13 +143,25 @@ class CourseTeacher(View):
     """授课老师展示"""
 
     # def get(self, request):
+    #     """后端渲染"""
     #     course_teachers = Teacher.objects.all().order_by('-id')
     #     context = {'course_teachers': course_teachers}
     #     return render(request, "cms/course_teacher.html", context)
 
     def get(self, request):
-
+        """前端渲染"""
         return render(request, "cms/course_teacher.html")
+
+
+class CourseTeacherDetail(View):
+    """课程老师详情展示"""
+
+    def get(self, request, pk):
+        """前端渲染"""
+        teacher = Teacher.objects.get(id=pk)
+        print("teacher:", teacher)
+        return render(request, "cms/course_teacher_detail.html", context={'teacher': teacher})
+
 
 # restful API接口规范化
 # 方法1：方法的restful
@@ -260,7 +272,7 @@ class CourseTeacherList(generics.ListCreateAPIView):
     serializer_class = TeacherSerializers
 
 
-class CourseTeacherDetail(generics.RetrieveUpdateDestroyAPIView):
+class CourseTeacherListDetail(generics.RetrieveUpdateDestroyAPIView):
     """查找更新一个实例"""
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializers
