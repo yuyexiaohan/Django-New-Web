@@ -6,6 +6,10 @@ function getCookies(name) {
 
 
 
+
+
+
+
 // 编辑老师信息
 $(function () {
     $('#submit-btn-teacher').click(function (e) {

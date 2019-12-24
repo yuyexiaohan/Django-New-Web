@@ -34,23 +34,16 @@ $(function () {
     // progressGroup 是用来进行控制进度条是否需要显示的
     var progressGroup = $("#progress-group");
     // progressBar 是用来控制进度条的宽度
-    var progressBar = $("#progress-bar");
+    var progressBar = $(".progress-bar");
 
     function progress(response) {
         var percent = response.total.percent;
         var percentText = percent.toFixed(0) + '%'; // .toFixed(0)代表小数点后面给0位
-        console.log('##################');
-        console.log(percent);
-        console.log('##################');
         progressBar.css({"width":percentText});
         progressBar.text(percentText);
     }
     function error(err) {
-        console.log('==========');
-        console.log(err);
-        console.log('==========');
         window.messageBox.showError(err.message); //输出错误信息
-
         progressGroup.hide(); // 错误出现后隐藏
 
     }

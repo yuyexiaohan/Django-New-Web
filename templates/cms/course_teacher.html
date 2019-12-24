@@ -32,14 +32,13 @@
            <h4 class="modal-title" id="exampleModalLabel">添加老师信息</h4>
       </div>
       <div class="modal-body">
-        <form id="course-teacher-data" action="" method="post">
-            {% csrf_token %}
+        <form id="course-teacher-data" action="" method="">
           <div class="form-group">
               <label for="recipient-name" class="control-label">姓名:</label>
-            <input type="text" class="form-control" name="teacher-name">
+            <textarea type="text" class="form-control" name="teacher-name"></textarea>
           </div><div class="form-group">
             <label for="recipient-name" class="control-label">职称:</label>
-            <input type="text" class="form-control" name="teacher-job-title">
+            <textarea type="text" class="form-control" name="teacher-job-title"></textarea>
           </div><div class="form-group">
             <label for="recipient-name" class="control-label">简介:</label>
             <textarea class="form-control" name="teacher-profile"></textarea>
@@ -48,7 +47,7 @@
             <label for="form-group" class="control-label">头像:</label>
 {#            <input type="file" class="form-control" id="recipient-name">#}
               <div class="input-group">
-                  <input type="text" name="teacher-avatar" class="form-control" id="thumbnail-form">
+                  <textarea type="text" name="teacher-avatar" class="form-control" id="thumbnail-form"></textarea>
                   <span class="input-group-btn">
                       <label class="btn btn-default btn-file">
                           上传图片 <input hidden="" type="file" class="btn btn-default" id="upload-btn">
@@ -86,16 +85,16 @@
 {#                    Django模板标签，将包裹部分不识别，当作字符串处理#}
                     {% verbatim %}
                     {{ each course_teachers as teacher }}
-                        <tr  data-pk="{{ teacher.id }} " data-name="{{ teacher.username }}" data-jobtitle="{{ teacher.jobtitle }}" data-profile="{{ teacher.profile }}" data-avatar="{{ teacher.avatar }}">
+                        <tr  data-pk="{{ teacher.id }}" data-name="{{ teacher.username }}" data-jobtitle="{{ teacher.jobtitle }}" data-profile="{{ teacher.profile }}" data-avatar="{{ teacher.avatar }}">
                             <td>{{ teacher.id }}</td>
                             <td>{{ teacher.username }}</td>
                             <td>{{ teacher.jobtitle }}</td>
                             <td>{{ teacher.profile }}</td>
                             <td><img src="{{ teacher.avatar}}" alt="" style="height: 40px"></td>
                             <td>
-                                <a href="{{ teacher.id }}">
-                                    <button id="edit-btn" type="button" class="btn btn-warning btn-xs edit-btn" onclick="editTeacher()">编辑</button>
-                                </a>
+
+                                    <button id="edit-btn" type="button" class="btn btn-warning btn-xs edit-btn">编辑</button>
+
 
                                 <button class="btn btn-danger btn-xs delete-btn">删除</button>
                             </td>

@@ -65,7 +65,6 @@ $(function () {
                        // 进行判断，如果返回的代码是200即成功，则执行后面操作
                         console.log(result);
                        if(result['code'] === 200){
-
                            // 重新加载本地页面
                             window.location.reload();
                         }
@@ -79,7 +78,6 @@ $(function () {
 
 
 // 删除分类
-
 $(function () {
     var deleteBtn = $('.delete-btn');
     deleteBtn.click(function () {
