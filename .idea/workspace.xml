@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/apps/payinfo/models.py" afterPath="$PROJECT_DIR$/apps/payinfo/models.py" />
-      <change beforePath="$PROJECT_DIR$/apps/payinfo/urls.py" afterPath="$PROJECT_DIR$/apps/payinfo/urls.py" />
       <change beforePath="$PROJECT_DIR$/apps/payinfo/views.py" afterPath="$PROJECT_DIR$/apps/payinfo/views.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -507,13 +505,6 @@
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
     </task>
-    <task id="LOCAL-00092" summary="add edit current_user massage">
-      <created>1568139585992</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1568139585992</updated>
-    </task>
     <task id="LOCAL-00093" summary="del debug code">
       <created>1568297973271</created>
       <option name="number" value="00093" />
@@ -850,7 +841,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577255166381</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="修复payinfo不能跳转到订单支付页面">
+      <created>1577262669785</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1577262669785</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -956,7 +954,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix course views" />
     <MESSAGE value="del notation" />
     <MESSAGE value="fix course_order.html" />
     <MESSAGE value="add course_teacher.html" />
@@ -981,7 +978,8 @@
     <MESSAGE value="add course_teacher_detail" />
     <MESSAGE value="前端处理老师的html界面及业务逻辑" />
     <MESSAGE value="完善js渲染数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善js渲染数据" />
+    <MESSAGE value="修复payinfo不能跳转到订单支付页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="修复payinfo不能跳转到订单支付页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

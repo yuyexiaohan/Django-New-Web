@@ -22,13 +22,20 @@ def payinfo_order(request):
     """付费资讯的支付"""
     payinfo_id = request.GET.get('payinfo_id')
     payinfo = Payinfo.objects.get(pk=payinfo_id)
-    buyed = PayinfoOrder.objects.filter(
-        buyer=request.user, payinfo=payinfo, status=2)
-    if buyed:
+    price = payinfo.price
+    if price == 0:
         return redirect(
             reverse("payinfo:download_payinfo") +
             "?payinfo_id=%s" %
             payinfo.pk)
+    else:
+        buyed = PayinfoOrder.objects.filter(
+            buyer=request.user, payinfo=payinfo, status=2)
+        if buyed:
+            return redirect(
+                reverse("payinfo:download_payinfo") +
+                "?payinfo_id=%s" %
+                payinfo.pk)
 
     order = PayinfoOrder.objects.create(
         buyer=request.user,
@@ -96,10 +103,12 @@ def download_payinfo(request):
     # 如果用户没有购买这个付费信息时，那么不能够让他下载
     payinfo_id = request.GET.get('payinfo_id')
     payinfo = Payinfo.objects.get(pk=payinfo_id)
-    buyed = PayinfoOrder.objects.filter(
-        payinfo=payinfo, buyer=request.user, status=2)
-    if not buyed:
-        return redirect(reverse('payinfo:index'))
+    price = payinfo.price
+    if price != 0:
+        buyed = PayinfoOrder.objects.filter(
+            payinfo=payinfo, buyer=request.user, status=2)
+        if not buyed:
+            return redirect(reverse('payinfo:index'))
     path = payinfo.path
     # 作为一个附件的形式下载，而不是作为一个普通的文件下载
     response = FileResponse(
