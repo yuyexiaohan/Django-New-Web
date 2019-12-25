@@ -9,10 +9,6 @@ class Payinfo(models.Model):
     title = models.CharField(max_length=100)
     profile = models.CharField(max_length=100)
 
-# def get_user():
-# 	from apps.xfzauth.models import User
-# 	return User.objects.filter()
-
 
 class PayinfoOrder(models.Model):
     uid = ShortUUIDField(primary_key=True)  # 不是自增长id
