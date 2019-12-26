@@ -115,15 +115,6 @@ def order_key(request):
     uid = settings.PAY_UID
     orderuid = str(request.user.pk)
 
-    # print('goodsname:', goodsname)
-    # print('istype:', istype)
-    # print('notify_url:', notify_url)
-    # print('orderid:', orderid)
-    # print('price:', price)
-    # print('return_url:', return_url)
-    # print('token:', token)
-    # print('orderuid:', orderuid)
-
     key = md5(
         (goodsname +
          istype +

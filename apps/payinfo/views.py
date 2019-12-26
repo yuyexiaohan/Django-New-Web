@@ -7,6 +7,7 @@ from hashlib import md5  # 导入md5加密
 from django.http import FileResponse
 from django.conf import settings
 import os
+from django.contrib.auth.decorators import login_required
 
 
 def index(request):
@@ -18,6 +19,7 @@ def index(request):
     return render(request, 'payinfo/payinfo.html', context=context)
 
 
+@login_required(login_url='/account/login/')
 def payinfo_order(request):
     """付费资讯的支付"""
     payinfo_id = request.GET.get('payinfo_id')
