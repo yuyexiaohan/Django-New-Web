@@ -78,7 +78,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 # auth中的user中有属性.is_authenticated可以判断该用户是否存在
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media', # media_url 文件
+                'django.template.context_processors.media',  # media_url 文件
             ],
             # 在setting文件中按照如下配置后，在后续的模板中就不用再加载静待模板。省去了所有文件中的这句代码‘{% load
             # static%}’
