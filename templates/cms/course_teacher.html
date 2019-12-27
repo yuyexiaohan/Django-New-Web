@@ -25,55 +25,54 @@
 {#                <a href="{% url "cms:course_teacher_list" %}"><button id="add-btn" class="btn btn-primary pull-right" >添加教师</button></a>#}
                 <button id="teacher-button" type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModal">添加教师信息</button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-           <h4 class="modal-title" id="exampleModalLabel">添加老师信息</h4>
-      </div>
-      <div class="modal-body">
-        <form id="course-teacher-data" action="" method="">
-          <div class="form-group">
-              <label for="recipient-name" class="control-label">姓名:</label>
-            <textarea type="text" class="form-control" name="teacher-name"></textarea>
-          </div><div class="form-group">
-            <label for="recipient-name" class="control-label">职称:</label>
-            <textarea type="text" class="form-control" name="teacher-job-title"></textarea>
-          </div><div class="form-group">
-            <label for="recipient-name" class="control-label">简介:</label>
-            <textarea class="form-control" name="teacher-profile"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="form-group" class="control-label">头像:</label>
-              <div class="input-group">
-                  <textarea type="text" name="teacher-avatar" class="form-control" id="thumbnail-form"></textarea>
-                  <span class="input-group-btn">
-                      <label class="btn btn-default btn-file">
-                          上传图片 <input hidden="" type="file" class="btn btn-default" id="upload-btn">
-                      </label>
-                  </span>
-              </div>
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                           <h4 class="modal-title" id="exampleModalLabel">老师信息</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form id="course-teacher-data" action="" method="">
+                          <div class="form-group">
+                              <label for="recipient-name" class="control-label">姓名:</label>
+                            <textarea type="text" class="form-control" name="teacher-name"></textarea>
+                          </div><div class="form-group">
+                            <label for="recipient-name" class="control-label">职称:</label>
+                            <textarea type="text" class="form-control" name="teacher-job-title"></textarea>
+                          </div><div class="form-group">
+                            <label for="recipient-name" class="control-label">简介:</label>
+                            <textarea class="form-control" name="teacher-profile"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <label for="form-group" class="control-label">头像:</label>
+                              <div class="input-group">
+                                  <textarea type="text" name="teacher-avatar" class="form-control" id="thumbnail-form"></textarea>
+                                  <span class="input-group-btn">
+                                      <label class="btn btn-default btn-file">
+                                          上传图片 <input hidden="" type="file" class="btn btn-default" id="upload-btn">
+                                      </label>
+                                  </span>
+                              </div>
 
-          </div>
-            <div class="form-group" id="progress-group" style="display: none;">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
-                                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                    0%
-                                </div>
+                          </div>
+                            <div class="form-group" id="progress-group" style="display: none;">
+                                            <div class="progress">
+                                                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+                                                     aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                                    0%
+                                                </div>
+                                            </div>
+                                        </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button id="submit-btn-teacher" type="button" class="btn btn-primary">提交</button>
                             </div>
-                        </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button id="submit-btn-teacher" type="button" class="btn btn-primary">提交</button>
-            </div>
-        </form>
-      </div>
-
-    </div>
-  </div>
-</div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
             </div>
             <div class="box-body">
@@ -116,7 +115,5 @@
         </div>
     </div>
 </div>
-
-
 
 {% endblock %}
