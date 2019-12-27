@@ -176,7 +176,7 @@ $(function editTeacher () {
         var teacherProfileFrom = $("textarea[name='teacher-profile']");
         var teacherAvatarFrom = $("textarea[name='teacher-avatar']");
         var formTitle = $('#exampleModalLabel');
-        formTitle.value = "修改老师信息";
+        formTitle.text("修改老师信息");
         teacherNameFrom.html(value = teacherName);
         teacherJobTitleFrom.html(value = teacherJobTitle);
         teacherProfileFrom.html(value = teacherProfile);

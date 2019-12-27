@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2e62268d-292f-4458-bb17-b06968999966" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/static/js/course_teacher.js" afterPath="$PROJECT_DIR$/static/js/course_teacher.js" />
       <change beforePath="$PROJECT_DIR$/templates/cms/course_teacher.html" afterPath="$PROJECT_DIR$/templates/cms/course_teacher.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -40,7 +41,7 @@
       <file leaf-file-name="course_teacher.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/course_teacher.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1568">
+            <state relative-caret-position="320">
               <caret line="177" column="48" lean-forward="false" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
               <folding>
                 <element signature="n#!!block;n#getCookies#0" expanded="false" />
@@ -52,7 +53,7 @@
                 <element signature="n#!!block;n#getTeacherInfo#0" expanded="false" />
                 <element signature="e#4501#4831#0" expanded="false" />
                 <element signature="e#4871#4963#0" expanded="false" />
-                <element signature="e#6272#7210#0" expanded="false" />
+                <element signature="e#6270#7208#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -86,14 +87,14 @@
         <entry file="file://$PROJECT_DIR$/note.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1952">
-                <caret line="61" column="53" lean-forward="false" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
+              <first_editor relative-caret-position="1989">
+                <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
                 <folding>
-                  <marker date="1577334284432" expanded="true" signature="256:340" ph="{&quot;file&quot;: 'http://domain/name.m3u8'...}" />
-                  <marker date="1577334284432" expanded="true" signature="380:551" ph="{...}" />
-                  <marker date="1577334284432" expanded="true" signature="412:435" ph="{...}" />
-                  <marker date="1577334284432" expanded="true" signature="500:547" ph="{...}" />
-                  <marker date="1577334284432" expanded="true" signature="639:760" ph="//..." />
+                  <marker date="1577422321872" expanded="true" signature="256:340" ph="{&quot;file&quot;: 'http://domain/name.m3u8'...}" />
+                  <marker date="1577422321872" expanded="true" signature="380:551" ph="{...}" />
+                  <marker date="1577422321872" expanded="true" signature="412:435" ph="{...}" />
+                  <marker date="1577422321872" expanded="true" signature="500:547" ph="{...}" />
+                  <marker date="1577422321872" expanded="true" signature="639:760" ph="//..." />
                 </folding>
               </first_editor>
               <second_editor />
@@ -156,8 +157,8 @@
       <file leaf-file-name="course_teacher.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/cms/course_teacher.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="32" column="83" lean-forward="false" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
+            <state relative-caret-position="90">
+              <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -288,8 +289,8 @@
         <option value="$PROJECT_DIR$/apps/payinfo/views.py" />
         <option value="$PROJECT_DIR$/django_01/settings.py" />
         <option value="$PROJECT_DIR$/static/js/writ_news.js" />
-        <option value="$PROJECT_DIR$/static/js/course_teacher.js" />
         <option value="$PROJECT_DIR$/note.md" />
+        <option value="$PROJECT_DIR$/static/js/course_teacher.js" />
         <option value="$PROJECT_DIR$/templates/cms/course_teacher.html" />
       </list>
     </option>
@@ -548,13 +549,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1529122678684</updated>
-    </task>
-    <task id="LOCAL-00097" summary="fix course_order.html">
-      <created>1573723710154</created>
-      <option name="number" value="00097" />
-      <option name="presentableId" value="LOCAL-00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1573723710154</updated>
     </task>
     <task id="LOCAL-00098" summary="add course_teacher.html">
       <created>1573726035749</created>
@@ -892,7 +886,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577338180912</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="adjust code">
+      <created>1577420263806</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1577420263806</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -911,9 +912,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28392246" sideWeight="0.5193133" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32611173" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31927025" sideWeight="0.4806867" order="2" side_tool="false" content_ui="tabs" />
@@ -934,7 +937,6 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32772166" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="0" y="0" width="170" height="821" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611173" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.49255583" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1342,42 +1344,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/course_teacher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1568">
-          <caret line="177" column="48" lean-forward="false" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
-          <folding>
-            <element signature="n#!!block;n#getCookies#0" expanded="false" />
-            <element signature="e#170#2569#0" expanded="false" />
-            <element signature="e#363#580#0" expanded="false" />
-            <element signature="e#605#713#0" expanded="false" />
-            <element signature="e#746#1218#0" expanded="false" />
-            <element signature="n#!!block;n#submitBtnFun#0" expanded="false" />
-            <element signature="n#!!block;n#getTeacherInfo#0" expanded="false" />
-            <element signature="e#4501#4831#0" expanded="false" />
-            <element signature="e#4871#4963#0" expanded="false" />
-            <element signature="e#6272#7210#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/note.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1952">
-            <caret line="61" column="53" lean-forward="false" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
-            <folding>
-              <marker date="1577334284432" expanded="true" signature="256:340" ph="{&quot;file&quot;: 'http://domain/name.m3u8'...}" />
-              <marker date="1577334284432" expanded="true" signature="380:551" ph="{...}" />
-              <marker date="1577334284432" expanded="true" signature="412:435" ph="{...}" />
-              <marker date="1577334284432" expanded="true" signature="500:547" ph="{...}" />
-              <marker date="1577334284432" expanded="true" signature="639:760" ph="//..." />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/apps/course/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -1420,10 +1386,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/note.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1989">
+            <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+            <folding>
+              <marker date="1577422321872" expanded="true" signature="256:340" ph="{&quot;file&quot;: 'http://domain/name.m3u8'...}" />
+              <marker date="1577422321872" expanded="true" signature="380:551" ph="{...}" />
+              <marker date="1577422321872" expanded="true" signature="412:435" ph="{...}" />
+              <marker date="1577422321872" expanded="true" signature="500:547" ph="{...}" />
+              <marker date="1577422321872" expanded="true" signature="639:760" ph="//..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/course_teacher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="177" column="48" lean-forward="false" selection-start-line="177" selection-start-column="48" selection-end-line="177" selection-end-column="48" />
+          <folding>
+            <element signature="n#!!block;n#getCookies#0" expanded="false" />
+            <element signature="e#170#2569#0" expanded="false" />
+            <element signature="e#363#580#0" expanded="false" />
+            <element signature="e#605#713#0" expanded="false" />
+            <element signature="e#746#1218#0" expanded="false" />
+            <element signature="n#!!block;n#submitBtnFun#0" expanded="false" />
+            <element signature="n#!!block;n#getTeacherInfo#0" expanded="false" />
+            <element signature="e#4501#4831#0" expanded="false" />
+            <element signature="e#4871#4963#0" expanded="false" />
+            <element signature="e#6270#7208#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cms/course_teacher.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="32" column="83" lean-forward="false" selection-start-line="32" selection-start-column="83" selection-end-line="32" selection-end-column="83" />
+        <state relative-caret-position="90">
+          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
           <folding />
         </state>
       </provider>
