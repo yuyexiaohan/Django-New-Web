@@ -10,12 +10,12 @@ from apps.xfzauth.decorators import xfz_permission_required
 from apps.course.serializers import TeacherSerializers
 
 # restful表格处理
-from django.shortcuts import get_object_or_404, redirect
-from apps.course.models import Teacher
-from rest_framework.renderers import TemplateHTMLRenderer
-from rest_framework.views import APIView
-from django.http import Http404
-from rest_framework.response import Response
+# from django.shortcuts import get_object_or_404, redirect
+# from apps.course.models import Teacher
+# from rest_framework.renderers import TemplateHTMLRenderer
+# from rest_framework.views import APIView
+# from django.http import Http404
+# from rest_framework.response import Response
 
 
 logger = logging.getLogger("django")  # 初始化logger模块

@@ -1,4 +1,5 @@
 # coding=utf-8
+import os
 from django.shortcuts import render, redirect, reverse
 from django.contrib.admin.views.decorators import staff_member_required
 # 导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
@@ -11,7 +12,6 @@ from utils import restful  # 引入自定义的浏览器返回的错误信息文
 from .forms import EditNewsCategoryForm, WriteNewsForm, AddBannerForm, EditBannerForm, EditNewsForm, EditUserCenterForm
 # 导入对应的forms表单，用于与数据库表单数据关联
 from django.conf import settings
-import os
 import qiniu
 from django.contrib.auth.decorators import login_required  # 导入登录验证函数
 from django.utils.decorators import method_decorator  # 验证登录才能访问函数的装饰器
@@ -23,7 +23,7 @@ from django.contrib.auth.decorators import permission_required
 from apps.xfzauth.decorators import xfz_permission_required
 import logging
 from apps.xfzauth.models import User
-from apps.course.models import Teacher
+# from apps.course.models import Teacher
 
 
 logger = logging.getLogger('django')  # 'django'与配置文件中的logger名称一致
