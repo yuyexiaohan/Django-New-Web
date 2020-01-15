@@ -1,13 +1,15 @@
+import os
+from hashlib import md5  # 导入md5加密
+
 from django.shortcuts import render
-from .models import Payinfo, PayinfoOrder
-from utils import restful
 from django.shortcuts import redirect, reverse
 from django.views.decorators.csrf import csrf_exempt
-from hashlib import md5  # 导入md5加密
 from django.http import FileResponse
 from django.conf import settings
-import os
 from django.contrib.auth.decorators import login_required
+
+from .models import Payinfo, PayinfoOrder
+from utils import restful
 
 
 def index(request):

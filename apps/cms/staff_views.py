@@ -1,6 +1,5 @@
 # encoding: utf-8
 from django.shortcuts import render, redirect, reverse
-from apps.xfzauth.models import User
 from django.db.models import Q
 from django.views.generic import View
 from django.contrib.auth.models import Group
@@ -8,6 +7,8 @@ from django.shortcuts import redirect, reverse
 from apps.xfzauth.decorators import xfz_superuser_required
 from django.utils.decorators import method_decorator
 from django.contrib import messages
+
+from apps.xfzauth.models import User
 
 
 @xfz_superuser_required

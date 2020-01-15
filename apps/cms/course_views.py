@@ -1,13 +1,15 @@
+import logging
+
 from django.views.generic import View  # 使用类方法定义视图函数引入的View模块
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
+from apps.xfzauth.decorators import xfz_permission_required
+from apps.course.serializers import TeacherSerializers
 from apps.course.models import CourseCategory, Teacher, Course
 from .forms import AddCourseForm, EditCoursesCategoryForm  # 导入需要的form表单
 from utils import restful  # 导入返回信息判断文件
-import logging
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
-from apps.xfzauth.decorators import xfz_permission_required
-from apps.course.serializers import TeacherSerializers
 
 # restful表格处理
 # from django.shortcuts import get_object_or_404, redirect

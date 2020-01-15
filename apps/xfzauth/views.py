@@ -1,13 +1,15 @@
+from io import BytesIO  # 用来存储这些字节流
+
 from django.shortcuts import render, redirect, reverse
 from django.views.generic import View
-from .forms import LoginFrom, RegisterForm  # 导入form表单
-# authentivate 用来验证用户是否登录，login和logout的登录和登出
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages  # 导入messages模块进行错误消息的传递
-from utils.captcha.hycaptcha import Captcha
-from io import BytesIO  # 用来存储这些字节流
 from django.http import HttpResponse
+
 from utils.aliyunsdk import aliyun
+from utils.captcha.hycaptcha import Captcha
+from .forms import LoginFrom, RegisterForm  # 导入form表单
+# authentivate 用来验证用户是否登录，login和logout的登录和登出
 from .models import User
 # from django.forms.utils import ErrorDict
 from utils import restful

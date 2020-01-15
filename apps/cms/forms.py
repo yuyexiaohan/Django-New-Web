@@ -1,8 +1,8 @@
-from apps.forms import FormMixin  # 导入错误信息反馈表单
 from django import forms
 from apps.news.models import News, Banner  # 导入创建的数据库模型
 from apps.course.models import Course  # 导入发布课程的模型
 from apps.xfzauth.models import User
+from apps.forms import FormMixin  # 导入错误信息反馈表单
 
 
 class EditNewsCategoryForm(forms.Form, FormMixin):

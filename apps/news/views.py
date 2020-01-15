@@ -1,20 +1,21 @@
 from django.shortcuts import render
-from .models import NewCategory, News, Banner
 from django.views.decorators.http import require_POST, require_GET
 from django.conf import settings
-from utils import restful
-from .serializers import NewsSerializer, CommentSerializer  # 导入定义序列化
 from django.http import Http404
-from .forms import AddCommentForm
-from .models import Comment
+# 当我们在查询的条件中需要组合条件时(例如两个条件“且”或者“或”)时。
+# 我们可以使用Q()查询对象
+from django.db.models import Q
+
 # login_required：只能针对传统的页面跳转（如果没有登录，就跳转到login_url指定的页面）
 # 但是他不能处理这种ajax请求。就是说如果通过ajax请求去访问一个需要授权的页面
 # 那么这个装饰器的页面跳转功能就不行了,针对Ajax请求的页面跳转自定义一个装饰器
 # from django.contrib.auth.decorators import login_required
 from apps.xfzauth.decorators import xfz_login_required   # y导入自定义的用于ajax请求的装饰器
-# 当我们在查询的条件中需要组合条件时(例如两个条件“且”或者“或”)时。
-# 我们可以使用Q()查询对象
-from django.db.models import Q
+from .serializers import NewsSerializer, CommentSerializer  # 导入定义序列化
+from utils import restful
+from .forms import AddCommentForm
+from .models import Comment
+from .models import NewCategory, News, Banner
 
 
 def index(request):

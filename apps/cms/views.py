@@ -1,27 +1,29 @@
 # coding=utf-8
 import os
+from datetime import datetime  # 获取时间参数模块
+from urllib import parse  # 导入url函数
+import logging
+
+import qiniu
 from django.shortcuts import render, redirect, reverse
 from django.contrib.admin.views.decorators import staff_member_required
 # 导入django自带的确定是否登陆和是否是工作人员的装饰器，后面可以跟重定向的url
 from django.views.generic import View  # 使用类定义函数时，变量需要引入该模块
 # 限制函数，只能使用post的请求，才能访问某个函数
 from django.views.decorators.http import require_POST, require_GET
+# 导入对应的forms表单，用于与数据库表单数据关联
+from django.conf import settings
+from django.contrib.auth.decorators import login_required  # 导入登录验证函数
+from django.utils.decorators import method_decorator  # 验证登录才能访问函数的装饰器
+from django.core.paginator import Paginator  # django自带分页处理
+# 可以在该模块后给出一个条件，这样就可以要求对应的权限
+from django.contrib.auth.decorators import permission_required
+
 from apps.news.models import NewCategory, News, Banner   # 导入对应的数据库表单
 from apps.payinfo.models import Payinfo
 from utils import restful  # 引入自定义的浏览器返回的错误信息文件
 from .forms import EditNewsCategoryForm, WriteNewsForm, AddBannerForm, EditBannerForm, EditNewsForm, EditUserCenterForm
-# 导入对应的forms表单，用于与数据库表单数据关联
-from django.conf import settings
-import qiniu
-from django.contrib.auth.decorators import login_required  # 导入登录验证函数
-from django.utils.decorators import method_decorator  # 验证登录才能访问函数的装饰器
-from django.core.paginator import Paginator  # django自带分页处理
-from datetime import datetime  # 获取时间参数模块
-from urllib import parse  # 导入url函数
-# 可以在该模块后给出一个条件，这样就可以要求对应的权限
-from django.contrib.auth.decorators import permission_required
 from apps.xfzauth.decorators import xfz_permission_required
-import logging
 from apps.xfzauth.models import User
 # from apps.course.models import Teacher
 

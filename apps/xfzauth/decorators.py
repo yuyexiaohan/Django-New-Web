@@ -1,10 +1,11 @@
 """自定义一个登录验证装饰器"""
 
-from utils import restful  # 导入错误信息提示文件
 from django.shortcuts import redirect  # 导入重定向函数
 from functools import wraps
 from django.contrib.auth.models import Permission, ContentType
 from django.http import Http404
+
+from utils import restful  # 导入错误信息提示文件
 
 
 def xfz_login_required(func):
