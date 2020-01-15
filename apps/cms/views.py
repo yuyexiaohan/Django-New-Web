@@ -200,7 +200,8 @@ class WriteNewsView(View):
 @method_decorator([login_required(login_url='/account/login/'),
                    xfz_permission_required(News)], name='dispatch')
 class EditNewsViem(View):
-    """编辑新闻
+    """
+    编辑新闻
     # dispatch函数解释,当把装饰器命名未dispatch方法时，它就会对请求进行判断，
     # 如果时get请求，就调用get函数；如果请求时post请求时，
     就调用post请求。这样装饰器就可以把两种请求都涉及到
