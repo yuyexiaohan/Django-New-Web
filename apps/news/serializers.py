@@ -29,7 +29,7 @@ class NewsSerializer(serializers.ModelSerializer):
             'author')
 
 
-class CommentSerializer(serializers. ModelSerializer):
+class CommentSerializer(serializers.ModelSerializer):
     author = UserSerizlizer()
 
     class Meta:
