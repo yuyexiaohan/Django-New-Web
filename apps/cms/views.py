@@ -502,6 +502,24 @@ class EditUserCenter(View):
             return render(request, "cms/edit_user_center.html", context={"current_user": current_user})
 
 
+# REST framework 使用通用的类视图
+from apps.payinfo.models import Payinfo
+from apps.payinfo.serializers import PayInfoSerializers
+from rest_framework import generics
+
+
+class PayInfo(generics.ListCreateAPIView):
+    """付费信息的增删改"""
+    queryset = Payinfo.objects.all()
+    serializer_class = PayInfoSerializers
+
+
+class PayInfoDetail(generics.RetrieveUpdateDestroyAPIView):
+    """查找更新一个实例"""
+    queryset = Payinfo.objects.all()
+    serializer_class = PayInfoSerializers
+
+
 class PayInfoList(View):
     """订单列表"""
 

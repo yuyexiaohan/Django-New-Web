@@ -47,6 +47,8 @@ urlpatterns += [
 # 分享资料url
 urlpatterns += [
     path('payinfo_list/', views.PayInfoList.as_view(), name='payinfo_list'),
+    path('payinfo/', views.PayInfo.as_view(), name="payinfo"),
+    path('payinfo/<pk>/', views.PayInfo.as_view(), name="payinfo_detail"),
 ]
 
 # 用户管理相关url配置
