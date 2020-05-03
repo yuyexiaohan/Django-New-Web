@@ -30,6 +30,8 @@ urlpatterns = [
     path('edit_banner/', views.edit_banner, name='edit_banner'),
     path('upload_file/', views.upload_file, name='upload_file'),
     path('qntoken/', views.qntoken, name='qntoken'),
+
+    path('news_show', views.NewsClickShowView.as_view(), name='news_show'),
 ]
 # 课程相关的url
 urlpatterns += [
@@ -46,6 +48,7 @@ urlpatterns += [
 
 # 分享资料url
 urlpatterns += [
+    path('pay_info/', views.PayInfoIndex.as_view(), name='pay_info'),
     path('payinfo_list/', views.PayInfoList.as_view(), name='payinfo_list'),
     path('payinfo/', views.PayInfo.as_view(), name="payinfo"),
     path('payinfo/<pk>/', views.PayInfo.as_view(), name="payinfo_detail"),
