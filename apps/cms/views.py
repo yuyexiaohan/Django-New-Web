@@ -508,6 +508,15 @@ from apps.payinfo.serializers import PayInfoSerializers
 from rest_framework import generics
 
 
+class PayInfoIndex(View):
+    """信息展示界面"""
+
+    def get(self, request):
+        """信息展示"""
+
+        return render(request, 'cms/add_pay_info.html')
+
+
 class PayInfo(generics.ListCreateAPIView):
     """付费信息的增删改"""
     queryset = Payinfo.objects.all()
@@ -612,3 +621,10 @@ class PayInfoList(View):
             'num_pages': num_pages,
             'current_page': current_page
         }
+
+
+class NewsClickShowView(View):
+    """新闻点击展示"""
+
+    def get(self, request):
+        return render(request, "cms/news_show.html" )
