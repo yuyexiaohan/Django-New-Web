@@ -33,3 +33,7 @@ urlpatterns = [
 # 说明;1.告诉当访问media文件时，可以到后面定义的settings.MEDIA_EOOT目录下寻找。这样就可以直接用浏览器通过对应的文件路径访问文件。如果不做这个配置，浏览器是不能直接根据路径访问文件的
 # 2.因为urlpatterns是一个列表参数，static()返回值也是一个列表，使用“+”直接变成列表相加，最终的static()也是urlpatterns中的一个元素。等效于：urlpatterns
 # += static()
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns.append(path("__debug__/",include(debug_toolbar.urls)))
