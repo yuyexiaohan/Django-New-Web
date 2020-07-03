@@ -187,7 +187,7 @@ REST_FRAMEWORK = {
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'zh-Hans'  # 语言配置'zh-Hans'/'en-us'
+LANGUAGE_CODE = 'zh-hans'  # 语言配置'zh-Hans'/'en-us'
 
 TIME_ZONE = 'Asia/Shanghai'  # 时区配置
 
@@ -195,8 +195,8 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True  # 为True时，数据库时间与系统时间相差8小时
-# USE_TZ = False  # 为True时，数据库时间与系统时间相差8小时
+# USE_TZ = True  # 为True时，数据库时间与系统时间相差8小时
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

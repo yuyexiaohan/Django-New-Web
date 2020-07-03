@@ -5,6 +5,7 @@ from django.http import Http404
 # 当我们在查询的条件中需要组合条件时(例如两个条件“且”或者“或”)时。
 # 我们可以使用Q()查询对象
 from django.db.models import Q
+from silk.profiling.profiler import silk_profile
 
 # login_required：只能针对传统的页面跳转（如果没有登录，就跳转到login_url指定的页面）
 # 但是他不能处理这种ajax请求。就是说如果通过ajax请求去访问一个需要授权的页面
@@ -18,6 +19,7 @@ from .models import Comment
 from .models import NewCategory, News, Banner
 
 
+@silk_profile(name='get_news')
 def index(request):
     """新闻显示页,加入轮播图"""
     # newses = News.objects.all()
