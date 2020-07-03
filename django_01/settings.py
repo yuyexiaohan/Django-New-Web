@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'apps.xfzauth',
     'rest_framework',
     'debug_toolbar',
+    'silk',
 ]
 
 # 中间键，针对所有的app有效,可以方便批量修改处理时使用
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'silk.middleware.SilkyMiddleware',
 ]
 
 # 配置debug-toolbar
@@ -89,7 +91,10 @@ DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.logging.LoggingPanel',
     # 重定向
     'debug_toolbar.panels.redirects.RedirectsPanel',
-]
+
+    # 配置第三方的panel
+    'djdt_flamegraph.FlamegraphPanel',
+    ]
 
 DEBUG_TOOLBAR_CONFIG = {
 
