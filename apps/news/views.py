@@ -104,24 +104,31 @@ def add_comment(request):
 def search(request):
     """查询，返回一个查询页面 """
     q = request.GET.get('q')
-    if q:
-        # 搜索对象为：title或者content中包含的关键字，有就返回
-        newes = News.objects.filter(
-            Q(title__icontains=q) | Q(content__icontains=q))
-        if newes:
-            flag = 2
+
+    # 限制字符串长度超过20
+    if len(str(q)) < 20:
+        if q:
+            # 搜索对象为：title或者content中包含的关键字，有就返回
+            newes = News.objects.filter(
+                Q(title__icontains=q) | Q(content__icontains=q))
+            if newes:
+                flag = 2
+            else:
+                page = int(request.GET.get('p', 1))
+                start = settings.ONE_PAGE_NEWS_COUNT * (page - 1)
+                end = start + settings.ONE_PAGE_NEWS_COUNT
+                newes = News.objects.all()[start:end]
+                flag = 1
         else:
             page = int(request.GET.get('p', 1))
             start = settings.ONE_PAGE_NEWS_COUNT * (page - 1)
             end = start + settings.ONE_PAGE_NEWS_COUNT
             newes = News.objects.all()[start:end]
-            flag = 1
-    else:
-        page = int(request.GET.get('p', 1))
-        start = settings.ONE_PAGE_NEWS_COUNT * (page - 1)
-        end = start + settings.ONE_PAGE_NEWS_COUNT
-        newes = News.objects.all()[start:end]
-        flag = 0
+            flag = 0
 
-    context = {'newes': newes, 'flag': flag}
-    return render(request, 'news/search.html', context=context)
+        context = {'newes': newes, 'flag': flag}
+        return render(request, 'news/search.html', context=context)
+    else:
+        flag = 3
+        context = {'flag': flag}
+        return render(request, 'news/search.html', context=context)

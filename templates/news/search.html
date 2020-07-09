@@ -17,29 +17,29 @@
     <script src="{% static 'js/index.js' %}"></script>
     <script id="news-item" type="text/html">
     {# 该标签是django标签，用于指示包裹的文件不处理，只作为字符串 #}
-    {% verbatim %}
-    {{ each newes news index }}
-        <li>
-            <div class="thumbnail-group">
-                <a href="/detail/{{ news.id }}">
-                    <img src="{{ news.thumbnail }}" alt="">
-                </a>
-            </div>
-            <div class="news-group">
-                <div class="title">
-                    <a href="/detail/{{ news.id }}">{{ news.title }}</a>
+        {% verbatim %}
+        {{ each newes news index }}
+            <li>
+                <div class="thumbnail-group">
+                    <a href="/detail/{{ news.id }}">
+                        <img src="{{ news.thumbnail }}" alt="">
+                    </a>
                 </div>
-                <p class="desc">{{ news.desc }}</p>
-                <div class="news-more-group">
-                    <span class="category">{{ news.category.name }}</span>
-                    <span class="pub-time">{{ news.pub_time|timeSince }}</span>
-                    <span class="author">{{ news.author.username }}</span>
+                <div class="news-group">
+                    <div class="title">
+                        <a href="/detail/{{ news.id }}">{{ news.title }}</a>
+                    </div>
+                    <p class="desc">{{ news.desc }}</p>
+                    <div class="news-more-group">
+                        <span class="category">{{ news.category.name }}</span>
+                        <span class="pub-time">{{ news.pub_time|timeSince }}</span>
+                        <span class="author">{{ news.author.username }}</span>
 
+                    </div>
                 </div>
-            </div>
-        </li>
-    {{ /each }}
-    {% endverbatim %}
+            </li>
+        {{ /each }}
+        {% endverbatim %}
     </script>
 {% endblock %}
 
@@ -57,10 +57,21 @@
                     <p class="list-search-title">
                     搜索结果:
                     </p>
+                {% elif flage == 0 %}
+{#                    <div class="news-list-group" >#}
+                        <p class="list-search-title">请输入搜索内容</p>
+{#                    </div>#}
+                {% elif flage == 3 %}
+{#                    <div class="news-list-group" >#}
+                        <p class="list-search-title">查询限制在20个字符以内</p>
+{#                    </div>#}
                 {% elif flag == 1 %}
-                    <p class="list-search-title" style="color: red">
+                    <div class="news-list-group">
+                        <p class="list-search-title" style="color: red;">
                     暂未搜索到相关内容，到<a href="{% url 'news:index' %}">主页</a>在看看？
                     </p>
+                    </div>
+
                 {% endif %}
                  <ul class="news-list-group">
                 {% for news in newes %}
