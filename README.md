@@ -35,6 +35,8 @@
     PAY_TOKEN = ''
     PAY_UID = ''
 ```
+3. 使用`python manage.py make migrations`和`python manage.py migrate`检查并迁移数据库
 
-3. 环境配置完成后，使用`python manage.py runserver 0.0.0.0 8000`命令运行系统
-4. 在浏览器中输入`127.0.0.1:8000`查看运行项目
+4. 环境配置完成后，使用`python manage.py runserver 0.0.0.0 8000`命令运行系统
+
+5. 在浏览器中输入`127.0.0.1:8000`查看运行项目
