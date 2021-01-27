@@ -195,8 +195,13 @@ USE_I18N = True
 
 USE_L10N = True
 
-# USE_TZ = True  # 为True时，数据库时间与系统时间相差8小时
-USE_TZ = False
+# 如果USE_TZ是True，并且数据库不支持时区（例如SQLite，MySQL，Oracle）
+# ，则Django会根据此选项（如果设置了该选项）在本地时间读写日期时间，
+# 如果不设置，则在UTC中读写日期时间。
+USE_TZ = True
+
+# 如果USE_TZ为isTrue并且数据库支持时区（例如PostgreSQL），则设置此选项是错误的
+# USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
