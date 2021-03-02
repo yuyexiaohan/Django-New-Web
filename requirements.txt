@@ -2,7 +2,7 @@ aliyun-python-sdk-core-v3==2.8.9
 aliyun-python-sdk-dysmsapi==1.0.0
 certifi==2018.4.16
 chardet==3.0.4
-Django==2.0.12
+Django==2.2.13
 django-shortuuidfield==0.1.3
 djangorestframework==3.9.1
 idna==2.7
